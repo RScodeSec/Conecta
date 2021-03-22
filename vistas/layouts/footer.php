@@ -15,7 +15,7 @@
                 <section id="input-footer ">
                     <input class="input-footer" type="text" aria-label="Search" placeholder="Tu correo electrónico" id="input-footer">
 
-                    <button class="btsubs" type="submit">SUSCRIBIRSE</button>
+                    <button class="btsubs" id="suscri" type="submit">SUSCRIBIRSE</button>
                     <p id="n-c-c">Nunca compartiremos tu dirección de correo electrónico con tercera persona.</p>
                 </section>
 
