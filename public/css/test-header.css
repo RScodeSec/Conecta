@@ -1,0 +1,508 @@
+html{
+    font-size: 62.5%;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+figure{
+    margin: 0px;
+}
+
+@font-face{
+    font-family:'Marker Felt';
+    src: url('../fonts/Marker_Felt.ttf');
+}
+@font-face{
+    font-family:'Gotham';
+    src: url('../fonts/Gotham-Black.otf');
+}
+
+@font-face{
+    font-family:'Myriad Pro';
+    src: url('../fonts/MYRIADPRO-REGULAR.woff');
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?t20w8t');
+    src:  url('../fonts/icomoon.eot?t20w8t#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?t20w8t') format('truetype'),
+      url('../fonts/icomoon.woff?t20w8t') format('woff'),
+      url('../fonts/icomoon.svg?t20w8t#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-instagram:before {
+    content: "\e900";
+  }
+  .icon-search:before {
+    content: "\e904";
+  }
+  .icon-location:before {
+    content: "\e902";
+  }
+  .icon-phone:before {
+    content: "\e903";
+  }
+  .icon-facebook:before {
+    content: "\e901";
+  }
+  .icon-menu:before {
+    content: "\e905";
+  }
+
+/* Contenedor principal */
+.cabecera{
+    width: 100%;
+    height: 220px;
+    display: flex;
+    background-color: #e5e5e5;
+    margin-bottom: 25px;
+}
+
+/* Seccion de logo */
+.cabecera .img-container{
+    width: 20%;
+    height: 100%;
+
+    position: relative;
+    float: left;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabecera .img-container a{ 
+    width: 100%;
+    height: 100%;
+}
+
+.cabecera .img-container a img{
+    width: 100%;
+    height: 100%;
+    padding: 0px 50px;
+}
+
+.cabecera .img-container .burger-button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color:rgba(0, 193, 200, 0.8);
+    line-height: 40px;
+    text-align: center;
+    position: fixed;
+    z-index: 1500;
+    color: #e5e5e5;
+    font-size: 20px;
+    right: 15px;
+    top: 15px;
+    display: none;
+}
+
+/* Contenedor de sección derecha */
+.cabecera .right-sect{
+    width: 80%;
+    height: 100%;
+}
+
+/* Apartado superior del header */
+.cabecera .right-sect .top{
+    height: 33.33%;
+    background-color: #00c1c8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabecera .right-sect .top .division{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.cabecera .right-sect .top .division.first{
+    width: 55%;
+    font-size: 32px;
+    font-family:'Myriad Pro';
+    color: #e4f4f4;
+    font-weight: 800;
+    padding-left: 30px;
+}
+
+.cabecera .right-sect .top .division.second{
+    font-size: 14px;
+    font-weight:600;
+    font-family: 'Helvetica';
+    text-align: center;
+}
+
+.cabecera .right-sect .top .division.first p,
+.cabecera .right-sect .top .division.second p{
+    margin: 0px;
+}
+
+.cabecera .right-sect .top .division.third button{
+    width: 90%;
+    height: 70%;
+    background-color: orange;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.cabecera .right-sect .top .division.third button:focus{
+    outline: none;
+}
+
+.cabecera .right-sect .top .division.fourth{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cabecera .right-sect .top .division.fourth .img-container{
+    width: 100%;
+    height: 50%;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.cabecera .right-sect .top .division.fourth img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+.cabecera .right-sect .top .division.fourth .Login{
+    width: 70%;
+    height: 32%;
+    background-color: orange;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.cabecera .right-sect .top .division.fourth .Login:focus{
+    outline: none;
+}
+
+/* Sección media (input) */
+.cabecera .right-sect .middle{
+    width: 100%;
+    height: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 11px;
+}
+
+.cabecera .right-sect .middle .input-container{
+    width: 60%;
+    height: 60%;
+    background-color: #e5e5e5;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #00b2bb;
+}
+
+.cabecera .right-sect .middle .input-container input{
+    width: 95%;
+    height: 100%;
+    padding-left: 20px;
+    border: none;
+    background-color: #e5e5e5;
+    color: #00b2bb;
+    font-size: 20px;
+}
+
+.cabecera .right-sect .middle .input-container input::-webkit-input-placeholder{
+    color: #00b2bb;
+}
+
+.cabecera .right-sect .middle .input-container input:focus{
+    outline: none;
+}
+
+.cabecera .right-sect .middle .input-container i{
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    line-height: 20px;
+    color: #00b2bb;
+}
+
+.cabecera .right-sect .bottom{
+    width: 100%;
+    height: 33.33%;
+}
+
+.cabecera .right-sect .bottom .menu{
+    height: 100%;
+}
+
+.cabecera .right-sect .bottom .menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.cabecera .right-sect .bottom .menu ul .first-nav{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 70%;
+    color: #00c1c8;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Helvetica';
+    float: left;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cabecera .right-sect .bottom .menu ul .first-nav a{
+    text-decoration: none;
+    color: #00c1c8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabecera .right-sect .bottom .menu ul .first-nav:hover{
+    background-color: #00c1c8;
+    color: #e5e5e5;
+}
+
+.cabecera .right-sect .bottom .menu ul .first-nav a{
+    color: inherit;
+}
+
+/* Submenú */
+.cabecera .right-sect .bottom .menu .first-nav ul{
+    display: none;
+}
+
+.cabecera .right-sect .bottom .menu ul .first-nav:hover ul{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    z-index: 5;
+    top: 100%;
+    right: -250%;
+    width: 625%;
+    height: 300%;
+    background-color: #00c1c8;
+}
+
+.cabecera .right-sect .bottom .menu ul .first-nav:hover ul .wrapper{
+    width: 100%;
+    height: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabecera .right-sect .bottom .menu ul .first-nav:hover ul .wrapper li{
+    width: 20%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabecera .right-sect .bottom .menu ul .first-nav:hover ul .wrapper li.lng-nav{
+    width: 25%;
+}
+
+.cabecera .right-sect .bottom .menu ul .first-nav:hover ul .wrapper li a{
+    width: auto;
+    height: min-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: #e5e5e5;
+}
+
+.cabecera .right-sect .bottom .menu ul .first-nav:hover ul .wrapper li:hover{
+    background-color: #e5e5e5;
+    color: #00c1c8;
+}
+
+.cabecera .right-sect .bottom .menu ul .first-nav:hover ul .wrapper li a{
+    color: inherit;
+}
+
+@media screen and (max-width:425px)
+{
+    .cabecera{
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .cabecera #img-logo{
+        width: 100%;
+        height: auto;
+        justify-content: flex-start;
+        padding-left: 30px;
+    }
+
+    .cabecera .img-container a{
+        height: 70px;
+        width: 70px;
+    }
+
+    .cabecera .img-container a img{
+        object-fit: contain;
+        padding: 0px;
+    }
+
+    .cabecera .img-container .burger-button{
+        display: block;
+    }
+
+    .cabecera .right-sect{
+        width: 100%;
+        height: auto;
+    }
+
+    .cabecera .right-sect .top{
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        padding-bottom: 15px;
+    }
+
+    .cabecera .right-sect .top .division.first{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-left: 0px;
+    }
+
+    .cabecera .right-sect .top .division.first p{
+        font-size: 24px;
+    }
+
+    .cabecera .right-sect .top .division.second{
+        display: none;
+    }
+
+    .cabecera .right-sect .top .division.third{
+        position: relative;
+        top: 8px;
+    }
+
+    .cabecera .right-sect .top .division.third,
+    .cabecera .right-sect .top .division.fourth{
+        width: 30%;
+    }
+
+    .cabecera .right-sect .middle .input-container{
+        width: 90%;
+    }
+
+    .cabecera .right-sect .middle .input-container input{
+        width: 90%;
+    }
+
+    .cabecera .right-sect .bottom .menu .first-nav ul,
+    .cabecera .right-sect .bottom .menu ul .first-nav:hover ul{
+        display: none;
+    }
+
+    .menu{
+        position: fixed;
+        background: rgb(229, 229, 229, 0.8);
+        z-index: 1000;
+        top: 0;
+        left: -4000px;
+        width: 100vw;
+        bottom: 0; /* Para centrar el ol */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .3s;
+    }
+
+    .menu.is-activem{
+        left: 0;
+    }
+
+    .cabecera .right-sect .middle{
+        height: 60px;
+    }
+
+    .cabecera .right-sect .bottom .menu ul{
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .cabecera .right-sect .bottom .menu ul .first-nav{
+        height: auto;
+        width: 100%;
+    }
+
+    #img-login{
+        padding: 0 30px;
+        object-fit: contain;
+    }
+
+    .cabecera .right-sect .top .division.fourth .Login{
+        font-size: 14px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 375px)
+{
+    .division.first p{
+        font-size: 28px;
+    }
+
+    .cabecera .right-sect .top .division.third button{
+        font-size: 12px;
+    } 
+}
+
+@media screen and (max-width: 320px)
+{
+    .division.first p{
+        font-size: 24px;
+    }    
+}

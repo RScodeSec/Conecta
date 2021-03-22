@@ -1,0 +1,79 @@
+*{box-sizing: border-box;margin: 0;
+    font-family:  Helvetica, sans-serif;}
+    @font-face{
+        font-family:'Myriad Pro';
+        src: url('../fonts/MYRIADPRO-REGULAR.woff');
+      }
+      
+      
+      @font-face{
+        font-family:'Gotham Black';
+        src: url('../fonts/Gotham-Black.otf');
+      }
+
+section#t-principal {
+	overflow: hidden;
+    width: 97%;
+    box-shadow: 1px 1px 15px -5px rgba(0, 0, 0, 0.75);
+    margin: 0 auto;
+}
+
+h4#categoria {
+    color: #00c1c8;
+    text-align: center;
+    font-family:'Gotham';
+    font-size: 32px;
+}
+
+section#contendido{
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+      .contenido_principal{
+        box-shadow: .00px 1.00px 4px 0px rgba(0,0,0,0.6);
+        margin: 1rem;
+        padding:.8rem;
+        padding-top: 1rem;
+        border-radius:  35px 5px 25px 5px;
+       background-color: rgb(255, 255, 255);
+      }
+    
+      @media screen and (min-width:730px){
+        .contenido_principal{
+            margin: 4rem;
+        padding: 3rem;
+        } 
+      }
+      .subtitulo{
+          color: #FF9E00;
+          font-family:'Myriad Pro' ;  
+    font-size: 2.5rem;
+    font-weight: 700;
+
+      }
+      .lista{
+    
+    list-style-position: inside;
+    padding-left:30px;}
+    
+    
+      .sub,.subtitulo,.lista,.comienzo,.lista,.item-list,.list_m{
+          margin: 1rem 0;
+      }
+      .obligaciones{
+          list-style-position: outside;
+      }
+      .list_m{
+          display: inline;
+          font-weight: 700;
+      }
+    
+      
+    .modificado{padding-left: 14px;
+    
+    }
+    .contenido_p{    margin-top: .8rem;}
+
+    .contenido_principal{font-size: 1rem;}

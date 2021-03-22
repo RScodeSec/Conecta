@@ -1,0 +1,188 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+figure{
+    margin: 0;
+}
+
+section#t-principal {
+	overflow: hidden;
+    width: 97%;
+    box-shadow: 1px 1px 15px -5px rgba(0, 0, 0, 0.75);
+    margin: 0 auto;
+}
+
+h1#categoria {
+    color: #00c1c8;
+    text-align: center;
+    font-family:'Gotham';
+    font-size: 32px;
+}
+.main{
+    
+    
+    padding: .8rem;
+}
+
+.introduccion{
+    margin-top:1rem;
+    display: flex;
+    flex-direction: column;
+}
+.introduccion__imagen{
+    width: 100%;
+}
+.introduccion__texto{
+    text-align: justify;
+    margin:1rem 0;
+}
+
+.mision{
+    display: flex;
+    flex-direction: column;
+    background-color: #c7e4e6d0;
+    margin:1rem 0;
+    padding: .1px;
+}
+.mision__img,.vision__img{
+    margin:2rem 0;
+}
+.mision__imagen,.vision__imagen{
+    
+    width: 37%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.mision__titulo,.vision__titulo,.valores__titulo{
+    
+    color: orange;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.mision__intro,.vision__intro{
+    text-align: justify;
+    padding: 0 .5rem;
+}
+
+.vision{
+    background-color: #c7e4e6d0;
+    margin:1rem 0;
+    padding: .1px;
+}
+
+.vision__texto,.mision__texto{
+    padding: .1px;
+}
+
+.valores{
+    display: flex;
+    flex-direction: column;
+}
+.valores__totales{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.valores__item{
+    margin: 1rem 0;
+    width: 50%;
+    
+}
+
+.valores__img{
+    width: 55%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.valores__text{
+    text-align: center;
+    font-weight: 700;
+}
+
+@media screen and (min-width:768px){
+
+.mision__titulo,.vision__titulo,.valores__titulo{
+    font-size: 32px;
+}
+
+.introduccion{
+    flex-direction: row;
+    margin-top: 2rem;
+}
+.introduccion__img{
+    width: 50%;
+}
+.introduccion__texto{
+    width: 50%;
+    padding: 0 4rem;
+    font-size:18px;
+}
+
+
+.introduccion__imagen{
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.section{
+    display: flex;
+    margin-top: 1.5rem;
+}
+.mision{
+flex: 1
+;
+font-size: 18px;
+align-items: center;
+flex-direction: row;
+margin-bottom: 1rem;
+}
+
+.vision{
+    font-size: 18px;
+flex: 1;
+align-items: center;
+display: flex;
+margin-left: 1rem;
+flex-direction: row;
+margin-bottom: 1rem;
+
+
+}
+
+.mision__img,.vision__img{flex: 1;}
+
+.mision__texto,.vision__texto{
+    margin: 1rem 0;
+    flex: 1;
+}
+
+.mision__imagen,.vision__imagen{
+    width: 80%;
+}
+
+.mision__intro,.vision__intro{
+    padding: 0 2rem;
+}
+
+.valores__item{
+    width: 22%;
+}
+
+.valores{
+    font-size: 18px;
+}
+
+.vision__texto{align-self: stretch;}
+h1#categoria{
+    font-size: 60px;
+}
+}

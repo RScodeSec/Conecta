@@ -1,0 +1,363 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+label {
+    font-weight: 600;
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.producto {
+    padding: .8rem;
+
+}
+
+@media screen and (min-width: 768px) {
+
+    label {
+        font-size: 1rem;
+    }
+
+    .producto {
+        padding-left: 40px;
+        padding-top: 40px;
+        padding-right: 40px;
+    }
+
+}
+
+.producto__titulo {
+    font-family: 'Gotham Black';
+    font-size: 24px;
+    margin: 0;
+    /* margin-bottom: 1rem; */
+}
+
+@media screen and (min-width: 768px) {
+    .producto__titulo {
+        font-size: 24px;
+    }
+
+}
+
+.header__main {
+    padding: 10px 0;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+@media screen and (min-width: 768px) {
+    .header__main {
+        font-size: 1rem;
+    }
+
+}
+
+.producto__boton {
+    width: auto;
+    padding: .3rem;
+    color: white;
+    background-color: #1aabc2;
+    border-color: #17a2b8;
+    text-decoration: none;
+    float: right;
+    font-weight: 600;
+    border: none;
+    transition: background .8s;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+
+}
+
+.producto__boton:hover {
+    background-color: #118394;
+
+}
+
+@media screen and (min-width: 768px) {
+    .producto__boton {
+        padding: .5rem;
+        font-size: 18px;
+    }
+
+}
+
+.form__producto {
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.contenido {
+    background-color: white;
+    padding: .1rem;
+    display: flex;
+    flex-direction: column;
+    width: initial;
+    margin: 0 auto;
+    border-radius: 4px;
+
+}
+
+@media screen and (min-width: 768px) {
+    .contenido {
+        padding: 0;
+        width: 500px;
+    }
+
+}
+
+.formProducto {
+    background-color: rgb(0, 158, 251);
+    margin: 0;
+    padding: 1rem;
+
+    border-radius: 4px;
+}
+
+.formProducto__form {
+    display: flex;
+    flex-direction: column;
+
+
+    padding-top: .4rem;
+
+}
+
+@media screen and (min-width: 768px) {
+    .formProducto__form {
+        padding: 1rem 1rem;
+
+    }
+
+}
+
+.form__item {
+    width: 100%;
+
+    margin: .5rem 0;
+    border-radius: 3px;
+}
+
+.form__text {
+    width: 100%;
+    border-radius: 3px;
+    height: 45px;
+
+
+}
+
+.form__producto {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    top: -2000px;
+    transition: top .6s;
+    left: 0;
+    padding: 0.2rem .5rem;
+}
+
+@media screen and (min-width: 768px) {
+    .form__producto {
+        padding: 2rem 10rem;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .form__producto {
+        padding: 2rem 25rem;
+    }
+}
+
+.botonesProducto {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form__submit {
+    margin: 0rem .3rem;
+
+}
+
+.cancelar {
+    background-color: rgb(218, 40, 40);
+    color: white;
+    padding: .8rem;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background .8s;
+}
+
+.cancelar:hover {
+    background-color: rgb(177, 37, 37);
+}
+
+@media screen and (min-width: 768px) {
+    .cancelar {
+        font-size: 1rem;
+    }
+
+}
+
+.guardar {
+
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    padding: .8rem;
+    background-color: white;
+    color: rgb(0, 158, 251);
+    border: 1px solid rgb(0, 158, 251);
+    transition: background .8s;
+
+}
+
+.guardar:hover {
+    background-color: rgb(0, 158, 251);
+    color: white;
+}
+
+.producto__tabla {
+    font-size: 14px;
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .producto__tabla {
+        font-size: 1rem;
+    }
+
+}
+
+.tabla {
+    width: 1050px;
+    background-color: white;
+    border-collapse: collapse;
+    text-align: center;
+    border-radius: 5px 5px 0px 0px;
+    overflow: hidden;
+    /* border: solid 1px white; */
+}
+
+@media screen and (min-width: 768px) {
+    .tabla {
+        width: 100%;
+    }
+}
+
+
+#tabla__head {
+    background-color: #00c1c8;
+    color: white;
+    font-family: 'Gotham Black';
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .tabla__celda {
+
+        padding: .8rem;
+    }
+
+}
+
+.editar,
+.eliminar {
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.editar_b {
+    background-color: orange;
+    border: none;
+    padding: .8rem;
+    border-radius: 3px;
+    transition: background .8s;
+}
+
+.editar_b:hover {
+    background-color: rgb(185, 125, 14);
+}
+
+.eliminar_b {
+    background-color: red;
+    border: none;
+    padding: .8rem;
+    border-radius: 3px;
+    transition: background .8s;
+}
+
+.eliminar_b:hover {
+    background-color: rgb(175, 13, 13)
+}
+
+.items {
+    display: flex;
+}
+
+.items__1 {
+    padding: .3rem;
+    border: 1px solid gray;
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+    margin-top: .5rem;
+}
+
+@media screen and (min-width: 768px) {
+    .items__1 {
+        font-size: 1rem;
+    }
+}
+
+
+
+.text_label {
+    font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+    .text_label {
+        font-size: 1rem;
+    }
+}
+
+#productosTabla tbody tr:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+#productosTabla tbody tr:hover {
+    background-color: rgba(63, 150, 156, 0.5);
+    color: white;
+}
+
+#productosTabla td, .tabla__celda {
+    border: solid 1px #c1c1c1;
+    padding: 0 20px;
+    height: 50px;
+    padding: .2rem;
+    min-width: 100px;
+    width: 25ch;
+}
+
+.display__nuevo {
+    display: block;
+    top: 0;
+}
+
+.buscar {
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+}

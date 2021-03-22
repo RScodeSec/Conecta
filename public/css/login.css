@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+}
+
+.login-container{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 50;
+    top: -2000px;
+    left: 0;
+    transition: 1.2s;
+    display: flex;
+    justify-content: center;
+}
+
+.login-container.is-activel{
+    top: 0;
+}
+
+
+.form-login{
+    width: 400px;
+    height: auto;
+    max-height: 300px;
+    background:white;
+    padding: 15px;
+    margin-top: 30px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color:black;
+    border:  #ff9e00 8px solid;
+    position: relative;
+    
+}
+.form-login h4{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 25px;
+    color: #00c1c8;
+}
+
+.form-login span{
+    position: absolute;
+    right: 15px;
+    top: 0px;
+    font-weight: 900;
+    font-size: 25px;
+    cursor: pointer;
+    color: orange;
+}
+
+.form-login .controles{
+    width: 100%;
+    height: 50px;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    border: 2px solid #00c1c8;
+    font-family: 'calibri';
+    font-size: 18px;
+}
+.controles:focus,
+.tip-categorias:focus{
+    outline: none;
+}
+
+::-webkit-input-placeholder { color:#00c1c8; } 
+
+.form-login a{
+    color: #ff9e00;
+    text-decoration: none;
+}
+.form-login a:hover{
+    color:#00c1c8;
+    text-decoration: underline;
+}
+
+.form-login .boton{
+    width: 55%;
+    color:white;
+    background:#ff9e00;
+    border:none;
+    font-family: 'Nerko One', cursive;
+    padding:10px;
+    margin: 10px 76px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 320px){
+    .form-login{
+        width: 320px;
+    }
+}

@@ -1,0 +1,265 @@
+html{
+    font-size: 62.5%;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+figure{
+    margin: 0px;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+	margin:0;
+    padding:0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.page-container{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+section#t-principal {
+    width: 100%;
+    background: #00c7ce;
+    margin-top: 70px;
+    padding-left: 20%;
+}
+
+h4#categoria {
+    color: black;
+    text-align: center;
+    margin-left: 30%;
+    font-family: 'Gotham';
+    font-size: 32px;
+    margin: 0px;
+}
+
+main{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Aside izquierdo */
+main .left-section{
+    width: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Contenedor imagen */
+main .img-container{
+    width: 20%;
+    height: 200px;
+    position: absolute;
+    top: -108px;
+    display: flex;
+    justify-content: center;
+}
+
+main .img-container img{
+    width: 200px;
+    height: auto;
+    border-radius: 200px;
+    border: 8px solid #00c7ce;
+    overflow: hidden;
+}
+
+/* Contenedor texto */
+main .left-section .info-emp{
+    height: 100%;
+    box-shadow: 5px 0px 20px -10px rgba(0, 0, 0, 0.75);
+}
+
+main .left-section .info-emp .container-sticky{
+    height: 60%;
+    max-height: 700px;
+    width: 100%;
+    margin-top: 190px;
+    position: sticky;
+    top: 40px;
+    font-family: 'Helvetica';
+}
+
+main .left-section .info-emp .container-sticky .description{
+    font-size: 14px;
+    padding: 0px 20px;
+    text-align: center;
+}
+
+main .left-section .info-emp .container-sticky .social-section{
+    margin-top: 30px;
+    font-size: 14px;
+    text-align: center;
+}
+
+main .left-section .info-emp .container-sticky .social-section .social i{
+    font-size: 18px;
+}
+
+main .left-section .info-emp .container-sticky .recomendaciones{
+    margin-top: 30px;
+    text-align: center;
+}
+
+main .left-section .info-emp .container-sticky .recomendaciones .titulo{
+    color: #00c7ce;
+    font-family: 'Myriad Pro';
+}
+
+main .left-section .info-emp .container-sticky .recomendaciones #docker-imgs{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+main .left-section .info-emp .container-sticky .recomendaciones #docker-imgs .dck-img-container{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+main .left-section .info-emp .container-sticky .recomendaciones #docker-imgs .dck-img-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+/* Seccion derecha */
+main .right-section{
+    width: 80%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+main .right-section .title-products{
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Myriad Pro';
+    font-weight: 600;
+    color: #00c7ce;
+}
+
+main .right-section #products-container{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+main .right-section #products-container .product{
+    width: 20%;
+    min-width: 250px;
+    margin-right: 1%;
+    margin-left: 1%;
+    margin-bottom: 5%;
+    min-height: 400px;
+    height: auto;
+    background-color: #e5e5e5;
+    height: auto;
+}
+
+main .right-section #products-container .product .img-product{
+    width: 100%;
+    height: 70%;
+}
+
+main .right-section #products-container .product .img-product img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main .right-section #products-container .product .subtitulo-product{
+    margin-top: 10px;
+    color: #00c7ce;
+    text-align: center;
+}
+
+main .right-section #products-container .product .button-container button{
+    background: #ff9e00;
+    color: #e4f4f4;
+    font-size: 18px;
+    border-radius: 15px;
+    text-decoration: none;
+    border: 1px solid #e5e5e5;
+    width: 65%;
+    font-weight: 700;
+}
+
+main .right-section #products-container .product .button-container button:focus{
+    outline: none;
+}
+
+main .right-section #products-container .product .product-desc{
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+main .right-section .button-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main .right-section .button-container button{
+    background: #ff9e00;
+    color: #e4f4f4;
+    font-size: 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    border: 1px solid #e5e5e5;
+    width: 20%;
+    font-weight: 700;
+}
+
+@media screen and (max-width:425px){
+
+    main .img-container{
+        width: 150px;
+        height: 150px;
+        top: -95px;
+    }
+
+    main .left-section{
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    main .left-section .info-emp .container-sticky{
+        position: static;
+        margin-top: 120px;
+        padding-bottom: 20px;
+        height: auto;
+    }
+
+    main .right-section{
+        width: 100%;
+    }
+
+    main .right-section .button-container button{
+        width: 45%;
+    }
+}
