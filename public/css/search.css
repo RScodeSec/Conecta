@@ -9,7 +9,7 @@ button:focus{
 }
 
 body{
-    background-color: #d8e1e7;
+    background-color: #f2f2f2;
     display: flex;
     justify-content: center;
 }
@@ -49,20 +49,79 @@ main .title-page-container h2{
 
 main .products-container{
     width: 100%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
 }
-main .products-container .product-card{
+/* main .products-container .product-card{
     width: 23%;
     height: 400px;
     background-color: white;
     margin-right: 5px;
     margin-bottom: 40px;
     box-shadow: 5px 5px 18px 0px rgba(0,0,0,0.5);
-}
-main .products-container .product-card:hover{
+} */
+.products-container #products-container-search{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+ }
+ .products-container .product{
+     width: 100%;
+ }
+    .product img{
+        width:100%;
+        height: 300px;
+    }
+    .product img:hover{
+        filter: contrast(90%);
+    }
+    .product h4{
+        width: 100%;
+        text-align: center;
+        font-weight: 400;
+    }
+    .product p{
+        width: 90%;
+        text-align: start;
+        font-size: 16px;
+    }
+    .product .button-container{
+        width: 100%;
+        display: flex;
+    }
+        .button-container button{
+            width:70%;
+            margin: auto;
+            padding: 8px;
+            background-color:#FFA500;
+            outline: none;
+            font-size: 16px;
+            color: #fff;
+            border: 1px solid #FFA500;
+            border-radius: 10px;
+        }
+        .button-container button:hover{
+            background-color:rgba(247, 168, 23, 1)
+        }
+        .button-container button:active{
+            transform: scale(0.9);
+        }
+ /* Modo Responsivo */
+ @media(max-width:1000px){
+    .products-container #products-container-search{
+        grid-template-columns: repeat(3,1fr);
+    }
+ }
+ @media(max-width:800px){
+    .products-container #products-container-search{
+        grid-template-columns: repeat(2,1fr);
+    }
+ }
+ @media (max-width:500px){
+    .products-container #products-container-search{
+         grid-template-columns: repeat(1,1fr);
+     }
+ }
+/*main .products-container .product-card:hover{
     box-shadow: 5px 5px 18px 0px rgba(255, 170, 43, 0.74);
 }
 main .products-container .product-card .img-card-container{
@@ -110,4 +169,4 @@ main .products-container .product-card .btn-container button{
     border: none;
     border-radius: 10px;
     cursor: pointer;
-}
+} */

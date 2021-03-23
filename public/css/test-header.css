@@ -367,7 +367,12 @@ figure{
     color: inherit;
 }
 
-@media screen and (max-width:425px)
+@media (max-width:1000px){
+    .cabecera .right-sect .middle .input-container input{
+        width: 90%;
+    }
+}
+@media screen and (max-width:800px)
 {
     .cabecera{
         flex-wrap: wrap;
