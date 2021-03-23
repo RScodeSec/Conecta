@@ -96,4 +96,13 @@ class Producto {
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    //HERE CODE FOR SEARCH:::::::::::::::::::::::::::::::::::::::::::::::::::::
+    function searchedProduct(string $name)
+    {
+        $sql = "SELECT * FROM productos WHERE NomProducto LIKE '%{$name}%'";
+        $stmt = $this->cnx->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);       
+    }
 }

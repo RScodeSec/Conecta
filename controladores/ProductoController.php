@@ -221,5 +221,35 @@ class ProductoController {
         return $articles;
 
         
-    } 
+    }
+    //HERE CODE FOR SEARCH:::::::::::::::::::::::::::::::::::::::::::::::::::::
+    function searchLiveProduct()
+    {
+        $searchProduct = $this->modelo->searchedProduct($_GET["inputsearch"]);
+            $articles = '';
+            //AQUI HE AGREGADO BR PARA AGREGAR ESPACIO
+            foreach ($searchProduct as $p) {
+                $iganes = $p['ImagenUrl'];
+                $articles .= "<article class='product'>
+                                <figure class='img-product'>
+                                    ´<img src='.$iganes' alt='Imagen del Producto'>´
+                                </figure>
+                                <br>
+                                <h4 class='subtitulo-product'>
+                                    ".$p['NomProducto']."
+                                </h4>
+                                <p class='product-desc'>
+                                    ".$p['Precio']."
+                                </p>
+                                <div class='button-container'>
+                                    <input type='text' id='idproducto' value='".$p['IdProducto']."' hidden>
+                                    <button class='btn-product' data-id='".$p['IdProducto']."'>
+                                        Ver producto
+                                    </button>
+                                </div>
+                            </article>";
+            }
+            return $articles;
+
+    }
 }

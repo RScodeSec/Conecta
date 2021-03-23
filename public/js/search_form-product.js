@@ -6,7 +6,7 @@ const closeButtonProduct = document.querySelector('.close-button-product');
 function ShowProduct(){
     product.classList.add('is-activep')
 }
-productButton.addEventListener('click', ShowProduct)
+//productButton.addEventListener('click', ShowProduct)
 
 // Ocultar Product
 function HideProduct(){

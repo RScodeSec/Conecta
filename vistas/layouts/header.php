@@ -69,12 +69,23 @@
 				</button>
 			</div>
 		</section>
+		<!--here search live code-->
 		<section class="middle">
 			<div class="input-container">
-				<input type="text" placeholder="¿Qué estás buscando?">
-				<i class="icon-search"></i>
+				<form action="search.php" method="GET">
+					<input type="text" id="searchproduct" name="inputsearch" placeholder="¿Qué estás buscando?" autocomplete="off" required>
+					<i class="icon-search"></i>
+				</form>
+			</div>
+			<div class="col-md-5" style="position:absolute;top:160px;left:180px;">
+				<div class="list-group" id="showProduct">
+					<!--<a href="#" class="list-group-item list-group-item-action">
+					List 1</a>-->	
+				</div>	
+			
 			</div>
 		</section>
+		
 		<section class="bottom">
 			<nav class="menu">
 				<ul>

@@ -102,7 +102,10 @@ include_once 'layouts/head.php';
         </div>
     
         <section class="products-container">
-            <article class="product-card">
+            <div id="products-container-search">
+
+            </div>
+            <!--<article class="product-card">
                 <figure class="img-card-container">
                     <img src="../public/imagenes/silla.jpg" alt="">
                 </figure>
@@ -160,11 +163,14 @@ include_once 'layouts/head.php';
                 <div class="btn-container">
                     <button class="btn-see-shop">Ver tienda</button>
                 </div>
-            </article>
+            </article>-->
 
 
         </section>
     </main>
+    <?php include_once 'layouts/footer.php'; ?>
+
+    <?php include_once 'layouts/scripts.php'; ?>  
 
 
 <!-- Iconos -->
