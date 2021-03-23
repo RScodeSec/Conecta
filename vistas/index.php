@@ -9,13 +9,14 @@ include_once 'layouts/head.php';
 
 	<div class="page-container">
 		<?php include_once 'layouts/header.php' ?>
-		<section id="video">
-			<video loop muted autoplay preload="auto">
-				<source src="../public/videos/dummy.mp4" type="video/mp4"> Tú navegador no soporta el video
+		<div id="video" class="video-src">
+			<video loop muted autoplay preload="auto" src="../public/videos/dummy.mp4">
+				Tú navegador no soporta el video
 			</video>
-		</section>
+       </div>
+    </div>
 
-		<div class="slider-container">
+		<!-- <div class="slider-container">
 			<section id="slider">
 				<div id="carouselExampleControls" class="carousel_slide" data-ride="carousel">
 					<div class="img-container">
@@ -120,7 +121,7 @@ include_once 'layouts/head.php';
 			</section>
 
 
-		</div>
+		</div> -->
 
 		<br>
 		<section id="contenido">
@@ -255,6 +256,19 @@ include_once 'layouts/head.php';
 					</div>-->
 				</div>
 			</section>
+            
+			<div class="img-click">
+				<div class="img-title">
+				<h2>Crea tu Propia Tienda Virtual con Conecta</h2>
+                </div>
+				<div class="img-check">
+				<a href="https://youtu.be/X3ifOIzq68Q" target="_blank">
+					<img src="../public/imagenes/footer/LOGO_FINAL.webp" alt="">
+				</a>
+				
+				</div>
+				
+			</div>
 
 			<section id="tunegocio">
 				<section id="cont">
@@ -318,6 +332,7 @@ include_once 'layouts/head.php';
 	<?php include_once 'layouts/scripts.php'; ?>
 	<!-- add this script-->
 	<script src="../public/js/empresa.js"></script>
+	
 	
 	
 

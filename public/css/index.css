@@ -54,26 +54,23 @@ body{
     background-color: white;
 }
 
-.img-container{
+/* .img-container{
     width: 100%;
     max-width: 1366px;
-}
+} */
 
-#video{
+.video-src{
     width: 100%;
-    height: auto;
     max-height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-#video video{
-    width: 800px;
+video{
     height: 400px;
+    width: 100%;
+    object-fit:cover;
 }
 
-.slider-container
+/* .slider-container
 {
     width: 100%;
     height: 600px;
@@ -81,16 +78,39 @@ body{
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-}
+} */
 
 #slider{
+    display: none;
     overflow: hidden;
     height: inherit;
     width: 1280px;
 }
+/* ESTILO PARA CUANDO DAS CLICK EN LA IMAGEN */
+.img-click{
+    background-color: rgb(95, 143, 165);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 30%;
+   
+}
+.img-click .img-check,.img-title{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+.img-check img{
+    width: 20%;
+    height: 10%;
+    z-index: 100;
+    margin: 2% 0px;
+}
 
 /* ------ Animacion Slider ------ */
-@-webkit-keyframes slide_animation{
+/* @-webkit-keyframes slide_animation{
     0%{left: 2560px;}
     10%{left: 2560px;}
     20%{left: 1280px;}
@@ -169,7 +189,7 @@ body{
     width: 70%;
     display: flex;
     flex-wrap: wrap;
-}
+} */
 .social{
     width: 50%;
     text-align: center;
@@ -182,7 +202,7 @@ body{
     color: #00c1c8;
 }
 
-.slider-container .banner-desc .desc-btn{
+/* .slider-container .banner-desc .desc-btn{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -198,7 +218,7 @@ body{
     color: white;
     background-color: #ff9c00;
     outline: none;
-}
+} */
 
 #contenido{
     min-height:220px;
@@ -445,12 +465,9 @@ section.titulocoti h2{
 
 section.abastece {
     background: #f2f2f2;
-    margin: 0 30px 0 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
     width: 100%;
-    height: 160px;
-    margin: auto;
+    height: auto;
+    margin-bottom: 110px;
     overflow: hidden;
     text-align: center;
 }
@@ -691,8 +708,15 @@ button#b{
     }
 }
 
-@media screen and (max-width:425px)
+@media screen and (max-width:500px)
 {
+    .img-click{
+        height: 10%;
+       
+    }
+    .img-click img{
+        width: 60%;
+    }
     .page-container{
         width: 100%;
         max-width: 425px;
@@ -701,7 +725,7 @@ button#b{
         justify-content: center;
     }
 
-    .slider-container
+    /* .slider-container
     {
         width: 100%;
         height: 400px;
@@ -718,7 +742,7 @@ button#b{
     }
 
     /* ------ Animacion Slider ------ */
-    @-webkit-keyframes slide_animation{
+    /* @-webkit-keyframes slide_animation{
         0%{left: 800px;}
         10%{left: 800px;}
         20%{left: 400px;}
@@ -730,9 +754,9 @@ button#b{
         80%{left: 400px;}
         90%{left: 800px;}
         100%{left: 800px;}
-    }
+    } */
 
-    .carousel_slide{
+    /* .carousel_slide{
         width: 1200px;
         height: inherit;
         margin: 0 0 0 -800px;
@@ -742,9 +766,9 @@ button#b{
         -webkit-animation-iteration-count: infinite;
         -webkit-animation-direction:alternate;
         -webkit-animation-play-state: running;
-    }
+    } */
 
-    .img-container{
+    /* .img-container{
         height: inherit;
         width: 400px;
         position: relative;
@@ -776,8 +800,8 @@ button#b{
 
     .img-container .banner-desc .desc-title{
         text-align: center;
-    }
-
+    } */ */
+/* 
     .slider-container .banner-desc .desc-logo{
         width: 100%;
         height: auto;
@@ -795,7 +819,7 @@ button#b{
         width: 90%;
         display: flex;
         flex-wrap: wrap;
-    }
+    } */
     .social{
         width: 50%;
         text-align: center;
@@ -807,7 +831,7 @@ button#b{
     .icon-location{
         color: #00c1c8;
     }
-
+/* 
     .slider-container .banner-desc .desc-btn{
         width: 100%;
         display: flex;
@@ -824,7 +848,7 @@ button#b{
         color: white;
         background-color: #ff9c00;
         outline: none;
-    }
+    } */
 
     .pasos-sig{
         width: 80%;
@@ -866,7 +890,7 @@ button#b{
     }
 
     /* ------ Animacion Slider ------ */
-    @-webkit-keyframes slide_animation{
+    /* @-webkit-keyframes slide_animation{
         0%{left: 700px;}
         10%{left: 700px;}
         20%{left: 350px;}
@@ -878,8 +902,8 @@ button#b{
         80%{left: 300px;}
         90%{left: 700px;}
         100%{left: 700px;}
-    }
-
+    } */
+/* 
     .carousel_slide{
         width: 1050px;
         height: inherit;
@@ -890,8 +914,8 @@ button#b{
         -webkit-animation-iteration-count: infinite;
         -webkit-animation-direction:alternate;
         -webkit-animation-play-state: running;
-    }
-
+    } */
+/* 
     .img-container{
         height: inherit;
         width: 350px;
@@ -904,7 +928,7 @@ button#b{
     }
     .img-container .banner-desc{
         width: 90%;
-    }
+    } */
 }
 
 @media screen and (max-width:320px)
@@ -913,14 +937,14 @@ button#b{
         width: 100%;
         max-width: 320px;
     }
-
+/* 
     #slider{
         overflow: hidden;
         height: inherit;
         width: 300px;
-    }
+    } */
 
-    /* ------ Animacion Slider ------ */
+    /* ------ Animacion Slider ------
     @-webkit-keyframes slide_animation{
         0%{left: 600px;}
         10%{left: 600px;}
@@ -933,9 +957,9 @@ button#b{
         80%{left: 300px;}
         90%{left: 600px;}
         100%{left: 600px;}
-    }
+    } */
 
-    .carousel_slide{
+    /* .carousel_slide{
         width: 900px;
         height: inherit;
         margin: 0 0 0 -600px;
@@ -945,9 +969,9 @@ button#b{
         -webkit-animation-iteration-count: infinite;
         -webkit-animation-direction:alternate;
         -webkit-animation-play-state: running;
-    }
+    } */
 
-    .img-container{
+    /* .img-container{
         height: inherit;
         width: 300px;
         position: relative;
@@ -959,5 +983,5 @@ button#b{
     }
     .img-container .banner-desc{
         width: 90%;
-    }
+    } */
 }
