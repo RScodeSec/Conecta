@@ -73,8 +73,10 @@
 		<section class="middle">
 			<div class="input-container">
 				<form action="search.php" method="GET">
-					<input type="text" id="searchproduct" name="inputsearch" placeholder="¿Qué estás buscando?" autocomplete="off" required>
-					<i class="icon-search"></i>
+					<input type="text"  name="inputsearch" id="inputsearch" placeholder="¿Qué estás buscando?" autocomplete="off" required>
+					<input type="submit" value="">
+
+					<!--<i class="icon-search"></i>-->
 				</form>
 			</div>
 			<div class="col-md-5" style="position:absolute;top:160px;left:180px;">

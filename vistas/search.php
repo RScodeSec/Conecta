@@ -10,6 +10,7 @@ include_once 'layouts/head.php';
 <body>
 <?php include_once 'layouts/header.php'; ?>
 
+
     <div class="form-container-product">
         <section class="form-product">
             <!-- Barra left formulario -->
@@ -92,13 +93,10 @@ include_once 'layouts/head.php';
         </section>
     </div>
 
-    <main>
-        <div class="btn-back-container">
-            <button class="btn-back"><i class="fas fa-backward"></i>Regresar</button>
-        </div>
-    
+    <main>    
         <div class="title-page-container">
             <h2>Resultados de la búsqueda</h2>
+            <input type="text"  id="id" value="<?php echo $_GET['inputsearch'];?>">
         </div>
     
         <section class="products-container">

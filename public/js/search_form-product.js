@@ -1,3 +1,12 @@
+let inputsearch = $("#id").val();
+console.log(inputsearch);
+let urlProds =
+                "../index.php?controller=producto&action=searchLiveProduct&inputsearch=" + inputsearch;
+            $("#products-container-search").load(urlProds, { type: "article" }, function () {
+
+});
+
+
 const product = document.querySelector('.form-container-product');
 const productButton = document.querySelector('.btn-see-shop');
 const closeButtonProduct = document.querySelector('.close-button-product');
