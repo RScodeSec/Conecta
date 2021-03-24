@@ -95,8 +95,8 @@ include_once 'layouts/head.php';
 
     <main>    
         <div class="title-page-container">
-            <h2>Resultados de la búsqueda</h2>
-            <input type="text"  id="id" value="<?php echo $_GET['inputsearch'];?>">
+            <h2>Mostrando Resultados de la búsqueda: <?php echo $_GET['inputsearch'];?> </h2>
+            <input type="text"  id="id" value="<?php echo $_GET['inputsearch'];?>" hidden>
         </div>
     
         <section class="products-container">

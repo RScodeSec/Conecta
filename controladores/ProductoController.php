@@ -252,4 +252,9 @@ class ProductoController {
             return $articles;
 
     }
+
+    function infoProductSearch(){
+        $prodsModal = $this->modelo->productosByidSearch($_GET['idmyprod']);
+        echo json_encode($prodsModal);
+    }
 }
