@@ -174,6 +174,7 @@ include_once 'layouts/head.php';
 <!-- Iconos -->
 <script src="https://kit.fontawesome.com/c702fce202.js" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../public/js/search_form-product.js"></script>
+<script type="text/javascript" src="../public/js/search.js"></script>
 
 </body>
 </html>
