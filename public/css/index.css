@@ -104,6 +104,9 @@ video{
     color: #fff;
     
 }
+.img-click ,.img-title h2{
+    font-size: 22px;
+}
 .img-check .zoom{
     width: 40%;
     margin: auto;
@@ -249,7 +252,7 @@ section.titulo{
 }
 
 section.titulo h2{
- 	font-size: 2rem;
+ 	font-size: 25px;
  	color: #00b2bb;
     font-family: 'Gotham';
 }
@@ -279,7 +282,7 @@ section.contenedor {
     color: white;
     border-radius: 10px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 16px;
     border-style: none;
 }
 .contenedor button:active{
@@ -329,7 +332,10 @@ span#subtitulo {
     width: 100%;
     height: auto;
     text-align: center;
-    color: black;
+    color: black;   
+}
+.subtitulo h4{
+    font-size: 16px;
 }
 
 .pasos-sig span {
@@ -339,7 +345,6 @@ span#subtitulo {
 .pasos-sig span .p {
     font-size: 15px;
     width: 90%;
-    text-transform: uppercase;
     margin: auto;
 }
 
@@ -489,6 +494,7 @@ h1#cotiza {
     margin:0 auto;
     text-align: center;
 }
+/* ************************ */
 
 section.titulocoti{
  	padding: 20px 0px;
@@ -499,16 +505,19 @@ section.titulocoti{
 }
 
 section.titulocoti h2{
- 	font-size: 2rem;
+ 	font-size: 22px;
  	color: #00b2bb;
 }
 
 section.abastece {
     background: #f2f2f2;
     width: 100%;
-    margin-bottom: 30px;
-    height: 100px;
+    padding: 0px;
     text-align: center;
+}
+section .abastece h4{
+    padding: 10px;
+    font-size: 20px;
 }
 
 .abastececonte {
@@ -636,9 +645,6 @@ button#b{
         font-family: 'Gotham';
     }
 
-    section.abastece {
-        height: 300px;
-    }
 
     .items {
         width: 100%;
@@ -774,9 +780,8 @@ button#b{
         flex-wrap: wrap;
         justify-content: center;
     }
-    section.abastece{
-        height: 200px;
-       
+    section .abastece{
+        padding: 10px;
     }
     .abastececonte{
         grid-template-columns: repeat(2,1fr);

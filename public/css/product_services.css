@@ -1,6 +1,4 @@
-html{
-    font-size: 62.5%;
-}
+
 
 *{
     box-sizing: border-box;
@@ -194,7 +192,9 @@ main .right-section #products-container .product .subtitulo-product{
     margin-top: 10px;
     color: #00c7ce;
     text-align: center;
-}
+    font-size: 16px;
+} 
+    
 
 main .right-section #products-container .product .button-container button{
     background: #ff9e00;
