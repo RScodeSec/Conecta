@@ -65,6 +65,7 @@ main .products-container{
     margin-bottom: 10px;
  }
  .products-container .product{
+    background-color: #E5E5E5;
      width: 100%;
  }
     .product img{
@@ -81,7 +82,8 @@ main .products-container{
     }
     .product p{
         width: 90%;
-        text-align: start;
+        text-align: center;
+        padding: 10px;
         font-size: 16px;
     }
     .product .button-container{
@@ -91,7 +93,7 @@ main .products-container{
         .button-container button{
             width:70%;
             margin: auto;
-            padding: 8px;
+            padding: 6px;
             background-color:#FFA500;
             outline: none;
             font-size: 16px;
