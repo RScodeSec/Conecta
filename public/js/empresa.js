@@ -96,6 +96,7 @@ $("#products-container").load(urlProds, { type: "article" }, function () {
 // add for image two and three for view slider complete...
 
 $('#formVenta').submit(function(e){
+	
 	//e.preventDefault();
 	let idProduct = $('#IdProducto').val();
 	let nombres = $('#nombres').val();
@@ -125,6 +126,8 @@ $('#formVenta').submit(function(e){
 			let json = JSON.parse(response);
 			Swal.fire({
 				icon: json.icon,
+				width:400,
+				padding:'5em',
 				title: json.msg,
 				confirmButtonText: json.btnText,
 			}).then(() => {

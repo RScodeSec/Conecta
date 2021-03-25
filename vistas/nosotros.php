@@ -63,49 +63,49 @@ include_once 'layouts/head.php';
         <div class="valores__totales">
             <figure class="valores__item">
 
-                <img class="valores__img" src="../public/imagenes/valores/COMPROMISO.png" alt="">
+                <img class="valores__img" src="../public/imagenes/nosotros/AnyConv.com__CALIDAD 290 x290.webp" alt="">
                 <figcaption class="valores__text">Calidad</figcaption>
             </figure>
 
             <figure class="valores__item">
 
-                <img class="valores__img" src="../public/imagenes/valores/COMPROMISO.png" alt="">
+                <img class="valores__img" src="../public//imagenes/nosotros/AnyConv.com__INTEGRIDAD 290 x290.webp" alt="">
                 <figcaption class="valores__text">Integridad</figcaption>
             </figure>
 
             <figure class="valores__item">
 
-                <img class="valores__img" src="../public/imagenes/valores/COMPROMISO.png" alt="">
+                <img class="valores__img" src="../public/imagenes/nosotros//AnyConv.com__PASION 290 x290.webp" alt="">
                 <figcaption class="valores__text">Pasión</figcaption>
             </figure>
 
             <figure class="valores__item">
 
-                <img class="valores__img" src="../public/imagenes/valores/COMPROMISO.png" alt="">
+                <img class="valores__img" src="../public/imagenes/nosotros/AnyConv.com__HONESTIDAD 290 x290.webp" alt="">
                 <figcaption class="valores__text">Honestidad</figcaption>
             </figure>
 
             <figure class="valores__item">
 
-                <img class="valores__img" src="../public/imagenes/valores/COMPROMISO.png" alt="">
+                <img class="valores__img" src="../public/imagenes/nosotros/AnyConv.com__COMPROMISO 290 x290.webp" alt="">
                 <figcaption class="valores__text">Compromiso</figcaption>
             </figure>
 
             <figure class="valores__item">
 
-                <img class="valores__img" src="../public/imagenes/valores/COMPROMISO.png" alt="">
+                <img class="valores__img" src="../public/imagenes/nosotros/ACTITUD-DE-SERVICIO-290-x290_1.webp" alt="">
                 <figcaption class="valores__text">Actitud de servicio</figcaption>
             </figure>
 
             <figure class="valores__item">
 
-                <img class="valores__img" src="../public/imagenes/valores/COMPROMISO.png" alt="">
+                <img class="valores__img" src="../public/imagenes/nosotros/ADAPTABILIDAD-290-x290_1.webp" alt="">
                 <figcaption class="valores__text">Adaptabilidad</figcaption>
             </figure>
 
             <figure class="valores__item">
 
-                <img class="valores__img" src="../public/imagenes/valores/COMPROMISO.png" alt="">
+                <img class="valores__img" src="../public/imagenes/nosotros/AnyConv.com__LEALTAD 290 x290.webp" alt="">
                 <figcaption class="valores__text">Lealtad</figcaption>
             </figure>
 

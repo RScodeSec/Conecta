@@ -2,9 +2,25 @@ const register = document.querySelector('.form-container');
 const registerButton = document.querySelector('.register');
 const closeButton = document.querySelector('.close-button');
 const suscribit = document.getElementById('suscri')
+const correo = document.querySelector('.input-footer');
+
+
 
 suscribit.addEventListener('click',()=>{
-	ShowRegister()
+	if(correo.value.length>1){
+		$("#correo").val(correo.value)
+		ShowRegister()	
+	}else{
+		Swal.fire({
+			position: 'center',
+			width: 400,
+			padding: '6em',
+			icon: 'error',
+			title: 'Escribe tu Correo',
+			showConfirmButton: false,
+			timer: 500
+		  })
+	}
 })
 // Desplegar registro
 function ShowRegister() {
