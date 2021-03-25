@@ -16,7 +16,7 @@ include 'header.php';
 
       <div class="body-frm-container">
         <figure class="img-container">
-          <img src="../../public/imagenes/categorias/abarrote.jpg" alt="">
+          <img  id="img-Product" src="" alt="img-Product">
         </figure>
         <input type="text" id="idPed" hidden>
         <div class="comments-container">
