@@ -255,6 +255,7 @@ include_once 'layouts/head.php';
 						</div>
 					</div>-->
 				</div>
+				<button class="ver btn-product"><a href="../vistas/categorias.php">Todos los Productos</a></button>
 			</section>
             
 			<div class="img-click">
@@ -262,9 +263,12 @@ include_once 'layouts/head.php';
 				<h2>Crea tu Propia Tienda Virtual con Conecta</h2>
                 </div>
 				<div class="img-check">
-				<a href="https://youtu.be/X3ifOIzq68Q" target="_blank">
-					<img src="../public/imagenes/footer/LOGO_FINAL.webp" alt="">
-				</a>
+					<div class="zoom">
+						<a href="https://youtu.be/X3ifOIzq68Q" target="_blank">
+						<img src="../public/imagenes/categorias-comercio/Ropa_textiles/Renzo/logo.jpg" alt="">
+						</a>
+					</div>
+				
 				
 				</div>
 				
@@ -323,6 +327,7 @@ include_once 'layouts/head.php';
 					<div class="items">
 						<span id="subtitulo">100+Industrias</span>
 					</div>
+				</div>
 			</section>
 		</section>
 		<?php include_once 'layouts/footer.php'; ?>

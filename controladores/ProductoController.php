@@ -231,15 +231,15 @@ class ProductoController {
             foreach ($searchProduct as $p) {
                 $iganes = $p['ImagenUrl'];
                 $articles .= "<article class='product'>
-                                <figure class='img-product'>
+                                
                                     ´<img src='.$iganes' alt='Imagen del Producto'>´
-                                </figure>
+                               
                                 <br>
                                 <h4 class='subtitulo-product'>
                                     ".$p['NomProducto']."
                                 </h4>
                                 <p class='product-desc'>
-                                    ".$p['Precio']."
+                                    S/.".$p['Precio']."
                                 </p>
                                 <div class='button-container'>
                                     <input type='text' id='idproducto' value='".$p['IdProducto']."' hidden>
