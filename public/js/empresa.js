@@ -126,8 +126,6 @@ $('#formVenta').submit(function(e){
 			let json = JSON.parse(response);
 			Swal.fire({
 				icon: json.icon,
-				width:400,
-				padding:'5em',
 				title: json.msg,
 				confirmButtonText: json.btnText,
 			}).then(() => {
