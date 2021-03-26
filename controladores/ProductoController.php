@@ -18,9 +18,9 @@ class ProductoController {
                 $iganes = $p['ImagenUrl'];
                 $articles .= "<article class='product'>
                                 <figure class='img-product'>
-                                    ´<img src='.$iganes' alt='Imagen del Producto'>´
+                                    <img src='.$iganes' alt='Imagen del Producto'>
                                 </figure>
-                                <br>
+                               
                                 <h4 class='subtitulo-product'>
                                     ".$p['NomProducto']."
                                 </h4>
@@ -232,7 +232,7 @@ class ProductoController {
                 $iganes = $p['ImagenUrl'];
                 $articles .= "<article class='product'>
                                 
-                                    ´<img src='.$iganes' alt='Imagen del Producto'>´
+                                    <img src='.$iganes' alt='Imagen del Producto'>
                                
                                 <br>
                                 <h4 class='subtitulo-product'>

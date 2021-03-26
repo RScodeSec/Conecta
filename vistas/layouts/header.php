@@ -76,7 +76,7 @@
 					<input type="text"  name="inputsearch" id="inputsearch" placeholder="¿Qué estás buscando?" autocomplete="off" required>
 					<input type="submit" value="">
 
-					<!--<i class="icon-search"></i>-->
+					<!-- <i class="icon-search"></i> -->
 				</form>
 			</div>
 			<div class="col-md-5" style="position:absolute;top:160px;left:180px;">
