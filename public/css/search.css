@@ -80,15 +80,17 @@ main .products-container{
         filter: contrast(90%);
     }
     .product h4{
+        color: #00C7CE;
+        padding-top: 10px;
         width: 100%;
         text-align: center;
-        font-weight: 400;
-        font-size: 16px;
+        font-weight: 700;
+        font-size: 15px;
     }
     .product p{
         width: 90%;
         text-align: center;
-        padding: 10px;
+        padding:0 10px;
         font-size: 16px;
     }
     .product .button-container{
