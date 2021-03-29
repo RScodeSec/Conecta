@@ -8,6 +8,4 @@
       <input type="text" id="rucSuperior" value="<?php echo $_SESSION['empresa']['RucEmpresa'] ?>" hidden>
       <figcaption class="menuHo__nombre"><?php echo $_SESSION['empresa']['NomTitular'] ?><br><br><a class="ver__tienda2" href="#"><i class="fas fa-list-alt"></i> Ver tienda</a> </figcaption>
     </div>
-   
-
 </section>

@@ -315,11 +315,11 @@ section.contenedor {
 
 .pasos-sig img{
     width: 100%;
-    height: 250px;
+    height: 350px;
 }
 
 span#subtitulo {
-    
+   
     font-size: 14px;
     text-align: center;
     font-family: 'Source Sans Pro', sans-serif;
@@ -327,6 +327,7 @@ span#subtitulo {
 }
 
 .pasos-sig .subtitulo {
+   
     padding: auto;
     text-transform: uppercase;
     width: 100%;
@@ -335,6 +336,8 @@ span#subtitulo {
     color: black;   
 }
 .subtitulo h4{
+    color: #31CDD3;
+    font-weight: 600;
     font-size: 16px;
 }
 
@@ -345,7 +348,7 @@ span#subtitulo {
 .pasos-sig span .p {
     font-size: 15px;
     width: 90%;
-    margin: auto;
+    margin:0 auto;
 }
 
 section.tituloconecta{
@@ -469,11 +472,12 @@ h3#txtcaja {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin: 0;
 }
 
 .ver .btn-product{
     outline: none;
-    padding: 10px;
+    padding: auto;
     width: 50%;
     background-color: orange;
     color: white;
@@ -763,8 +767,14 @@ button#b{
         grid-template-columns: repeat(1,1fr);
     }
     .pasos-sig{
-        width: 100%;
+        width: 80%;
         margin: auto;
+    }
+    .pasos-sig img{
+        height: 300px;
+    }
+    .pasos-sig span .p{
+        padding: 0;
     }
     .img-check .zoom{
         width: 70%;
@@ -918,9 +928,9 @@ button#b{
         outline: none;
     } */
 
-    .pasos-sig{
+    /* .pasos-sig{
         width: 80%;
-    }
+    } */
 
     section#tunegocio{
         height: auto;
