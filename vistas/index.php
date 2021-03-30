@@ -7,10 +7,10 @@ include_once 'layouts/head.php';
 
 <body>
 
-	<div class="page-container">
+	<div class="page-video">
 		<?php include_once 'layouts/header.php' ?>
 		<div id="video" class="video-src">
-			<video loop muted autoplay preload="auto" src="../public/videos/dummy.mp4">
+			<video class="" loop muted autoplay preload="auto" src="../public/videos/dummy.mp4">
 				Tú navegador no soporta el video
 			</video>
        </div>
