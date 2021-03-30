@@ -114,4 +114,18 @@ class Producto {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     }
+
+    function orderBestSeller(int $rucBest)
+    {
+        //$sql = "SELECT * FROM `productos` WHERE `IdProducto` = {$idmyprod};";
+        $sql = "SELECT pedidos.IdProducto,p.Imagen,p.NomProducto,p.Descripcion,p.Precio, SUM(pedidos.Vendido) AS MAS_Vendidos 
+        FROM pedidos INNER JOIN productos as p WHERE pedidos.IdProducto=p.IdProducto AND p.RucEmpresa = {$rucBest} AND p.Estado = 1
+        GROUP BY pedidos.IdProducto
+        ORDER BY SUM(pedidos.Vendido) DESC
+        LIMIT 5";
+        $stmt = $this->cnx->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+        
+    }
 }
