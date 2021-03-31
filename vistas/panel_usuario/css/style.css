@@ -26,6 +26,12 @@ figure, body {
   justify-content: center;
   }
 
+.datos-v5{
+  background-color:#c7c7c7;
+}
+.datos-title{
+  background-color: rgb(131, 131, 131);
+}
 .page-container{
     width: 100%;
     background-color: white;
@@ -209,6 +215,9 @@ figure, body {
   .menu-top h2{
     font-size: 17px;
     font-weight: 400;
+  }
+  .datos-v5{
+    background-color: rgb(179, 179, 179);
   }
 }
 
