@@ -15,7 +15,8 @@ body{
 }
 
 body main{
-    width: 90%;
+    width: 100%;
+    background-color: #fff;
     height: 100%;
     padding-top: 20px;
 }
