@@ -38,6 +38,8 @@ $(function () {
 		ShowForm();
 		let data = tablePed.row($(this).parents("tr")).data();
 		$("#idPed").val(data["IdPedido"]);
+		//$("#img-Product").val(data["Imagen"]);
+		$("#img-Product").attr("src","imgproducts/"+data["Imagen"]);//add
 		$("#telefono").val(data["Telefono"]);
 		$("#direccion").val(data["Direccion"]);
 		$("#comments").val(data["Comentarios"]);

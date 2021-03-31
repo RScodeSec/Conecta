@@ -22,7 +22,7 @@ class Pedido {
         $this->cnx = Conexion::conectar();
     }
     function mostrarPedidosByRuc($ruc) {
-        $sql = "SELECT ped.IdPedido,prod.NomProducto,CONCAT(ped.nombre,' ',ped.apellido) AS NombreCompleto,ped.Cantidad,ped.Fecha,ped.Telefono,ped.Direccion,ped.Comentarios
+        $sql = "SELECT ped.IdPedido,prod.NomProducto,prod.Imagen,CONCAT(ped.nombre,' ',ped.apellido) AS NombreCompleto,ped.Cantidad,ped.Fecha,ped.Telefono,ped.Direccion,ped.Comentarios
                 FROM pedidos ped 
                 INNER JOIN productos prod 
                 ON ped.IdProducto = prod.IdProducto

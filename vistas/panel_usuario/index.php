@@ -50,5 +50,6 @@ include 'header.php';
     </main>
   </div>
 <?php include 'footer.php'; ?>
+<script type="text/javascript" src="./js/bestSeller.js"></script>
   </body>
 </html>

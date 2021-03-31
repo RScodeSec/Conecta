@@ -257,4 +257,9 @@ class ProductoController {
         $prodsModal = $this->modelo->productosByidSearch($_GET['idmyprod']);
         echo json_encode($prodsModal);
     }
+    function getBestSeller()
+    {
+        $resultBestSeller = $this->modelo->orderBestSeller($_GET['ruc']);
+        echo json_encode($resultBestSeller);
+    }
 }

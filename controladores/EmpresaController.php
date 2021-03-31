@@ -139,5 +139,6 @@ class EmpresaController {
     function showEmpresa() {
         return $this->modelo->showEmpresa($_GET['ruc']);
     }
+    
 }
 ?>
