@@ -265,7 +265,7 @@ include_once 'layouts/head.php';
 				<div class="img-check">
 					<div class="zoom">
 						<a href="https://youtu.be/X3ifOIzq68Q" target="_blank">
-						<img src="../public/imagenes/categorias-comercio/Ropa_textiles/Renzo/logo.jpg" alt="">
+						<img src="../public/imagenes/categorias-comercio/Ropa_textiles/Renzo/Conecta.webp" alt="Conecta">
 						</a>
 					</div>
 				

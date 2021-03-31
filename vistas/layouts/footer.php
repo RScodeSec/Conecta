@@ -30,9 +30,9 @@
             <br id="salto-foot-der">
             <h1 id="contactanos">CONTÁCTANOS</h1>
             <div class="wrapper-fot">
-                <a class="contact-fot" href="https://www.facebook.com/conectaperupymes/" target="_blank"> <img id="face" src="../public/imagenes/footer/facebook.png"></a>
+                <a class="contact-fot" href="https://web.facebook.com/conectaperunegocios/" target="_blank"> <img id="face" src="../public/imagenes/footer/facebook.png"></a>
                 <a class="contact-fot" href="https://wa.me/51936910425" target="_blank"> <img id="telefono" src="../public/imagenes/footer/telefono.png"></a>
-                <a class="contact-fot" href="https://www.instagram.com/conectaperunegocios/" target="_blank"> <img id="instagram" src="../public/imagenes/footer/instagram.png"></a>
+                <a class="contact-fot" href="https://www.instagram.com/conectaperunegocios/feed/" target="_blank"> <img id="instagram" src="../public/imagenes/footer/instagram.png"></a>
             </div>
         </div>
     </div>
