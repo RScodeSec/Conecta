@@ -114,7 +114,7 @@ include_once 'layouts/head.php'; ?>
 						</p>
 						<div class="social-section">
 							<div class="social social-tlf">
-								<a href=" <?php echo 'tel:+51'. $_SESSION['empresa']['Telefono']; ?> " target="_blank" ><i class="icon-phone" ></i></a>
+								<a href=" <?php echo 'https://wa.me/51'. $_SESSION['empresa']['Telefono']; ?> " target="_blank" ><i class="icon-phone" ></i></a>
 								<?php echo $_SESSION['empresa']['Telefono']; ?>
 							</div>
 							<?php if ($_SESSION['empresa']['Facebook'] != "") {
