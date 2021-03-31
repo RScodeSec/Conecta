@@ -6,9 +6,29 @@ let urlEmpImgs = "../index.php?controller=categoria&action=empresasByCategoria",
 		ruc: ruc,
 	};
 $("#docker-imgs").load(urlEmpImgs, data, function () {
-	$(".dck-img-container").click(function () {
+	//$(".dck-img-container").click(function () {
 		// Redirigir a otra empresa (ajax)
-	});
+		const otroEmpresa = document.querySelectorAll(
+			'.dck-img-container #logoMiotraruc'
+		);
+		for (let i = 0; i < otroEmpresa.length; i++) {
+			otroEmpresa[i].addEventListener('click', (e) => {
+				let rucEmpMismaCat = e.target.closest('.dck-img-container').querySelector('input[type="text"').value;
+				//alert(rucEmpMismaCat);
+				let url = "../index.php?controller=empresa&action=showEmpresa&ruc="+rucEmpMismaCat;
+				//alert(idmyprod);
+				$.ajax({
+					type: "GET",
+					url: url,
+					success: function () {
+						location.href = "empresa.php";
+					},
+				});
+
+			 });			
+
+		}
+	//});
 });
 let urlProds =
 	"../index.php?controller=producto&action=productosByRuc&ruc=" + ruc;

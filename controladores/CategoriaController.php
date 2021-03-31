@@ -67,9 +67,10 @@ class CategoriaController {
                     if ($numFigures > 0) {
                         if ($_POST['ruc'] != $emp['RucEmpresa']) {
                             $ruc = $emp['RucEmpresa'];
+                            $logo = $emp['Logo'];
                             $cuadros .= "<figure class='dck-img-container'>
-                                            <input type='text' value='{$ruc}' hidden>
-                                            <img src='' alt='Otro logo'>
+                                            <input id='miotraruc' type='text' value='{$ruc}' hidden>
+                                            <img id='logoMiotraruc'src='../vistas/panel_usuario/logoemp/{$logo}' alt='Otro logo'>
                                         </figure>";
                             $numFigures;
                         }
