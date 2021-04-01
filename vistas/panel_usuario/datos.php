@@ -11,7 +11,9 @@
         <div class="datos-generales">
           <div class="group">
           <label for="">Administrador</label>
-          <input class="datos__form" type="text" placeholder="Nombre" name="nombre" value="<?php echo $_SESSION['empresa']['NomTitular'] ?>" readonly>
+          <input class="datos__form" type="text" placeholder="Nombre" name="nombre" value="<?php echo $_SESSION['empresa']['NomTitular'] ?>" readonly title="Verifique correctamente sus
+datos, recuerde que este
+espacio no permite cambios">
           </div>
 
           <div class="group">
@@ -36,7 +38,9 @@
 
           <div class="group">
           <label for="">RUC</label>
-          <input class="datos__form" type="text" placeholder="RUC" name="ruc" id="ruc" value="<?php echo $_SESSION['empresa']['RucEmpresa'] ?>" readonly>
+          <input class="datos__form" type="text" placeholder="RUC" name="ruc" id="ruc" value="<?php echo $_SESSION['empresa']['RucEmpresa'] ?>" readonly title="Verifique correctamente sus
+datos, recuerde que este
+espacio no permite cambios">
           </div>
 
           <div class="descripcion">

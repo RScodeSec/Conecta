@@ -64,6 +64,14 @@
     font-family: 'calibri' ;
     font-size: 18px;
 }
+.ruc i{   
+    position: absolute;
+   width: 5%;
+   right: 7%;
+   color: red;
+   padding: 10px;
+   font-size: 15px;
+}
 
 ::-webkit-input-placeholder { 
     color:#00c1c8; 
