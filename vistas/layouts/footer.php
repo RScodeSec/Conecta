@@ -7,32 +7,28 @@
 
         </div>
         <div class="content-footercentro">
-            <h4 id="Suscribete">
+            <section id="contenedor-input">
+                <h4 class="Suscribete">
                 Suscríbete a Conecta Perú <br>
                 Enterate acerca de nuestros productos y servicios.
-            </h4>
-            <section id="input-footer ">
-                <section id="input-footer ">
-                    <input class="input-footer" type="text" aria-label="Search" placeholder="Tu correo electrónico" id="input-footer">
-
-                    <button class="btsubs" id="suscri" type="submit">SUSCRIBIRSE</button>
-                    <p id="n-c-c">Nunca compartiremos tu dirección de correo electrónico con tercera persona.</p>
-                </section>
-
-
+                </h4>
+                <div class="contenedor-input">
+                <input class="input-footer" type="text" aria-label="Search" placeholder="Tu correo electrónico" id="input-footer">
+                <button class="btsubs" id="suscri" type="submit">SUSCRIBIRSE</button>
+                </div>
+                <p id="n-c-c">Nunca compartiremos tu dirección de correo electrónico con tercera persona.</p>
             </section>
         </div>
         <div class="content-footerder">
-            <br id="salto-foot-der">
-            <br id="salto-foot-der">
-            <br id="salto-foot-der">
-            <br id="salto-foot-der">
-            <br id="salto-foot-der">
+            <div class="contactacnos">
             <h1 id="contactanos">CONTÁCTANOS</h1>
+            </div>
+            
             <div class="wrapper-fot">
-                <a class="contact-fot" href="https://web.facebook.com/conectaperunegocios/" target="_blank"> <img id="face" src="../public/imagenes/footer/facebook.png"></a>
-                <a class="contact-fot" href="https://wa.me/51936910425" target="_blank"> <img id="telefono" src="../public/imagenes/footer/telefono.png"></a>
-                <a class="contact-fot" href="https://www.instagram.com/conectaperunegocios/feed/" target="_blank"> <img id="instagram" src="../public/imagenes/footer/instagram.png"></a>
+                <a class="contact-fot" href="https://web.facebook.com/conectaperunegocios/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a class="contact-fot" href="https://wa.me/51936910425" target="_blank"><i class="fas fa-phone-alt"></i></i></a>
+                <a class="contact-fot" href="https://www.instagram.com/conectaperunegocios/feed/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a class="contact-fot" href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
     </div>

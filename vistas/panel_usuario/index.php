@@ -13,20 +13,24 @@ include 'header.php';
       
       <section class="container datos-v5 col-md-12 rounded-bottom">
          <br>
-       <div>
-          <table class="table table-hover table-Light table-responsive bg-light">
-            <thead class="bg-info text-white">
-              <!-- <tr>
-                <th scope="col">#</th>
+       <div class="table-responsive ">
+          <table id="ProductBestSeller" class="table table-hover table-Light bg-light">
+            <!-- <thead class="bg-info text-white">
+              <tr>
+              <th scope="col">#</th>
+                <th scope="col">Imagen</th>
                 <th scope="col">Producto</th>
                 <th scope="col">
                   Descripcion
                 </th>
-                <th scope="col">Estado</th>
-              </tr> -->
-            </thead>
+                <th scope="col">
+                  Precio
+                </th>
+                <th scope="col">Mas ventas</th>
+              </tr>
+            </thead> -->
             <tbody>
-              <tr>
+              <!-- <tr>
                 <th scope="row">1</th>
                 <td class="w-25"><img class="w-100" src="../panel_usuario/image/usuario.jpg" alt=""></td>
                 <td class="w-50">
@@ -37,10 +41,11 @@ include 'header.php';
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                 </td>
                 <td>Vendido: 45</td>
-              </tr>
+              </tr> -->
               
             </tbody>
         </table>
+       </div>
         <p class="text-center p-4">Actualizado a las <?php
         $meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
         date_default_timezone_set('America/Lima');

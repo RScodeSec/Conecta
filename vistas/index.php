@@ -10,9 +10,56 @@ include_once 'layouts/head.php';
 	<div class="page-video">
 		<?php include_once 'layouts/header.php' ?>
 		<div id="video" class="video-src">
-			<video class="" loop muted autoplay preload="auto" src="../public/videos/dummy.mp4">
-				Tú navegador no soporta el video
-			</video>
+			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators rounded-circle">
+				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+				<img src="../public/imagenes/sliders/img-01.webp" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+				<img src="../public/imagenes/sliders/img-02.webp" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+				<img src="../public/imagenes/sliders/img-03.webp" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+				<img src="../public/imagenes/sliders/img-04.webp" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+				<img src="../public/imagenes/sliders/img-05.webp" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+				<img src="../public/imagenes/sliders/img-06.webp" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+				<img src="../public/imagenes/sliders/img-07.webp" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+				<img src="../public/imagenes/sliders/img-08.webp" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+				<img src="../public/imagenes/sliders/img-09.webp" class="d-block w-100" alt="...">
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Anterior</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Adelante</span>
+			</a>
+			</div>
        </div>
     </div>
 

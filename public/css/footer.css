@@ -12,63 +12,63 @@ footer{
 }
 
 .contenedor-footer{
-    
-    display: flex;
+    height: 200px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     width: 100%;
-    height: 100%;
-    justify-content: space-evenly;
-    margin: auto;
+    background: #00c7ce;
 }
 
 .content-footeriz {
-    width: 25%;
-    height: 120px;
-    margin: 0px 0 0 33px;
+    width: 100%;
+    height: 200px;
 }
 
 .c-logo {
     margin: 0 auto;
     width: 50%;
-    height: 100%;
 }
 
-.c-logo #logofooter{
-    margin: 0;
+
+.c-logo img{
+    height:200px;
     width: 100%;
-    height: 100%;
-    object-fit: contain;
 }
 
 .content-footercentro {
-    width: 50%;
+    width: 100%;
     text-align: center;
 }
-
-input#input-footer {
+#contenedor-input{
+    display: grid;
+    grid-column: auto;
+}
+.contenedor-input{
      font-size: 15px; 
      font-weight: 700;
-     padding-left: 20px;
+     display: flex;
+     margin: 20px 0;
 }
 input.input-footer {
-    width: 60%;
-    height:70%;
+    width: 100%;
     border: 1px solid #00b2bb;
     border-radius: 30px;
-    padding: 5px 5px;
+    padding: 10px;
+    margin: 0px 5px;
     outline: none;
     color: #00b2bb;
 }
 
-
 button.btsubs {
+    width: 70%;
     background: #ff9e00;
     color: #e4f4f4;
     font-size: 18px;
     border-radius: 30px;
     text-decoration: none;
     border: 1px solid #e5e5e5;
-    width: 30%;
     font-weight: 700;
+    margin: 0 5px;
 }
 
 p#n-c-c {
@@ -76,10 +76,10 @@ p#n-c-c {
     color: #fff;
 }
 
-h4#Suscribete {
+.Suscribete {
     color: #fff;
     font-size: 16px;
-    margin-bottom: 10px;
+    padding: 10px 0;
 }
 
 p#i{
@@ -87,9 +87,12 @@ p#i{
 }
 
 .content-footerder {
-    width: 25%;
+    width: 100%;
+    display: grid;
 }
-
+.content-footerder .contactacnos{
+    margin-top: 100px;
+}
 .wrapper-fot{
     width: 100%;
     display: flex;
@@ -97,8 +100,23 @@ p#i{
 }
 
 .wrapper-fot .contact-fot{
-    margin-right: 5px;
+    width: 10%;
+    color:#00b2bb;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;   
 }
+  .contact-fot i{
+      width: 50%;
+      padding: 5px 15px ;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      text-align: center;
+      background-color: #fff;
+      border-radius: 10px;
+  }
 
 h1#contactanos {
     color: #fff;
@@ -116,9 +134,8 @@ img#instagram {
 .otros {
     background: #00c7ce;
     width: 100%;
-    height: 30px;
-    display: flex;
-    justify-content: center;
+    padding: 20px;
+    
 }
 .c-otros {
     width: 100%;
@@ -131,106 +148,46 @@ a#otros {
     font-size: 12px;
     text-align: center;
 }
-@media screen and (max-width:1200px){
-footer {
-        background: #00c7ce;
-        width: 100%;
-        flex-wrap: wrap;
-        height: 335px;
-        align-items: center;
-    }
 
-    .contenedor-footer {
-        display: block;
-        width: 100%;
-        height: 100%;
-        justify-content: space-evenly;
-        margin: auto;
-    }
 
-    .content-footeriz {
-        width: 50%;
-        height: 120px;
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 10px;
+@media(max-width:1000px){
+    .contenedor-footer{
+        grid-template-columns: auto;
+        height: 500px;
     }
-    .otros {
-        background: #00c7ce;
-        width: 100%;
-        height: 30px;
-        display: flex;
-        display: block;
-        margin: 0 auto;
-    }
-    .c-logo{
-        width: 100%;
-        height: 100%;
-    }
-
-    .content-footercentro {
-        width: 90%;
-        padding: 0; 
-        display: block;
-        margin: 0 auto;
-        height: 22px;
-    }
-    h4#Suscribete {
-        font-size: 12px;
-        text-align: center;
-    }
-
-    .content-footerder {
-        width: 100%;
-        display: block;
-        margin: 0 auto;
-        margin-top: 40px;
-    }
-    .otros {
-        background: #00c7ce;
-        width: 100%;
-        height: 80px;
-    }
-    .c-otros {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    input#input-footer{
-        width: 100%;
-    }
-
-    input#input-footer{
-        font-size: 13px;
-    }
-
-    button.btsubs {
-        display: block;
-        width: 50%;
-        margin-top: 5px;
-        margin: 0 auto;
-    }
-    p#n-c-c {
-        margin: 0 auto;
-        display: block;
-        font-size: 12px;
-        text-align: center;
+    .content-footerder .contactacnos{
+        margin: 0;
     }
 }
-
-@media screen and (max-width:425px){
-    input#input-footer{
-        margin-bottom: 10px;
+@media screen and (max-width:600px){
+    .contenedor-footer{
+        grid-template-columns: repeat(1,1fr);
+        height: 500px;
     }
-
+    .content-footerder .contactacnos{
+        margin: 0;
+    }
+    .content-footeriz {
+        height: 150px;
+    }
+    .c-logo img{
+        height: 150px;
+    }
+    .contenedor-input{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
     button.btsubs{
-        margin-bottom: 10px;
+        width: 50%;
+        margin:2px auto;
+        padding: 5px;
     }
-
-    h1#contactanos{
-        margin-top: 15px;
+    input.input-footer{
+        width: 90%;
+        margin: auto;
     }
+    .Suscribete {
+        font-weight: 300;
+    }
+    
 }
