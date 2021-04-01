@@ -17,8 +17,12 @@ $(function () {
 		columns: [
             { data: null },
 			{ data: "Imagen" },
-			{ data: "NomProducto" },
-			{ data: "Descripcion" },
+			//{ data: "NomProducto" },
+			//{ data: "Descripcion" },
+            { data: null,
+                render: function(data, type, row, meta) {
+                return row.NomProducto + ' <br>(' + row.Descripcion + ')'
+            }},
 			{ data: "Precio" },
             { data: "MAS_Vendidos" },
             
@@ -32,6 +36,9 @@ $(function () {
                 }
             },
 		],
+        initComplete: function() {
+            $('.thead').hide();
+        },
 	});
     tableProd.on( 'order.dt search.dt', function () {
         tableProd.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
