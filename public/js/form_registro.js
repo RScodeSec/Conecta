@@ -4,7 +4,7 @@ const closeButton = document.querySelector('.close-button');
 const suscribit = document.getElementById('suscri')
 const correo = document.querySelector('.input-footer');
 
-
+const registro = document.querySelector('#registrar');
 
 suscribit.addEventListener('click',()=>{
 	if(correo.value.length>1){
@@ -94,7 +94,13 @@ function CheckRegistro() {
 			telefono: $("#numero").val(),
 		};
 		return getFormResponse(url, parametros);
+
 }
+
+// registro.addEventListener('submit',(e)=>{
+// 	e.preventDefault()
+// 	CheckRegistro()
+// })
 
 $('#tip-categorias').load("../index.php?controller=categoria&action=listarCategorias");
 

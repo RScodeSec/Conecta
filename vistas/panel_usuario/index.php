@@ -7,14 +7,15 @@ include 'header.php';
     <?php include 'menu.html'; ?>
     <main class="main">
       <?php include 'superior.php'; ?>
-      <div class="container  datos-title  col-md-12 rounded-top">
+      <br>
+      <div class="container  datos-title  col-md-10 rounded-top">
       <h4 class="py-3 my-0"> <i class="fas fa-medal"></i> Destacados</h4>
       </div>
       
-      <section class="container datos-v5 col-md-12 rounded-bottom">
+      <section class="container datos-v5 col-md-10 rounded-bottom">
          <br>
        <div class="table-responsive ">
-          <table id="ProductBestSeller" class="table table-hover table-Light bg-light">
+          <table id="ProductBestSeller" class="table table-hover table-Light bg-light table-sm">
             <!-- <thead class="bg-info text-white">
               <tr>
               <th scope="col">#</th>
@@ -29,7 +30,7 @@ include 'header.php';
                 <th scope="col">Mas ventas</th>
               </tr>
             </thead> -->
-            <tbody>
+            <tbody id="body">
               <!-- <tr>
                 <th scope="row">1</th>
                 <td class="w-25"><img class="w-100" src="../panel_usuario/image/usuario.jpg" alt=""></td>

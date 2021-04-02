@@ -311,7 +311,7 @@ include_once 'layouts/head.php';
                 </div>
 				<div class="img-check">
 					<div class="zoom">
-						<a href="https://youtu.be/X3ifOIzq68Q" target="_blank">
+						<a href="https://youtu.be/QP6A7u7mCCs" target="_blank">
 						<img src="../public/imagenes/categorias-comercio/Ropa_textiles/Renzo/Conecta.webp" alt="Conecta">
 						</a>
 					</div>

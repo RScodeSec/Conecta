@@ -28,7 +28,7 @@
                 <a class="contact-fot" href="https://web.facebook.com/conectaperunegocios/" target="_blank"><i class="fab fa-facebook-f"></i></a>
                 <a class="contact-fot" href="https://wa.me/51936910425" target="_blank"><i class="fas fa-phone-alt"></i></i></a>
                 <a class="contact-fot" href="https://www.instagram.com/conectaperunegocios/feed/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a class="contact-fot" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="contact-fot" href="https://www.linkedin.com/company/conecta-per%C3%BA"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
     </div>

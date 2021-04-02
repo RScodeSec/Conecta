@@ -115,9 +115,7 @@ figure, body {
   box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
   justify-content: space-between;
   align-items: center;
-  margin: auto;
-  padding:0 20px ;
-  
+
 }
 .menu-top h2{
   color:#FFA500;
@@ -147,7 +145,32 @@ figure, body {
 .contenido{
   background: #f6f6f6;
 }
-
+/* TABLE */
+.columna{
+  border: 1px solid red;
+  width: 20%;
+  padding: 0;
+  margin: 0;
+}
+.columna-id{
+  width: 1%;
+}
+.columna-imagen{
+  width: 5%;
+}
+.columna-descripcion{
+  width: 10%;
+}
+.columna-precio{
+  width: 5%;
+  text-align: end;
+}
+.columna-temporal{
+  width: 3%;
+}
+.columna-imagen img{
+  width: 50%;
+}
 @media screen and (max-width: 768px){
   .header{
     flex:initial;
@@ -219,6 +242,20 @@ figure, body {
   .datos-v5{
     background-color: rgb(179, 179, 179);
   }
+  .columna-imagen{
+    width: 10%;
+  }
+  .columna-imagen img{
+    width:100%;
+    padding: 0;
+    height: 100px;
+  }
+  .columna-descripcion p{
+    font-size: 15px;
+  }
+  .columna-precio {
+    font-size: 15px;
+  }
 }
 
 
@@ -227,30 +264,23 @@ figure, body {
   text-decoration: none;
   color:black;
   font-size: 16px;
+  padding: 10px;
   text-align: center;
-  display: none;
-}
-.ver__tienda2{
-  text-decoration: none;
-  color: #868686;
-  font-size: 16px;
-  text-align: center;
+
 }
 
 @media screen and (min-width: 768px) {
   .ver__tienda2{
-    display: none;
+    
     font-size: 1rem;
     
   }
 }
 
 @media screen and (min-width: 768px) {
-  .ver__tienda1{
-    display: block;
-    font-size: 1rem;
-    color: #868686;
-  }
+  
+
+  
 }
 
 
