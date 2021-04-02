@@ -3,8 +3,32 @@ const registerButton = document.querySelector('.register');
 const closeButton = document.querySelector('.close-button');
 const suscribit = document.getElementById('suscri')
 const correo = document.querySelector('.input-footer');
-
 const registro = document.querySelector('#registrar');
+const telefono = document.getElementById('numero')
+
+telefono.addEventListener('keyup',()=>{
+	if(telefono.value.trim().length >8){
+		Swal.fire({
+			title: 'Advertencia!',
+			text: "Recuerde verificar que sus datos sean correctos. Una vez enviado el formulario, no podrá realizar cambios en la sección de RUC y nombre del negocio",
+			icon: 'warning',
+			showCancelButton: true,
+			confirmButtonColor: '#3085d6',
+			cancelButtonColor: '#d33',
+			cancelButtonText:'Volver',
+			confirmButtonText: 'Continuar'
+		  }).then((result) => {
+			if (result.isConfirmed) {
+			  registro.classList.add('anima-boton')
+			  
+			}else{
+				$("#ruc").focus()
+				$("#negocio").focus()
+			}
+		})
+	}
+	
+})
 
 suscribit.addEventListener('click',()=>{
 	if(correo.value.length>1){

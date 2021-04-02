@@ -30,7 +30,7 @@
 		<input class="controles" type="text" name="numero" id="numero" placeholder="Número de celular" onkeydown="return validateNumber(event)" maxlength="9" required>
 
 		<div class="btn-container">
-			<input class="boton" type="submit" value="REGISTRARSE">
+			<input class="boton" id="registrar" type="submit" value="REGISTRARSE">
 		</div>
 	</form>
 </div>

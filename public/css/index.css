@@ -124,6 +124,18 @@ video{
     
 }
 
+.anima-boton{
+    animation:5s 3 boton ease-in;
+}
+@keyframes boton{
+    50%{
+        transform: scale(0.9);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
 /* ------ Animacion Slider ------ */
 /* @-webkit-keyframes slide_animation{
     0%{left: 2560px;}
