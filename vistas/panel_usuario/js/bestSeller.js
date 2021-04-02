@@ -13,11 +13,12 @@ const listar= async()=>{
     .then(response => response.json())
     .then(data=>{
         let template = ''
-       
+        let valor = 0
         data.forEach(e=> {
+            valor++
             template+=`
             <tr>
-                <th class="columna-id" scope="row">${e.IdProducto}</th>
+                <th class="columna-id" scope="row">${valor}</th>
                 <td class="columna-imagen"><img class="" src="imgproducts/${e.Imagen}" alt=""></td>
                 <td class="columna-descripcion">
                   <div class="d-flex justify-content-between">
