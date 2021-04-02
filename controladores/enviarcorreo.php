@@ -21,7 +21,7 @@ if (isset($_POST["enviar"])) {
         
         $mail = new PHPMailer();
         $mail->setFrom($Email,$Nombres);
-        $mail->addAddress('utestroger@gmail.com'); //correo a la que le llegaran los correos 
+        $mail->addAddress('20conectaperu@gmail.com'); //correo a la que le llegaran los correos 
         $mail->addReplyTo($Email,$Nombres);
     
         // Aqu¨ª van los datos que apareceran en el correo que reciba  
