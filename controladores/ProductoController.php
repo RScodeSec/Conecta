@@ -207,7 +207,7 @@ class ProductoController {
                             </div>
                             <span>
                                 <p class='p'>
-                                    ".$p['Descripcion']."
+                                    ".'S/ '.$p['Precio']."
                                 </p>
                             </span>
                             <div class='ver'>

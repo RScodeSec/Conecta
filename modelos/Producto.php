@@ -91,7 +91,15 @@ class Producto {
 
     ///ad my code 
     function featuredProduct(){
-        $sql = "SELECT * FROM productos WHERE RucEmpresa IN (select distinct RucEmpresa from productos) limit 4";
+        $sql = "SELECT DISTINCT e.RucEmpresa,pr.NomProducto,pr.Precio,pr.ImagenUrl,c.nombre as Categoria,p.Vendido FROM pedidos as p 
+        inner Join productos pr 
+        on p.IdProducto = pr.IdProducto 
+        inner join empresas e 
+        on e.RucEmpresa = pr.RucEmpresa 
+        inner join categorias c 
+        on c.IdCategoria=e.IdCategoria 
+        Where p.Vendido = 1 AND p.Estado=1 AND p.Cantidad = (SELECT max(p.Cantidad) from pedidos) 
+        GROUP BY c.IdCategoria";
         $stmt = $this->cnx->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
