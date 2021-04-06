@@ -124,17 +124,6 @@ video{
     
 }
 
-.anima-boton{
-    animation:5s 3 boton ease-in;
-}
-@keyframes boton{
-    50%{
-        transform: scale(0.9);
-    }
-    100%{
-        transform: scale(1);
-    }
-}
 
 /* ------ Animacion Slider ------ */
 /* @-webkit-keyframes slide_animation{
@@ -783,7 +772,7 @@ button#b{
         grid-template-columns: repeat(1,1fr);
     }
     .pasos-sig{
-        width: 80%;
+        width: 65%;
         margin: auto;
     }
     .pasos-sig img{

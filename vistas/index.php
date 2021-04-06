@@ -315,8 +315,6 @@ include_once 'layouts/head.php';
 						<img src="../public/imagenes/categorias-comercio/Ropa_textiles/Renzo/Conecta.webp" alt="Conecta">
 						</a>
 					</div>
-				
-				
 				</div>
 				
 			</div>

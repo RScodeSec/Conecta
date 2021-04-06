@@ -60,7 +60,7 @@ body {
   height: 40px;
   border-radius: 40px;
   position: absolute;
-  z-index: 6000;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,6 +71,7 @@ body {
 }
 
 .nav {
+  z-index: 1;
   flex: 1;
   padding-top: 3rem;
 }
@@ -104,16 +105,16 @@ body {
 /* ESTILOS ARREGLADOS */
 .datos-generales .group{
   display: grid;
-  width: 100%;
+  width: 90%;
 }
 .group input{
-  width: 90%;
+  width: 100%;
 }
 .selectores{
   width: 90%;
 }
 .descripcion{
-  width: 90%;
+  width: 80%;
 }
 
 .menu__link {
@@ -139,18 +140,18 @@ body {
   position: relative;
   margin-bottom: .3rem;
 }
-
+/* 
 .menuHo.initial {
   position: initial;
-}
-
+} */
+/* 
 .menuHo__img {
   width: 15%;
   padding: 1.5rem;
   padding-left: 3rem;
   min-width: 175px;
   min-height: 120px;
-}
+} */
 
 .menuHo__usuario {
   
@@ -159,46 +160,46 @@ body {
 
 }
 
-.ver__tienda1 {
+/* .ver__tienda1 {
   text-decoration: none;
   color: black;
   font-size: 16px;
   text-align: center;
   display: none;
-}
-
+} */
+/* 
 .ver__tienda2 {
   text-decoration: none;
   color: #868686;
   font-size: 16px;
   text-align: center;
-}
+} */
 
 @media screen and (min-width: 768px) {
-  .ver__tienda2 {
+  /* .ver__tienda2 {
     display: none;
     font-size: 1rem;
 
-  }
+  } */
 }
 
 @media screen and (min-width: 768px) {
-  .ver__tienda1 {
+  /* .ver__tienda1 {
     display: block;
     font-size: 1rem;
     color: #868686;
-  }
+  } */
 }
-.ver__tienda1,
+/* .ver__tienda1,
 .ver__tienda2{
   font-family: 'Myriad Pro';
-}
+} */
 
-.ver__tienda1:hover,
+/* .ver__tienda1:hover,
 .ver__tienda2:hover {
   color: rgb(0, 178, 187);
 
-}
+} */
 
 .menuHo__usuarioSection {
 
@@ -226,89 +227,6 @@ body {
 }
 
 
-@media screen and (max-width: 768px) {
-  .body {
-    display: initial;
-  }
-
-  .header {
-    flex: initial;
-    position: fixed;
-    width: 100%;
-    height: 90px;
-    padding-left: 15px;
-    background-color: #e5e5e5;
-    border: none;
-  }
-
-  .header__logo,
-  .header__img {
-    height: 100%;
-    object-fit: contain;
-    padding: 5px;
-  }
-
-  .header__img {
-    width: 30%;
-    margin: initial;
-  }
-
-  .nav {
-    padding: 0;
-    top: 90px;
-    transform: translateX(-120%);
-    position: fixed;
-    width: 100%;
-    height: calc(100% - 90px);
-    z-index: 5000;
-    background-color: #f5f5f5;
-    ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 1s;
-  }
-
-  .menu {
-    align-items: center;
-  }
-
-  .menu__item {
-    width: 120px;
-
-  }
-
-  .nav.is-active {
-    left: 0;
-    transform: translateX(0%);
-  }
-
-  .burger-button {
-    display: flex;
-  }
-
-  .menuHo__img {
-    padding-left: 2rem;
-  }
-
-  .main {
-    margin-top: 90px;
-  }
-}
-
-@media screen and (max-width:320px) {
-  .menuHo__img {
-    padding-left: 1rem;
-  }
-}
-
-.formulario {
-  padding: .8rem;
-  padding-bottom: 1rem;
-}
-
-
-
 .datos__titulo {
   font-size: 24px;
   margin: 0;
@@ -317,11 +235,11 @@ body {
 }
 
 .datos__form {
- 
+  width: 100%;
   border-radius: 5px;
   border: .5px solid gray;
   background-color: #f5f5f5;
-  height: 29px;
+  height: 50px;
 }
 
 .selectores {
@@ -342,7 +260,7 @@ body {
 .descripcion,
 .selectores,
 .imagen {
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .texto {
@@ -378,23 +296,122 @@ body {
 .imagen__submit:hover {
   background-color: #118394;
 }
+.formulario {
+  background: #f6f6f6;
+}
+input::-webkit-input-placeholder {
+  color: rgb(0, 178, 187);
+
+}
+
+.datos__form {
+  width: 100%;
+  border: 1px solid rgb(0, 178, 187);
+}
+
+label {
+  color: rgb(0, 178, 187);
+  font-weight: 600;
+  font-family: Helvetica, sans-serif;
+}
+
+.indicacion__texto {
+  text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  .body {
+    display: initial;
+  }
+
+  .header {
+    flex: initial;
+    position: fixed;
+    width: 90%;
+    height: 90px;
+    padding-left: 15px;
+    background-color: #e5e5e5;
+    border: none;
+  }
+
+  .header__logo,
+  .header__img {
+    height: 100%;
+    object-fit: contain;
+    padding: 5px;
+  }
+
+  .header__img {
+    width: 30%;
+    margin: initial;
+  }
+
+  .nav {
+    padding: 0;
+    top: 90px;
+    transform: translateX(-120%);
+    position: fixed;
+    width: 100%;
+    height: calc(100% - 90px);
+    z-index: 1;
+    background-color: #f5f5f5;
+    ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+  }
+
+  .menu {
+    align-items: center;
+  }
+
+  .menu__item {
+    width: 120px;
+
+  }
+
+  .nav.is-active {
+    z-index:100;
+    left: 0;
+    transform: translateX(0%);
+  }
+
+  .burger-button {
+    display: flex;
+  }
+
+  /* .menuHo__img {
+    padding-left: 2rem;
+  } */
+
+  .main {
+    margin-top: 90px;
+  }
+}
+
+@media screen and (max-width:320px) {
+  .menuHo__img {
+    padding-left: 1rem;
+  }
+}
+
 
 @media screen and (min-width: 768px) {
   .formulario {
-    padding-left: 40px;
-    padding-top: 40px;
-    padding-right: 40px;
+    padding: 40px;
   }
 
   .datos {
     flex-direction: row;
     flex-wrap: wrap;
-    width: 103%;
+    width: 100%;
   }
 
   .datos__form {
-    width: 48%;
-    margin-right: .3rem;
+    width: 100%;
+    
   }
 
  
@@ -432,7 +449,8 @@ body {
   }
 
   .datos__form {
-    height: 38px;
+    width: 100%;
+    height: 50px;
     background-color: white
   }
 
@@ -477,9 +495,7 @@ body {
   }
 }
 
-.formulario {
-  background: #f6f6f6;
-}
+
 
 @media screen and (max-width: 768px) {
   .menu__item {
@@ -501,7 +517,7 @@ body {
     position: fixed;
     width: 100%;
     height: calc(100% - 90px);
-    z-index: 5000;
+    z-index:100;
     background-color: #e5e5e5;
     display: flex;
     justify-content: center;
@@ -518,28 +534,53 @@ body {
 }
 
 
-input::-webkit-input-placeholder {
-  color: rgb(0, 178, 187);
 
-}
-
-.datos__form {
-  border: 1px solid rgb(0, 178, 187);
-}
-
-label {
-  color: rgb(0, 178, 187);
-  font-weight: 600;
-  font-family: Helvetica, sans-serif;
-}
-
-.indicacion__texto {
-  text-align: center;
-}
 
 @media (max-width:800px){
   .datos-generales{
+    width: 100%;
     grid-template-columns: repeat(1,1fr);
   }
+  .formulario{
+    width: 90%;
+    margin: auto;
+  }
+  
+}
+
+@media (max-width:500px){
+  .formulario{
+    margin: auto;
+    width: 90%;
+  }
+  .datos-generales .group{
+    display: grid;
+    width: 100%;
+    font-size: 18px;
+  }
+  .descripcion{
+    width: 100%;
+    font-size: 18px;
+  }
+  .selectores{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(1,1fr);
+   
+  }
+  
+.departamento,
+.provincia,
+.distrito {
+  width: 100%;
+  font-size: 18px;
+}
+.texto{
+  font-size: 16px;
+  font-weight: 400;
+}
+ 
+
+
   
 }

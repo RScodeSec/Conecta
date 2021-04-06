@@ -1,5 +1,6 @@
 <?php include 'header.php'; ?>
 <link rel="stylesheet" href="css/datos.css">
+<link rel="stylesheet" href="css/style.css" />  
 </head>
 <body class="body">
   <?php include 'menu.html'; ?>
@@ -45,7 +46,7 @@ espacio no permite cambios">
 
           <div class="descripcion">
             <label for="descripcion">Descripción de tu tienda:</label><br>
-            <textarea class="datos__form text_area" id="descripcion" name="descripcion" required><?php echo $_SESSION['empresa']['Descripcion'] ?></textarea>
+            <textarea class="datos__form text_area" rows="8" cols="50" id="descripcion" name="descripcion" required ><?php echo $_SESSION['empresa']['Descripcion'] ?></textarea>
           </div>
           <div class="selectores">
             <div class="departamento">
