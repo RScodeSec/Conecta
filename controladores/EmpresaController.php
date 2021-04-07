@@ -1,5 +1,7 @@
 <?php
 require_once 'modelos/Empresa.php';
+require_once 'vendor/autoload.php';
+use Verot\Upload\Upload;
 
 class EmpresaController {
     private $modelo;
@@ -79,43 +81,60 @@ class EmpresaController {
         
         $e->ruc = $_POST['ruc'];
 
-        $imagenName = $_FILES['file']['name']; 
-
         if($_POST['nameimage'] ==""){
 
-                     
-        
-            //-------- MODIFIED NAME --------------
-            $extension = pathinfo($imagenName, PATHINFO_EXTENSION);
+            $path = './vistas/panel_usuario/logoemp/';
+            $file = $_FILES['file'];
+            $foo  = new Upload($file);
+            if (!$foo) {
+                redirect('datos.php?error=no-uploaded');
+            } 
+            /* __________image 1___________*/
             $random = rand(0,99);
-            $rename = $random.date('Ymd').$imagenName;
-            $newname = $rename;
-            //for obtain extension of image .'.'.$extension
-            $imageurl = "./vistas/panel_usuario/logoemp/" . $newname;
-    
-            $imagenTemp = $_FILES['file']['tmp_name'];
-            move_uploaded_file($imagenTemp, $imageurl);
-            //copy($imagenTemp,$imagenUrl);
+            $nameimg1 = pathinfo($_FILES['file']['name'], PATHINFO_FILENAME);
+            $size_x                  = 270;
+            $renameimg1 = $foo->file_new_name_body = sprintf('%s_logo_%s', $nameimg1, time().$random);
+            $foo->image_resize       = true;
+            $foo->image_ratio_x      = true;
+            $foo->image_y            = $size_x;
+            $foo->image_convert = 'webp';
+            $foo->process($path);
+            if ($foo->processed) {
+                $foo->clean();
+            } else {
+                echo sprintf('Error: %s<br>', $foo->error);
+            }
         }else{
             
 
             $eliminarimage = "./vistas/panel_usuario/logoemp/" . $_POST['nameimage'];
             unlink($eliminarimage);
 
-            $extension = pathinfo($imagenName, PATHINFO_EXTENSION);
+            $path = './vistas/panel_usuario/logoemp/';
+            $file = $_FILES['file'];
+            $foo  = new Upload($file);
+            if (!$foo) {
+                redirect('datos.php?error=no-uploaded');
+            }
             $random = rand(0,99);
-            $rename = $random.date('Ymd').$imagenName;
-            $newname = $rename;
-            //for obtain extension of image .'.'.$extension
-            $imageurl = "./vistas/panel_usuario/logoemp/" . $newname;
-    
-            $imagenTemp = $_FILES['file']['tmp_name'];
-            move_uploaded_file($imagenTemp, $imageurl);
+            $nameimg1 = pathinfo($_FILES['file']['name'], PATHINFO_FILENAME);
+            $size_x                  = 270;
+            $renameimg1 = $foo->file_new_name_body = sprintf('%s_logo_%s', $nameimg1, time().$random);
+            $foo->image_resize       = true;
+            $foo->image_ratio_x      = true;
+            $foo->image_y            = $size_x;
+            $foo->image_convert = 'webp';
+            $foo->process($path);
+            if ($foo->processed) {
+                $foo->clean();
+            } else {
+                echo sprintf('Error: %s<br>', $foo->error);
+            }
 
         }
         //ad in controller 
-        $e->logo = $newname;
-        $e->logoUrl = $imageurl;
+        $e->logo = $renameimg1.'.webp';
+        $e->logoUrl = $path.$renameimg1.'.webp';
 
         $e->emailEmp = str_replace(" ","",$_POST['email']);
         $e->descripcion = trim($_POST['descripcion']);
