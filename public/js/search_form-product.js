@@ -4,7 +4,7 @@ console.log(inputsearch);
 let urlProds =
                 "../index.php?controller=producto&action=searchLiveProduct&inputsearch=" + inputsearch;
     $("#products-container-search").load(urlProds, { type: "article" }, function () {
-
+		
         const productsButton = document.querySelectorAll(
             '#products-container-search .btn-product'
         );
@@ -22,6 +22,7 @@ let urlProds =
                     
                     success: function (data){
                         var mydatos =JSON.parse(data);
+						
                         ShowProduct()
                         console.log(mydatos)
                         var IdProducto = mydatos[0]['IdProducto'];
