@@ -33,8 +33,10 @@ class EmpresaController {
         $direccion = trim($_POST['direccion']);
         $titular = trim($_POST['titular']);
         $celular = $_POST['telefono'];
-        if (empty($clave) || empty($negocio) || empty($direccion) || empty($titular) || ctype_digit($titular)
-            || $id_categoria == 0 || strlen($ruc) != 11 || strlen($celular) != 9) {
+        //empty($clave) || empty($negocio) || empty($direccion) || empty($titular) || ctype_digit($titular)
+        //|| $id_categoria == 0 || strlen($ruc) != 11 || strlen($celular) != 9
+        if (empty($clave) || empty($negocio) || empty($titular) || ctype_digit($titular)
+            || $id_categoria == 0 || strlen($celular) != 9) {
             return ['bool' => false, 'error' => 'datosIncorrectos'];
         }
         if (empty($this->modelo->buscarByRuc($ruc))) {
@@ -80,6 +82,8 @@ class EmpresaController {
         $e = new Empresa();
         
         $e->ruc = $_POST['ruc'];
+        $e->numRucEmp = $_POST['numRucEmp'];
+        $e->nomEmp = $_POST['nameBusiness'];
 
         if($_POST['nameimage'] ==""){
 
@@ -157,6 +161,16 @@ class EmpresaController {
     }
     function showEmpresa() {
         return $this->modelo->showEmpresa($_GET['ruc']);
+    }
+
+    function listShowCategory(){
+        $categoryBusiness = $this->modelo->showCategory();
+        $options = '<option value="0">Seleccione una Categoria</option>';
+        foreach ($categoryBusiness as $dep) {
+            $selected = ($_GET['phpcategoria'] == $dep['IdCategoria']) ? ' selected' : '';
+            $options.= '<option value="'.$dep['IdCategoria'].'"'.$selected.'>'.$dep['nombre'].'</option>';
+        }
+        return $options;
     }
     
 }

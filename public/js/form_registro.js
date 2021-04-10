@@ -10,7 +10,7 @@ telefono.addEventListener('keyup',()=>{
 	if(telefono.value.trim().length >8){
 		Swal.fire({
 			title: 'Advertencia!',
-			text: "Recuerde verificar que sus datos sean correctos. Una vez enviado el formulario, no podrá realizar cambios en la sección de RUC y nombre del negocio",
+			text: "Recuerde verificar que sus datos sean correctos. Una vez enviado el formulario, no podrá realizar cambios en la sección de nombre del negocio",
 			icon: 'warning',
 			showCancelButton: true,
 			confirmButtonColor: '#3085d6',

@@ -8,22 +8,20 @@
 		<input class="controles" type="password" name="contrasena" id="contrasena" placeholder="Contraseña" required>
 
 		<div class="ruc">
-		<input class="controles" type="text" name="ruc" id="ruc" placeholder="RUC del negocio" onkeydown="return validateNumber(event)" maxlength="11" required title="Verifique correctamente sus
-          datos, recuerde que este
-          espacio no permite cambios"><i>✱</i>
+			<input class="controles" type="text" name="ruc" id="ruc" placeholder="RUC del negocio" onkeydown="return validateNumber(event)" maxlength="11">
 		</div>
 		
 
 		<div class="ruc">
-		<input class="controles" type="text" name="negocio" id="negocio" placeholder="Nombre del negocio" required title="Verifique correctamente sus
-          datos, recuerde que este
-          espacio no permite cambios"><i>✱</i>
+			<input class="controles" type="text" name="negocio" id="negocio" placeholder="Nombre del negocio" required title="Verifique correctamente sus
+			datos, recuerde que este
+			espacio no permite cambios"><i>✱</i>
 		</div>
 		
 
-		<select name="tip-categorias" id="tip-categorias" class="tip-categorias"></select>
+		<select name="tip-categorias" required id="tip-categorias" class="tip-categorias"></select>
 
-		<input class="controles" type="text" name="direccion" id="direccion" placeholder="Dirección o referencia" required>
+		<input class="controles" type="text" name="direccion" id="direccion" placeholder="Dirección o referencia" >
 
 		<input class="controles" type="text" name="nombre" id="nombre" placeholder="Nombre del titular" required>
 

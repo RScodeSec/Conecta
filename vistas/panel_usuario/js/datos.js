@@ -1,7 +1,8 @@
 let dep = $("#departamento"),
 	prov = $("#provincia"),
 	dist = $("#distrito");
-
+let category = $("#categoria");
+category.load("../../index.php?controller=empresa&action=listShowCategory&phpcategoria=" +$("#phpcategoria").val());
 function updateSelects() {
 	if ($(this).val() == 0) {
 		prov.html('<option value="0">Seleccione una provincia...</option>');
@@ -45,8 +46,12 @@ function CheckDatos() {
 		var fdata = new FormData();
 
         let ruc = $('#ruc').val();
+		let numRucEmp = $("#numruc").val();
+		let nameBusiness = $("#nameBusiness").val();
+
         let emailPers = $('#emailEmp').val();
 		let email = $("#emailEmp").val();
+		
 
         let clave = $('#clave').val();
 		let descripcion = $('#descripcion').val();
@@ -64,6 +69,9 @@ function CheckDatos() {
         let file = $('#file')[0].files[0];
 
         fdata.append('ruc', ruc);
+		fdata.append('numRucEmp', numRucEmp);
+		fdata.append('nameBusiness', nameBusiness);
+
         fdata.append('emailPers', emailPers);
 
 		fdata.append('email', email);
@@ -91,6 +99,7 @@ function CheckDatos() {
 		processData: false,
 		contentType: false,
 		success: function (response) {
+			//console.log(response);
 			let msg,
 				icon,
 				json = JSON.parse(response);
