@@ -54,6 +54,9 @@ function CheckDatos() {
 		
 
         let clave = $('#clave').val();
+		let categoryemp = $("#categoria").val();
+
+
 		let descripcion = $('#descripcion').val();
         let distrito = $('#distrito').val();
         let departamento = $('#departamento').val();
@@ -77,6 +80,8 @@ function CheckDatos() {
 		fdata.append('email', email);
 
         fdata.append('clave', clave);
+		fdata.append('categoryemp',categoryemp);
+
 		fdata.append('descripcion', descripcion);
         fdata.append('distrito', distrito);
         fdata.append('departamento', departamento);

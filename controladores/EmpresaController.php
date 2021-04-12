@@ -141,6 +141,7 @@ class EmpresaController {
         $e->logoUrl = $path.$renameimg1.'.webp';
 
         $e->emailEmp = str_replace(" ","",$_POST['email']);
+        $e->id_categoria = $_POST['categoryemp'];
         $e->descripcion = trim($_POST['descripcion']);
         $e->direccion = trim($_POST['direccion']);
         $e->distrito = $_POST['distrito'];

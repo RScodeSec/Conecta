@@ -79,6 +79,7 @@ class Empresa {
         $sql = "UPDATE `empresas` SET `NumRucEmp` = ?,
                                     `NomEmpresa` = ?,
                                     `EmailEmp` = ?,
+                                    `IdCategoria` = ?,
                                     `Descripcion` = ?,
                                     `Direccion` = ?,
                                     `Distrito` = ?,
@@ -94,18 +95,20 @@ class Empresa {
         $stmt->bindParam(2,$e->nomEmp, PDO::PARAM_STR);
 
         $stmt->bindParam(3,$e->emailEmp, PDO::PARAM_STR);
-        $stmt->bindParam(4,$e->descripcion, PDO::PARAM_STR);
-        $stmt->bindParam(5,$e->direccion, PDO::PARAM_STR);
-        $stmt->bindParam(6,$e->distrito, PDO::PARAM_STR);
-        $stmt->bindParam(7,$e->telefono, PDO::PARAM_STR,9);
-        $stmt->bindParam(8,$e->whatsapp, PDO::PARAM_STR,9);
-        $stmt->bindParam(9,$e->facebook, PDO::PARAM_STR);
-        $stmt->bindParam(10,$e->instagram, PDO::PARAM_STR);
+        $stmt->bindParam(4,$e->id_categoria, PDO::PARAM_STR);
 
-        $stmt->bindParam(11,$e->logo, PDO::PARAM_STR);
-        $stmt->bindParam(12,$e->logoUrl, PDO::PARAM_STR);
+        $stmt->bindParam(5,$e->descripcion, PDO::PARAM_STR);
+        $stmt->bindParam(6,$e->direccion, PDO::PARAM_STR);
+        $stmt->bindParam(7,$e->distrito, PDO::PARAM_STR);
+        $stmt->bindParam(8,$e->telefono, PDO::PARAM_STR,9);
+        $stmt->bindParam(9,$e->whatsapp, PDO::PARAM_STR,9);
+        $stmt->bindParam(10,$e->facebook, PDO::PARAM_STR);
+        $stmt->bindParam(11,$e->instagram, PDO::PARAM_STR);
 
-        $stmt->bindParam(13,$e->ruc, PDO::PARAM_STR);
+        $stmt->bindParam(12,$e->logo, PDO::PARAM_STR);
+        $stmt->bindParam(13,$e->logoUrl, PDO::PARAM_STR);
+
+        $stmt->bindParam(14,$e->ruc, PDO::PARAM_STR);
 
         return $stmt->execute();
     }
