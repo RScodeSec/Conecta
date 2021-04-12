@@ -174,5 +174,26 @@ class EmpresaController {
         return $options;
     }
     
+    function updatePassword()
+    {
+        $e = new Empresa();
+        $e->ruc = $_POST['ruc'];
+        $oldpassword = $_POST['oldpassword'];
+        $newpassword = $_POST['newpassword'];
+        $passHased = password_hash($newpassword,PASSWORD_DEFAULT);
+        $checkCredential =  $this->modelo->serchPassword($e->ruc);
+        if(password_verify($oldpassword,$checkCredential->Contrasena)){
+            $changed= $this->modelo->updatePassword($e->ruc,$passHased);
+            echo $changed ? json_encode(['title' => 'Perfecto!', 'text' => 'Credencial Actualizado Correctamente','icon' => 'success']):
+            json_encode(['title' => 'Noo!', 'text' => 'No se Pudo Actualizar Credencial','icon' => 'error']);
+        }
+        else{
+            echo json_encode(['title' => 'Noo!', 'text' => 'No Coincide Tu Credencial Actual','icon' => 'error']);
+        }
+        //return $checkCredential->Contrasena; 
+        
+    }
+    
+    
 }
 ?>

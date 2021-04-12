@@ -133,4 +133,18 @@ class Empresa {
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    function serchPassword(string $ruc){
+        $sql = "SELECT Contrasena FROM empresas WHERE RucEmpresa = '{$ruc}'";
+        $stmt = $this->cnx->prepare($sql);
+        $stmt->execute(); 
+        return $stmt->fetch(PDO::FETCH_OBJ);       
+    }
+
+    function updatePassword(string $ruc,string $passwordHashed){
+        $sql = "UPDATE empresas SET Contrasena ='{$passwordHashed}' WHERE RucEmpresa = '{$ruc}'";
+        $stmt = $this->cnx->prepare($sql);
+        $stmt->execute(); 
+        return $stmt->execute();    
+    }
 }
