@@ -15,8 +15,7 @@ class Categoria {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
     function empresasByCategoria($idCat) {
-        $sql = "SELECT `RucEmpresa`,`NomEmpresa`,`Logo` 
-                FROM `empresas` WHERE `IdCategoria` = {$idCat}"; 
+        $sql = "call EmpresaByCat($idCat)"; 
         if($this->cnx->query($sql,PDO::FETCH_ASSOC)){
 
             return $this->cnx->query($sql,PDO::FETCH_ASSOC)->fetchAll();

@@ -105,14 +105,16 @@ figure, body {
   
 
 .menuHo.initial{
+    padding: 20px;
     display: grid;
     grid-template-columns: repeat(1,1fr);
    
 }
 .menuHo.initial .menu-top{
+  background-color: transparent;
   display: flex;
   width:100%;
-  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.3);
+ 
   justify-content: space-between;
   align-items: center;
 
@@ -215,6 +217,7 @@ figure, body {
         width: 160px;
       }
       .nav.is-active{
+        z-index: 100;
         left: 0px;
         transform: translateX(0%);
       }
@@ -232,12 +235,15 @@ figure, body {
 }
 
 @media screen and (max-width:500px){
+  .menuHo.initial{
+    padding: 10px;
+  }
   .menuHo__img{
     padding-left: 1rem;
   }
   .menu-top h2{
-    font-size: 17px;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 600;
   }
   .datos-v5{
     background-color: rgb(179, 179, 179);

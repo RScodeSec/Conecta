@@ -107,6 +107,19 @@
     border-radius: 20px;
 }
 
+.anima-boton{
+    animation:2s 3 boton ease-in;
+}
+@keyframes boton{
+    50%{
+        transform: scale(0.9);
+        /* transform: rotate(360deg);transform: rotate(360deg); */
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
 @media screen and (max-width: 320px){
     .form-registro{
         width: 320px;

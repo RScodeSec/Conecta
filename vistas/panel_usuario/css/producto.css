@@ -241,6 +241,7 @@ label {
 }
 
 .tabla {
+    z-index: -100;
     width: 1050px;
     background-color: white;
     border-collapse: collapse;
@@ -343,6 +344,7 @@ label {
 }
 
 #productosTabla td, .tabla__celda {
+    z-index: -100;
     border: solid 1px #c1c1c1;
     padding: 0 20px;
     height: 50px;
@@ -360,4 +362,11 @@ label {
     color: black;
     font-size: 18px;
     font-weight: 400;
+}
+
+@media (max-width:500px){
+    .dataTables_scroll{
+        z-index: -1000;
+        
+    }
 }

@@ -31,8 +31,8 @@ class Producto {
         $this->cnx = Conexion::conectar();
     }
    
-    function productosByRuc(string $ruc){
-        $sql = "SELECT * FROM `productos` WHERE `RucEmpresa` = ? AND `Estado` = true;";
+    function productosByRuc(int $ruc){
+        $sql = "call ProductosByRyc($ruc)";
         $stmt = $this->cnx->prepare($sql);
         $stmt->execute(array($ruc));
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -106,9 +106,9 @@ class Producto {
     }
 
     //HERE CODE FOR SEARCH:::::::::::::::::::::::::::::::::::::::::::::::::::::
-    function searchedProduct(string $name)
+    function searchedProduct($name)
     {
-        $sql = "SELECT * FROM productos WHERE NomProducto LIKE '%{$name}%'";
+        $sql = "call BuscarProductoNombre('$name')";
         $stmt = $this->cnx->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);       
@@ -126,11 +126,7 @@ class Producto {
     function orderBestSeller(int $rucBest)
     {
         //$sql = "SELECT * FROM `productos` WHERE `IdProducto` = {$idmyprod};";
-        $sql = "SELECT pedidos.IdProducto,p.Imagen,p.NomProducto,p.Descripcion,p.Precio, SUM(pedidos.Vendido) AS MAS_Vendidos 
-        FROM pedidos INNER JOIN productos as p WHERE pedidos.IdProducto=p.IdProducto AND p.RucEmpresa = {$rucBest} AND p.Estado = 1 AND pedidos.Vendido =1
-        GROUP BY pedidos.IdProducto
-        ORDER BY SUM(pedidos.Vendido) DESC
-        LIMIT 5";
+        $sql = "call OrderBestSeller($rucBest)";
         $stmt = $this->cnx->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_OBJ);
