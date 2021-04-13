@@ -98,7 +98,7 @@ class Producto {
         on e.RucEmpresa = pr.RucEmpresa 
         inner join categorias c 
         on c.IdCategoria=e.IdCategoria 
-        Where p.Vendido = 1 AND pr.Estado=1 AND p.Estado=1 AND p.Cantidad = (SELECT max(p.Cantidad) from pedidos) 
+        Where p.Vendido = 1 AND pr.Estado=1 AND p.Estado=1 AND p.Cantidad = (SELECT max(Cantidad) from pedidos) 
         GROUP BY c.IdCategoria";
         $stmt = $this->cnx->prepare($sql);
         $stmt->execute();
