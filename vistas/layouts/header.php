@@ -42,8 +42,8 @@
 
 		<input class="controles" type="email" name="correologin" id="correologin" placeholder="Correo electrónico" required>
 		<input class="controles" type="password" name="contrasenalogin" id="contrasenalogin" placeholder="Contraseña" required>
-
 		<input class="boton" type="submit" value="INGRESAR">
+		<a class="olvide" href="recuperar-contraseña.php">Olvide Mi contraseña</a>
 	</form>
 </div>
 

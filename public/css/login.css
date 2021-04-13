@@ -25,7 +25,7 @@
 .form-login{
     width: 400px;
     height: auto;
-    max-height: 300px;
+    max-height: 320px;
     background:white;
     padding: 15px;
     margin-top: 30px;
@@ -35,12 +35,25 @@
     position: relative;
     
 }
+.form-login .olvide{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #00c1c8;
+    cursor:pointer;
+}
+.form-login .olvide:active{
+    transform: scale(1.1);
+}
 .form-login h4{
     text-align: center;
     font-size: 40px;
     margin-bottom: 25px;
     color: #00c1c8;
 }
+
 
 .form-login span{
     position: absolute;

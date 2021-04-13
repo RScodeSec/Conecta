@@ -6,7 +6,7 @@
 <?php include 'menu.html'; ?>
     <main class="main">
       <?php include 'superior.php'; ?>
-    <div class="container col-md-4 my-2">
+    <div class="container col-md-4 my-2" style="z-index: 0;">
         <div class="card">
             <div class="card-header">
                <h4 class="text-center">Cambiar Contraseña</h4>

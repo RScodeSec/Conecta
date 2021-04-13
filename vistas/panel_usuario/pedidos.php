@@ -3,9 +3,11 @@ include 'header.php';
 ?>
 <link rel="stylesheet" href="css/form-pedido.css">
 <link rel="stylesheet" href="css/pedidos.css" />
+
 </head>
 
 <body class="body">
+<?php include 'menu.html'; ?>
   <!-- Formulario ver pedido -->
   <div class="form-container">
     <form action="" class="frm-product" onsubmit="return false">
@@ -42,10 +44,10 @@ include 'header.php';
   </div>
 
   <div class="page-container">
-    <?php include 'menu.html'; ?>
+    
     <main class="main">
       <?php include 'superior.php'; ?>
-      <section class="contenido">
+      <section class="contenido-pedidos">
         <div class="space">
           <div class="titulo">
             <div class="cont-titulo">
