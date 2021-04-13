@@ -307,7 +307,7 @@ include_once 'layouts/head.php';
             
 			<div class="img-click">
 				<div class="img-title">
-				<h2>Crea tu Propia Tienda Virtual con Conecta</h2>
+				<h2>Aprende cómo registrarte a Conecta</h2>
                 </div>
 				<div class="img-check">
 					<div class="zoom">

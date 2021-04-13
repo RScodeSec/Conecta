@@ -4,18 +4,21 @@
     padding: 0px;
 }
 
-.contenido{
+.contenido-pedidos{
+    width: 95%;
+    margin:auto;
     font-family: Helvetica, sans-serif;
 }
 
-.contenido.ventas{
+.contenido-pedidos.ventas{
+    margin-top:1% ;
     background-color: #f6f6f6;
 }
 
-.contenido .space{
+.contenido-pedidos .space{
+    margin-top: 1%;
     min-height: calc(100vh - 120px);
     padding-left: 40px;
-    padding-top: 40px;
     padding-right: 40px;
     padding-bottom: 40px;
 }
@@ -189,9 +192,21 @@
     color: black;
     margin-top: .5rem;
 }
+@media (max-width:600px){
+    .contenido-pedidos{
+        width: 100%;
+    }
+    .contenido-pedidos .space{
+        margin-top: 1%;
+        min-height: calc(100vh - 120px);
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+}
 
 @media screen and (max-width:425px){
-    .contenido .space{
+    .contenido-pedidos .space{
         padding-left:20px;
         padding-top: 20px;
         padding-right: 20px;
@@ -206,7 +221,7 @@
 }
 
 @media screen and (max-width:320px){
-    .contenido .space{
+    .contenido-pedidos .space{
         padding-left:10px;
         padding-top: 10px;
         padding-right: 10px;

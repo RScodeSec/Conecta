@@ -1,0 +1,25 @@
+BuscarProductoNombre =>
+SELECT * FROM productos as p WHERE p.NomProducto LIKE CONCAT('%',name, '%')
+
+EmpresaByCat =>
+SELECT e.RucEmpresa,e.NomEmpresa,e.Logo 
+ FROM empresas as e WHERE IdCategoria = idcat
+
+OrderBestSeller =>
+SELECT pe.IdProducto,p.Imagen,p.NomProducto,p.Descripcion,p.Precio, COUNT(pe.IdPedido) AS MAS_Vendidos 
+FROM pedidos as pe INNER JOIN productos as p WHERE pe.IdProducto=p.IdProducto AND p.RucEmpresa = ruc AND p.Estado = 1 AND pe.Vendido =1
+        GROUP BY p.IdProducto
+        ORDER BY MAS_Vendidos DESC
+        LIMIT 5
+
+PedidosCantidad =>
+SELECT DISTINCT pr.IdProducto,MAX(p.Cantidad) as PedidosCan,pr.NomProducto as Produto,c.nombre as Categoria,
+e.NomEmpresa as Empresa,p.Vendido FROM pedidos as p
+inner Join productos pr on p.IdProducto = pr.IdProducto
+inner join empresas e on e.RucEmpresa = pr.RucEmpresa
+inner join categorias c on c.IdCategoria=e.IdCategoria
+Where p.Vendido = 1
+GROUP BY c.IdCategoria DESC,rand(),c.nombre DESC ORDER BY PedidosCan DESC,c.IdCategoria ASC
+
+ProductosByRyc
+SELECT * FROM productos WHERE RucEmpresa = ruc  AND Estado = true

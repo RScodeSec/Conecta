@@ -11,7 +11,7 @@ include 'header.php';
     <main class="main">
       <?php include 'superior.php'; ?>
 
-      <section class="contenido ventas">
+      <section class="contenido-pedidos ventas">
         <div class="space">
           <div class="titulo">
             <div class="cont-titulo">
