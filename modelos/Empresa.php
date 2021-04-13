@@ -147,4 +147,29 @@ class Empresa {
         $stmt->execute(); 
         return $stmt->execute();    
     }
+
+    function searchCredential(string $email){
+        $sql = "SELECT EmailPers,RucEmpresa FROM empresas WHERE EmailPers = '{$email}'";
+        $stmt = $this->cnx->prepare($sql);
+        $stmt->execute();        
+        return $stmt->fetch(PDO::FETCH_OBJ);       
+    }
+
+    function insertToken(string $token,string $email){
+        $sql = "UPDATE empresas SET token ='{$token}' WHERE EmailPers = '{$email}'";
+        $stmt = $this->cnx->prepare($sql);
+        $stmt->execute(); 
+        return $stmt->execute();    
+    }
+
+    function resetMyPassword(string $mytoken,string $mynewpass, int $idRuc)
+    {
+        $sql = "CALL resetPass_withToken('$mytoken','$mynewpass', $idRuc)";
+        $stmt = $this->cnx->prepare($sql);
+        $stmt->execute(); 
+        return $stmt->execute(); 
+        
+    }
+
+    
 }

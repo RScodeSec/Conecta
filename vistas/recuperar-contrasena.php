@@ -1,5 +1,5 @@
 <?php
-$title = "Categorías";
+$title = "Solicitar Nueva Credencial";
 include_once 'layouts/head.php';
 ?>
 <link rel="stylesheet" type="text/css" href="../public/css/categorias.css">
@@ -15,24 +15,25 @@ include_once 'layouts/head.php';
 		<div class="container col-md-6">
 			<div class="card">
 				<div class="card-header">
-					<h5 class="card-title">Recuperar la Contraseña</h5>
+					<h5 class="card-title">Solicitar Restablecimiento de Mi Credencial</h5>
 				</div>
 				<div class="card-body">
-				<form>
+				<form id="solicitar">
 					<div class="form-group">
-						<label for="Contraseña1">Contraseña</label>
-						<input type="text" class="form-control" id="Contraseña1" placeholder="Contraseña">
+						<label for="Contraseña1">Correo</label>
+						<input type="email" class="form-control" id="email" placeholder="Ingrese su Email Registrado" required>
 					</div>
-					<div class="form-group">
+					<!--<div class="form-group">
 						<label for="Contraseña2">Confirma Contraseña</label>
 						<input type="text" class="form-control" id="Contraseña2" placeholder="Confirma Contraseña">
-					</div>
+					</div>-->
 					<button type="submit" class="btn btn-primary mb-2">Confirmar</button>
 				</form>
 				</div>
 				<div class="card-footer text-muted">
-					Recuerda memorizar tu contraseña
+					Recuerda Revisar Su  bandeja de Correo no Deseado!!
 				</div>
+				
 			</div>
 			<br>
 		
@@ -42,7 +43,8 @@ include_once 'layouts/head.php';
 
 	</div>
 	<?php include_once 'layouts/scripts.php'; ?>
-	<script src="../public/js/categorias.js"></script>
+	<script src="../public/js/recover.js"></script>
+	<!--<script src="../public/js/categorias.js"></script>-->
 </body>
 
 </html>

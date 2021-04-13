@@ -1,5 +1,10 @@
 <?php
 require_once 'modelos/Empresa.php';
+//php mailer
+require 'public/mailer/PHPMailerAutoload.php';
+require 'public/mailer/class.phpmailer.php';
+require 'public/mailer/class.smtp.php';
+// end phpmailer
 require_once 'vendor/autoload.php';
 use Verot\Upload\Upload;
 
@@ -191,6 +196,68 @@ class EmpresaController {
             echo json_encode(['title' => 'Noo!', 'text' => 'No Coincide Tu Credencial Actual','icon' => 'error']);
         }
         //return $checkCredential->Contrasena; 
+        
+    }
+
+    function verifyCredential()
+    {
+        $e = new Empresa();
+        $e->emailPers = $_POST['email'];
+        $resultCredential = $this->modelo->searchCredential($e->emailPers); 
+        if(empty($resultCredential)){
+            //echo "Email no registrado";
+            echo json_encode(['title' => 'Noo!', 'text' => 'Email no registrado','icon' => 'error']);
+        }
+        else{
+            $token = uniqid();
+            $this->modelo->insertToken($token, $resultCredential->EmailPers);
+            //__________________________________________________
+                                
+                $mail = new PHPMailer();
+                $mail->setFrom('20conectaperu@gmail.com','Restablecimiento de Contraseña');
+                $mail->addAddress($resultCredential->EmailPers); //correo a la que le llegaran los correos 
+                $mail->addReplyTo('20conectaperu@gmail.com','Restablecimiento de Contraseña');
+            
+                // Aqu¨ª van los datos que apareceran en el correo que reciba  
+                $mail->WordWrap = 50; 
+                $mail->IsHTML(true);      
+                $mail->Subject='Recupera su Contraseña';
+                $mail->Body='Para Restablecer su Contraseña as CLICK en el enlace <a href="http://localhost/Conecta/vistas/recover.php?token='.$token.'&id='.$resultCredential->RucEmpresa.'">Click Aqui</a>';
+
+                // Datos del servidor SMTP
+                $mail->IsSMTP();
+                $mail->CharSet = 'UTF-8';
+                $mail->SMTPAuth = true;
+                $mail->SMTPSecure = "ssl";
+                $mail->Host = "mail.conecta-peru.com"; //servidor smtp, esto lo puedes dejar igual
+                $mail->Port = 465; //puerto smtp de gmail, tambien lo puedes dejar igual
+                $mail->Username = 'informes@conecta-peru.com';  // en local, tu correo gmail // en servidor, nombre usuario
+                $mail->Password = ';iv(K79yN.R^'; // en local, tu contrasena gmail //en servidor, contraseña de usuario
+                
+                if ($mail->Send()){
+                    echo json_encode(['title' => 'Perfecto!', 'text' => 'En Breve Recibira Un Correo para restablecer su Contraseña','icon' => 'success']);
+                }
+                else{
+                    echo json_encode(['title' => 'Noo!', 'text' => 'Hubo Problemas en realizar la Peticion','icon' => 'error']);
+                }
+
+            //______________________________________________
+
+            //echo $resultCredential->EmailPers;
+            // echo $resultCredential->RucEmpresa;
+        }
+        //echo $resultCredential->EmailPers;
+        //echo "gaa";
+    }
+
+    function resetNewCredential()
+    {
+        $mytoken = $_POST['urltoken'];
+        $newPass = password_hash($_POST['newpassword'],PASSWORD_DEFAULT);
+        $idRuc = $_POST['idRuc'];
+        $newpassword = $this->modelo->resetMyPassword($mytoken,$newPass,$idRuc); 
+        echo $newpassword ? json_encode(['title' => 'Perfecto!', 'text' => 'Contraseña Actualizado Correctamente','icon' => 'success']):
+        json_encode(['title' => 'Noo!', 'text' => 'No se Pudo Actualizar Contraseña','icon' => 'error']);
         
     }
     
