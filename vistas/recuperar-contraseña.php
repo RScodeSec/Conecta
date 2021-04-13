@@ -21,13 +21,13 @@ include_once 'layouts/head.php';
 				<form>
 					<div class="form-group">
 						<label for="Contraseña1">Contraseña</label>
-						<input type="text" class="form-control" id="Contraseña1" placeholder="Contraseña">
+						<input type="password" class="form-control" id="Contraseña1" placeholder="Contraseña">
 					</div>
 					<div class="form-group">
 						<label for="Contraseña2">Confirma Contraseña</label>
-						<input type="text" class="form-control" id="Contraseña2" placeholder="Confirma Contraseña">
+						<input type="password" class="form-control" id="Contraseña2" placeholder="Confirma Contraseña">
 					</div>
-					<button type="submit" class="btn btn-primary mb-2">Confirmar</button>
+					<button type="submit" class="btn mb-2 text-light" style="background-color: #FF9E00;">Confirmar</button>
 				</form>
 				</div>
 				<div class="card-footer text-muted">
