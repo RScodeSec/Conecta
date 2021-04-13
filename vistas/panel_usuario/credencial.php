@@ -13,15 +13,15 @@
             </div>
             <div class="card-body">
                 <form class="form-inline" id="credential">
-                    <div class="form-group">
+                    <div class="form-group mb-2">
                         <label for="contraseñaAnterior">Contraseña Actual</label>
                         <input type=password" class="form-control" id="contraseñaAnterior" placeholder="Contraseña" required>
                     </div>
-                    <div class="form-group mb-2">
+                    <div class="form-group mb-3">
                         <label for="ContraseñaNueva">Nueva Contraseña</label>
                         <input type="password" class="form-control" id="ContraseñaNueva" placeholder="Nueva Contraseña" required>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Cambiar</button>
+                    <button type="submit" class="btn text-white" style="background-color: #FFA500;">Cambiar</button>
                 </form>
             </div>
             <div class="card-footer text-muted">
