@@ -19,7 +19,7 @@ espacio no permite cambios">
 
           <div class="group">
           <label for="">Tienda</label>
-          <input class="datos__form" type="text" placeholder="Mi empresa" name="mi_empresa" value="<?php echo $_SESSION['empresa']['NomEmpresa'] ?>" readonly>
+          <input class="datos__form" type="text" placeholder="Mi empresa" name="mi_empresa" name="nameBusiness" id="nameBusiness" value="<?php echo $_SESSION['empresa']['NomEmpresa'] ?>">
           </div>
 
           <div class="group">
@@ -33,15 +33,15 @@ espacio no permite cambios">
           </div>
 
           <div class="group">
-          <label for="">Contraseña</label>
-          <input class="datos__form" type="password" placeholder="Contraseña" name="contrasena" value="<?php echo $_SESSION['empresa']['Contrasena'] ?>" readonly>
+            <label for="categoria">Categoria</label>
+            <!--<input class="datos__form" type="password" placeholder="Contraseña" name="contrasena" value="</?php echo $_SESSION['empresa']['Contrasena'] ?>" readonly>-->
+              <input type="text" id="phpcategoria" value="<?php echo $_SESSION['empresa']['IdCategoria'] ?>" hidden>
+              <select class="datos__form  select-hidden" id="categoria" name="categoria"></select>
           </div>
-
+          <input class="datos__form" type="text" placeholder="RUC" name="ruc" id="ruc" value="<?php echo $_SESSION['empresa']['RucEmpresa'] ?>" hidden>
           <div class="group">
-          <label for="">RUC</label>
-          <input class="datos__form" type="text" placeholder="RUC" name="ruc" id="ruc" value="<?php echo $_SESSION['empresa']['RucEmpresa'] ?>" readonly title="Verifique correctamente sus
-datos, recuerde que este
-espacio no permite cambios">
+            <label for="numruc">RUC</label>
+            <input class="datos__form" type="text" placeholder="RUC" name="numruc" id="numruc" value="<?php echo $_SESSION['empresa']['NumRucEmp'] ?>" >
           </div>
 
           <div class="descripcion">

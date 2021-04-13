@@ -1,5 +1,7 @@
 <?php
 require_once 'modelos/Producto.php';
+require_once 'vendor/autoload.php';
+use Verot\Upload\Upload;
 
 class ProductoController {
     private $modelo;
@@ -44,19 +46,18 @@ class ProductoController {
     //here funtion for add new product and your image
     function agregarProducto(){
         $ruc = $_POST['ruc'];
-        $imagenName = $_FILES['file']['name'];
+       
         
         //-------- MODIFIED NAME --------------
+        /* $imagenName = $_FILES['file']['name'];
         $extension = pathinfo($imagenName, PATHINFO_EXTENSION);
         $random = rand(0,99);
         $rename = $random.date('YmdH').$imagenName;
         $newname = $rename;
-        //for obtain extension of image .'.'.$extension
         $imageurl = "./vistas/panel_usuario/imgproducts/" . $newname;
-
         $imagenTemp = $_FILES['file']['tmp_name'];
         move_uploaded_file($imagenTemp, $imageurl);
-        //copy($imagenTemp,$imagenUrl);
+
         //:::::::::::code for add two and three image::::::::::::::::::::::
         $random1 = rand(0,99);
         $imagenName1 = $_FILES['file1']['name'];
@@ -72,13 +73,61 @@ class ProductoController {
         $newname2 = $rename2;
         $imageurl2 = "./vistas/panel_usuario/imgproducts/" . $newname2;
         $imagenTemp2= $_FILES['file2']['tmp_name'];
-        move_uploaded_file($imagenTemp2, $imageurl2);
+        move_uploaded_file($imagenTemp2, $imageurl2);*/
 
-        $imagen = $newname;
-        $ImagenUrl = $imageurl;
+        
+        $path = './vistas/panel_usuario/imgproducts/';
+        $file = $_FILES['file'];
+        $foo  = new Upload($file);
+        if (!$foo) {
+            redirect('Producto.php?error=no-uploaded');
+        } 
+        /* __________image 1___________*/
+        $random = rand(0,99);
+        $nameimg1 = pathinfo($_FILES['file']['name'], PATHINFO_FILENAME);
+        $size_x                  = 300;
+        $renameimg1 = $foo->file_new_name_body = sprintf('%s_producto_%s', $nameimg1, time().$random);
+        $foo->image_resize       = true;
+        $foo->image_ratio_x      = true;
+        $foo->image_y            = $size_x;
+        $foo->image_convert = 'webp';
+        $foo->process($path);
+        /* __________image 2___________*/
+        $random1 = rand(0,99);
+        $file1 = $_FILES['file1'];
+        $foo  = new Upload($file1);
+        $nameimg2 = pathinfo($_FILES['file1']['name'], PATHINFO_FILENAME);
+        $size_x                  = 300;
+        $renameimg2 = $foo->file_new_name_body = sprintf('%s_producto_%s', $nameimg2, time().$random1);
+        $foo->image_resize       = true;
+        $foo->image_ratio_x      = true;
+        $foo->image_y            = $size_x;
+        $foo->image_convert = 'webp';
+        $foo->process($path);
+        /* __________image 3___________*/
+        $random2 = rand(0,99);
+        $file2 = $_FILES['file2'];
+        $foo  = new Upload($file2);
+        $nameimg3 = pathinfo($_FILES['file1']['name'], PATHINFO_FILENAME);
+        $size_x                  = 300;
+        $renameimg3 = $foo->file_new_name_body = sprintf('%s_producto_%s', $nameimg3, time().$random2);
+        $foo->image_resize       = true;
+        $foo->image_ratio_x      = true;
+        $foo->image_y            = $size_x;
+        $foo->image_convert = 'webp';
+        $foo->process($path);
+        if ($foo->processed) {
+            $foo->clean();
+          } else {
+            echo sprintf('Error: %s<br>', $foo->error);
+          } 
+
+
+        $imagen = $renameimg1.'.webp';
+        $ImagenUrl = $path.$renameimg1.'.webp';
         //end my code add
-        $imagen1 = $newname1;
-        $imagen2 = $newname2;
+        $imagen1 = $renameimg2.'.webp';
+        $imagen2 = $renameimg3.'.webp';
 
 
         $nombre = trim($_POST['nombre']);
@@ -98,51 +147,70 @@ class ProductoController {
     
     function editarProducto(){
         $idProducto = (int)$_POST['id'];
-        //////////////////77////////// AD CODE FOR UPDATE IMAGE ////////////////
+
+        $path = './vistas/panel_usuario/imgproducts/';
+        $file = $_FILES['file'];
+        $foo  = new Upload($file);
+        if (!$foo) {
+            redirect('Producto.php?error=no-uploaded');
+        }
+
+        /*____Image 1__________*/
+        $random = rand(0,99);
         $eliminarimage = "./vistas/panel_usuario/imgproducts/" . $_POST['nameimage'];
         unlink($eliminarimage);
-        //::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-        $imagenName = $_FILES['file']['name'];
-        
-        //-------- MODIFIED NAME --------------
-        $extension = pathinfo($imagenName, PATHINFO_EXTENSION);
-        $random = rand(0,99);
-        $rename = $random.date('YmdH').$imagenName;
-        $newname = $rename;
-        //for obtain extension of image .'.'.$extension
-        $imageurl = "./vistas/panel_usuario/imgproducts/" . $newname;
 
-        $imagenTemp = $_FILES['file']['tmp_name'];
-        move_uploaded_file($imagenTemp, $imageurl);
+        $nameimg1 = pathinfo($_FILES['file']['name'], PATHINFO_FILENAME);
+        $size_x                  = 300;
+        $renameimg1 = $foo->file_new_name_body = sprintf('%s_producto_%s', $nameimg1, time().$random);
+        $foo->image_resize       = true;
+        $foo->image_ratio_x      = true;
+        $foo->image_y            = $size_x;
+        $foo->image_convert = 'webp';
+        $foo->process($path);       
         
-        //image two and three:::::::::::::::::::::
+         /*____Image 2__________*/
+         $random1 = rand(0,99);
         $eliminarimage1 = "./vistas/panel_usuario/imgproducts/" . $_POST['nameimage1'];
         unlink($eliminarimage1);
-        $random1 = rand(0,99);
-        $imagenName1 = $_FILES['file1']['name'];
-        $rename1 = $random1.date('Ymdi').$imagenName1;
-        $newname1 = $rename1;
-        $imageurl1 = "./vistas/panel_usuario/imgproducts/" . $newname1;
-        $imagenTemp1 = $_FILES['file1']['tmp_name'];
-        move_uploaded_file($imagenTemp1, $imageurl1);
 
+        $file1 = $_FILES['file1'];
+        $foo  = new Upload($file1);
+        $nameimg2 = pathinfo($_FILES['file1']['name'], PATHINFO_FILENAME);
+        $size_x                  = 300;
+        $renameimg2 = $foo->file_new_name_body = sprintf('%s_producto_%s', $nameimg2, time().$random1);
+        $foo->image_resize       = true;
+        $foo->image_ratio_x      = true;
+        $foo->image_y            = $size_x;
+        $foo->image_convert = 'webp';
+        $foo->process($path);
+        
+         /*____Image 3__________*/
+         $random2 = rand(0,99);
         $eliminarimage2 = "./vistas/panel_usuario/imgproducts/" . $_POST['nameimage2'];
         unlink($eliminarimage2);
-        $random2 = rand(0,99);
-        $imagenName2 = $_FILES['file2']['name'];
-        $rename2 = $random2.date('Ymds').$imagenName2;
-        $newname2 = $rename2;
-        $imageurl2 = "./vistas/panel_usuario/imgproducts/" . $newname2;
-        $imagenTemp2= $_FILES['file2']['tmp_name'];
-        move_uploaded_file($imagenTemp2, $imageurl2);
+        $file2 = $_FILES['file2'];
+        $foo  = new Upload($file2);
+        $nameimg3 = pathinfo($_FILES['file1']['name'], PATHINFO_FILENAME);
+        $size_x                  = 300;
+        $renameimg3 = $foo->file_new_name_body = sprintf('%s_producto_%s', $nameimg3, time().$random2);
+        $foo->image_resize       = true;
+        $foo->image_ratio_x      = true;
+        $foo->image_y            = $size_x;
+        $foo->image_convert = 'webp';
+        $foo->process($path);
+        if ($foo->processed) {
+            $foo->clean();
+          } else {
+            echo sprintf('Error: %s<br>', $foo->error);
+          }
+        
 
-
-        $imagen = $newname;
-        $ImagenUrl = $imageurl;
-
-        $imagen1 = $newname1;
-        $imagen2 = $newname2;
+        $imagen = $renameimg1.'.webp';
+        $ImagenUrl = $path.$renameimg1.'.webp';
         //end my code add
+        $imagen1 = $renameimg2.'.webp';
+        $imagen2 = $renameimg3.'.webp';
 
         ////////////////////// END CODE FOR UPDATE IMAGE////////////////////////
 

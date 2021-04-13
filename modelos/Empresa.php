@@ -3,14 +3,15 @@ require_once 'Conexion.php';
 
 class Empresa {
     private $cnx;
-    public $emailPers,$clave,$ruc,$nomEmp,$direccion,$titular,$telefono,$descripcion,$logo,$emailEmp,$distrito,$whatsapp,$facebook,$instagram,$logoUrl,$estado,$id,$id_categoria;
+    public $emailPers,$clave,$ruc,$numRucEmp,$nomEmp,$direccion,$titular,$telefono,$descripcion,$logo,$emailEmp,$distrito,$whatsapp,$facebook,$instagram,$logoUrl,$estado,$id,$id_categoria;
 
     
-    function __construct($emailPers = null,$clave = null,$ruc = null,$nomEmp = null,$id_categoria = 0,$direccion = null,$titular = null,$telefono = null,$logo = null,$logoUrl = null)
+    function __construct($emailPers = null,$clave = null,$ruc = null,$numRucEmp = null,$nomEmp = null,$id_categoria = 0,$direccion = null,$titular = null,$telefono = null,$logo = null,$logoUrl = null)
     {
         $this->emailPers = $emailPers;
         $this->clave = $clave;
         $this->ruc = $ruc;
+        $this->numRucEmp = $numRucEmp;
         $this->nomEmp = $nomEmp;
         $this->id_categoria = $id_categoria;
         $this->direccion = $direccion;
@@ -22,7 +23,7 @@ class Empresa {
         $this->cnx = Conexion::conectar();
     }
     function registrarEmpresa(Empresa $e){
-        $sql = 'INSERT INTO empresas(`EmailPers`,`Contrasena`,`RucEmpresa`,`NomEmpresa`,`IdCategoria`,`Direccion`,`NomTitular`,`Telefono`)
+        $sql = 'INSERT INTO empresas(`EmailPers`,`Contrasena`,`NumRucEmp`,`NomEmpresa`,`IdCategoria`,`Direccion`,`NomTitular`,`Telefono`)
                 VALUES(?,?,?,?,?,?,?,?)';
         $stmt = $this->cnx->prepare($sql);
 
@@ -75,7 +76,10 @@ class Empresa {
     }
     //here ad code for add image of the bussinness
     function actualizarEmpresa(Empresa $e){
-        $sql = "UPDATE `empresas` SET `EmailEmp` = ?,
+        $sql = "UPDATE `empresas` SET `NumRucEmp` = ?,
+                                    `NomEmpresa` = ?,
+                                    `EmailEmp` = ?,
+                                    `IdCategoria` = ?,
                                     `Descripcion` = ?,
                                     `Direccion` = ?,
                                     `Distrito` = ?,
@@ -87,20 +91,24 @@ class Empresa {
                                     `logoUrl` = ?
                 WHERE empresas.RucEmpresa = ?;";
         $stmt = $this->cnx->prepare($sql);
+        $stmt->bindParam(1,$e->numRucEmp, PDO::PARAM_STR);
+        $stmt->bindParam(2,$e->nomEmp, PDO::PARAM_STR);
 
-        $stmt->bindParam(1,$e->emailEmp, PDO::PARAM_STR);
-        $stmt->bindParam(2,$e->descripcion, PDO::PARAM_STR);
-        $stmt->bindParam(3,$e->direccion, PDO::PARAM_STR);
-        $stmt->bindParam(4,$e->distrito, PDO::PARAM_STR);
-        $stmt->bindParam(5,$e->telefono, PDO::PARAM_STR,9);
-        $stmt->bindParam(6,$e->whatsapp, PDO::PARAM_STR,9);
-        $stmt->bindParam(7,$e->facebook, PDO::PARAM_STR);
-        $stmt->bindParam(8,$e->instagram, PDO::PARAM_STR);
+        $stmt->bindParam(3,$e->emailEmp, PDO::PARAM_STR);
+        $stmt->bindParam(4,$e->id_categoria, PDO::PARAM_STR);
 
-        $stmt->bindParam(9,$e->logo, PDO::PARAM_STR);
-        $stmt->bindParam(10,$e->logoUrl, PDO::PARAM_STR);
+        $stmt->bindParam(5,$e->descripcion, PDO::PARAM_STR);
+        $stmt->bindParam(6,$e->direccion, PDO::PARAM_STR);
+        $stmt->bindParam(7,$e->distrito, PDO::PARAM_STR);
+        $stmt->bindParam(8,$e->telefono, PDO::PARAM_STR,9);
+        $stmt->bindParam(9,$e->whatsapp, PDO::PARAM_STR,9);
+        $stmt->bindParam(10,$e->facebook, PDO::PARAM_STR);
+        $stmt->bindParam(11,$e->instagram, PDO::PARAM_STR);
 
-        $stmt->bindParam(11,$e->ruc, PDO::PARAM_STR,11);
+        $stmt->bindParam(12,$e->logo, PDO::PARAM_STR);
+        $stmt->bindParam(13,$e->logoUrl, PDO::PARAM_STR);
+
+        $stmt->bindParam(14,$e->ruc, PDO::PARAM_STR);
 
         return $stmt->execute();
     }
@@ -118,4 +126,50 @@ class Empresa {
                 FROM `empresas` WHERE `RucEmpresa` = '{$ruc}';";
         return $this->cnx->query($sql,PDO::FETCH_ASSOC)->fetch();
     }
+
+    function showCategory(){
+        $sql = "SELECT IdCategoria,nombre FROM categorias";
+        $stmt = $this->cnx->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    function serchPassword(string $ruc){
+        $sql = "SELECT Contrasena FROM empresas WHERE RucEmpresa = '{$ruc}'";
+        $stmt = $this->cnx->prepare($sql);
+        $stmt->execute(); 
+        return $stmt->fetch(PDO::FETCH_OBJ);       
+    }
+
+    function updatePassword(string $ruc,string $passwordHashed){
+        $sql = "UPDATE empresas SET Contrasena ='{$passwordHashed}' WHERE RucEmpresa = '{$ruc}'";
+        $stmt = $this->cnx->prepare($sql);
+        $stmt->execute(); 
+        return $stmt->execute();    
+    }
+
+    function searchCredential(string $email){
+        $sql = "SELECT EmailPers,RucEmpresa FROM empresas WHERE EmailPers = '{$email}'";
+        $stmt = $this->cnx->prepare($sql);
+        $stmt->execute();        
+        return $stmt->fetch(PDO::FETCH_OBJ);       
+    }
+
+    function insertToken(string $token,string $email){
+        $sql = "UPDATE empresas SET token ='{$token}' WHERE EmailPers = '{$email}'";
+        $stmt = $this->cnx->prepare($sql);
+        $stmt->execute(); 
+        return $stmt->execute();    
+    }
+
+    function resetMyPassword(string $mytoken,string $mynewpass, int $idRuc)
+    {
+        $sql = "CALL resetPass_withToken('$mytoken','$mynewpass', $idRuc)";
+        $stmt = $this->cnx->prepare($sql);
+        $stmt->execute(); 
+        return $stmt->execute(); 
+        
+    }
+
+    
 }

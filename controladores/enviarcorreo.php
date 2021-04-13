@@ -21,7 +21,7 @@ if (isset($_POST["enviar"])) {
         
         $mail = new PHPMailer();
         $mail->setFrom($Email,$Nombres);
-        $mail->addAddress('utestroger@gmail.com'); //correo a la que le llegaran los correos 
+        $mail->addAddress('20conectaperu@gmail.com'); //correo a la que le llegaran los correos 
         $mail->addReplyTo($Email,$Nombres);
     
         // Aqu¨ª van los datos que apareceran en el correo que reciba  
@@ -41,10 +41,10 @@ if (isset($_POST["enviar"])) {
         $mail->CharSet = 'UTF-8';
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = "ssl";
-        $mail->Host = "box5759.bluehost.com"; //servidor smtp, esto lo puedes dejar igual
+        $mail->Host = "mail.conecta-peru.com"; //servidor smtp, esto lo puedes dejar igual
         $mail->Port = 465; //puerto smtp de gmail, tambien lo puedes dejar igual
-        $mail->Username = 'tami@ghx.umd.mybluehost.me';  // en local, tu correo gmail // en servidor, nombre usuario
-        $mail->Password = '%)Yj[w_z?dx$'; // en local, tu contrasena gmail //en servidor, contraseña de usuario
+        $mail->Username = 'informes@conecta-peru.com';  // en local, tu correo gmail // en servidor, nombre usuario
+        $mail->Password = ';iv(K79yN.R^'; // en local, tu contrasena gmail //en servidor, contraseña de usuario
         
         if ($mail->Send())
         //echo "<script>swal('Formulario enviado exitosamente', 'le responderemos lo mas pronto posible.','success');window.location.href='../index.php';</script>";
