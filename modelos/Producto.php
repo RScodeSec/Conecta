@@ -32,7 +32,7 @@ class Producto {
     }
    
     function productosByRuc(int $ruc){
-        $sql = "call ProductosByRyc($ruc)";
+        $sql = "CALL productsBy_Ruc($ruc);";
         $stmt = $this->cnx->prepare($sql);
         $stmt->execute(array($ruc));
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -91,15 +91,7 @@ class Producto {
 
     ///ad my code 
     function featuredProduct(){
-        $sql = "SELECT DISTINCT e.RucEmpresa,pr.NomProducto,pr.Precio,pr.ImagenUrl,c.nombre as Categoria,p.Vendido FROM pedidos as p 
-        inner Join productos pr 
-        on p.IdProducto = pr.IdProducto 
-        inner join empresas e 
-        on e.RucEmpresa = pr.RucEmpresa 
-        inner join categorias c 
-        on c.IdCategoria=e.IdCategoria 
-        Where p.Vendido = 1 AND pr.Estado=1 AND p.Estado=1 AND p.Cantidad = (SELECT max(Cantidad) from pedidos) 
-        GROUP BY c.IdCategoria";
+        $sql = "call featured_Products()";
         $stmt = $this->cnx->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -108,7 +100,7 @@ class Producto {
     //HERE CODE FOR SEARCH:::::::::::::::::::::::::::::::::::::::::::::::::::::
     function searchedProduct($name)
     {
-        $sql = "call BuscarProductoNombre('$name')";
+        $sql = "call searchBy_name('$name');";
         $stmt = $this->cnx->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);       
