@@ -118,7 +118,7 @@ class Producto {
     function orderBestSeller(int $rucBest)
     {
         //$sql = "SELECT * FROM `productos` WHERE `IdProducto` = {$idmyprod};";
-        $sql = "call OrderBestSeller($rucBest)";
+        $sql = "call OrderBestSeller($rucBest);";
         $stmt = $this->cnx->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_OBJ);
