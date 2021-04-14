@@ -170,7 +170,7 @@ $('#formVenta').submit(function(e){
 });
 
 //lead products destacados in index
-let urlFeauturedProduct = "../index.php?controller=producto&action=featuredProduct";
+/*let urlFeauturedProduct = "../index.php?controller=producto&action=featuredProduct";
 $("#destacado").load(urlFeauturedProduct, { type: "article" }, function(){
 
 	const productsButton = document.querySelectorAll(
@@ -197,4 +197,4 @@ $("#destacado").load(urlFeauturedProduct, { type: "article" }, function(){
 	  }
 	//here code
 
-})
+})*/
