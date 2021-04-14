@@ -60,7 +60,7 @@ class CategoriaController {
                                     <input type='text' class='urlEmp' value='{$rucEmpresa}' hidden>
                                     <img id='img' src='../vistas/panel_usuario/logoemp/{$logo}' >
                                     <div class='hover-galeria'>
-                                        <p>{$nomEmp}</p>
+                                        <p class='text-center' >{$nomEmp}</p>
                                     </div>
                                 </div>";
                 } else {
