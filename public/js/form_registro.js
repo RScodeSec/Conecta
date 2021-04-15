@@ -117,6 +117,7 @@ function CheckRegistro() {
 			titular: $("#nombre").val(),
 			telefono: $("#numero").val(),
 		};
+		//console.log(parametros);
 		return getFormResponse(url, parametros);
 
 }

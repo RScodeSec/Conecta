@@ -42,7 +42,7 @@ include_once 'layouts/head.php';
                         accesible,fácil y gratuita.</p>
                 </figcaption>
                 <div class="mision__img">
-                <img class="mision__imagen" src="../public/imagenes/valores/AnyConv.com__Misión 320 x 320-01.webp" alt="">
+                <img class="mision__imagen" src="../public/imagenes/valores/AnyConv.com__Mision 320 x 320-01.webp" alt="">
     </div>
     </figure>
 
@@ -54,7 +54,7 @@ include_once 'layouts/head.php';
                 pequeñas empresas a potenciar su nivel de negocio.</p>
         </figcaption>
         <div class="vision__img">
-        <img class="vision__imagen" src="../public/imagenes/valores/AnyConv.com__Visión 320 x 320-02.webp" alt="">
+        <img class="vision__imagen" src="../public/imagenes/valores/AnyConv.com__Vision 320 x 320-02.webp" alt="">
         </div>
     </figure>
     </div>

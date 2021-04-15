@@ -21,7 +21,7 @@
 
 		<select name="tip-categorias" required id="tip-categorias" class="tip-categorias"></select>
 
-		<input class="controles" type="text" name="direccion" id="direccion" placeholder="Dirección o referencia" >
+		<input class="controles" type="text" name="direccion" id="direccion" placeholder="Dirección o referencia" required>
 
 		<input class="controles" type="text" name="nombre" id="nombre" placeholder="Nombre del titular" required>
 

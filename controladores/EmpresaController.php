@@ -45,8 +45,8 @@ class EmpresaController {
             return ['bool' => false, 'error' => 'datosIncorrectos'];
         }
         if (empty($this->modelo->buscarByRuc($ruc))) {
-            $empresa = new Empresa($email,$clave,$ruc,$negocio,$id_categoria,$direccion,$titular,$celular);
-            return ($this->modelo->registrarEmpresa($empresa)) ?
+            //$empresa = new Empresa($email,$clave,$ruc,$negocio,$id_categoria,$direccion,$titular,$celular);
+            return ($this->modelo->registrarEmpresa($email,$clave,$ruc,$negocio,$id_categoria,$direccion,$titular,$celular)) ?
                     $this->modelo->loginEmpresa($email,$clave) :
                     ['bool' => false, 'error' => 'problemaSQL'];
         } else {

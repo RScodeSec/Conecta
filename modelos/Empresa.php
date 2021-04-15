@@ -22,20 +22,20 @@ class Empresa {
         $this->logoUrl = $logoUrl;
         $this->cnx = Conexion::conectar();
     }
-    function registrarEmpresa(Empresa $e){
+    function registrarEmpresa(string $emailPers, string $clave,string $numruc,string $nomEmp, string $id_categoria,string $direccion,string $nomtitu, int $telefono){
         $sql = 'INSERT INTO empresas(`EmailPers`,`Contrasena`,`NumRucEmp`,`NomEmpresa`,`IdCategoria`,`Direccion`,`NomTitular`,`Telefono`)
                 VALUES(?,?,?,?,?,?,?,?)';
         $stmt = $this->cnx->prepare($sql);
 
-        $stmt->bindParam(1,$e->emailPers, PDO::PARAM_STR);
-        $password = password_hash($e->clave,PASSWORD_DEFAULT);
+        $stmt->bindParam(1,$emailPers, PDO::PARAM_STR);
+        $password = password_hash($clave,PASSWORD_DEFAULT);
         $stmt->bindParam(2,$password);
-        $stmt->bindParam(3,$e->ruc, PDO::PARAM_STR, 11);
-        $stmt->bindParam(4,$e->nomEmp, PDO::PARAM_STR);
-        $stmt->bindParam(5,$e->id_categoria, PDO::PARAM_INT);
-        $stmt->bindParam(6,$e->direccion, PDO::PARAM_STR);
-        $stmt->bindParam(7,$e->titular, PDO::PARAM_STR);
-        $stmt->bindParam(8,$e->telefono, PDO::PARAM_STR, 9);
+        $stmt->bindParam(3,$numruc, PDO::PARAM_STR, 11);
+        $stmt->bindParam(4,$nomEmp, PDO::PARAM_STR);
+        $stmt->bindParam(5,$id_categoria, PDO::PARAM_INT);
+        $stmt->bindParam(6,$direccion, PDO::PARAM_STR);
+        $stmt->bindParam(7,$nomtitu, PDO::PARAM_STR);
+        $stmt->bindParam(8,$telefono, PDO::PARAM_STR, 9);
 
         return $stmt->execute();
     }
