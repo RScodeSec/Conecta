@@ -247,13 +247,15 @@ main .right-section .button-container button{
     }
 
     main .left-section{
+        padding: 0;
         width: 100%;
-        padding-bottom: 20px;
+        
     }
 
-    main .left-section .info-emp .container-sticky{
+    main .left-section .info-emp {
         position: static;
         margin-top: 120px;
+        width: 100%;
         padding-bottom: 20px;
         height: auto;
     }
@@ -264,5 +266,15 @@ main .right-section .button-container button{
 
     main .right-section .button-container button{
         width: 45%;
+    }
+    h4#categoria {
+        width: 70%;
+        margin: 0 2% 0 25%;
+        color: black;
+        text-align: center;
+        font-family: 'Gotham';
+        font-size: 22px;
+        z-index: 100;
+        font-weight: 200;
     }
 }

@@ -267,7 +267,6 @@ label {
 
 @media screen and (min-width: 768px) {
     .tabla__celda {
-
         padding: .8rem;
     }
 
@@ -344,7 +343,6 @@ label {
 }
 
 #productosTabla td, .tabla__celda {
-    z-index: -100;
     border: solid 1px #c1c1c1;
     padding: 0 20px;
     height: 50px;

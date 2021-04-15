@@ -11,29 +11,29 @@
         <h1 class="datos__titulo">Mis datos</h1>
         <div class="datos-generales">
           <div class="group">
-          <label for="">Administrador</label>
+          <label for="" >Administrador <i class="fas fa-info-circle info  adminCorreo"></i><p class="alerta">Por seguridad este campo esta bloqueado</p></label>
           <input class="datos__form" type="text" placeholder="Nombre" name="nombre" value="<?php echo $_SESSION['empresa']['NomTitular'] ?>" readonly title="Verifique correctamente sus
 datos, recuerde que este
 espacio no permite cambios">
           </div>
 
           <div class="group">
-          <label for="">Tienda</label>
+          <label for="" >Tienda <i class="fas fa-info-circle info adminCorreo3"></i><p class="alerta3">Antes de modificar este campo verifica si se encuentra sujeto al cambio de categoria</p></label>
           <input class="datos__form" type="text" placeholder="Mi empresa" name="mi_empresa" name="nameBusiness" id="nameBusiness" value="<?php echo $_SESSION['empresa']['NomEmpresa'] ?>">
           </div>
 
           <div class="group">
-          <label for="">Correo</label>
+          <label for="">Correo <i class="fas fa-info-circle info adminCorreo2"></i><p class="alerta2">Por seguridad este campo esta bloqueado</p></label>
           <input class="datos__form" type="email" placeholder="Correo electrónico" name="email" id="emailPers" value="<?php echo $_SESSION['empresa']['EmailPers'] ?>" readonly>
           </div>
 
           <div class="group">
-          <label for="">Correo Corporativo</label>
+          <label for="">Correo Corporativo </label>
           <input class="datos__form" type="email" placeholder="Correo Corporativo" name="email_corporativo" id="emailEmp" value="<?php echo $_SESSION['empresa']['EmailEmp'] ?>" required>
           </div>
 
           <div class="group">
-            <label for="categoria">Categoria</label>
+            <label for="categoria">Categoria <i class="fas fa-info-circle info adminCorreo4"></i><p class="alerta4">Antes de modificar este campo verifica si se encuentra sujeto al cambio de categoria</p></label>
             <!--<input class="datos__form" type="password" placeholder="Contraseña" name="contrasena" value="</?php echo $_SESSION['empresa']['Contrasena'] ?>" readonly>-->
               <input type="text" id="phpcategoria" value="<?php echo $_SESSION['empresa']['IdCategoria'] ?>" hidden>
               <select class="datos__form  select-hidden" id="categoria" name="categoria"></select>
@@ -45,7 +45,7 @@ espacio no permite cambios">
           </div>
 
           <div class="descripcion">
-            <label for="descripcion">Descripción de tu tienda:</label><br>
+            <label for="descripcion">Descripción de tu tienda <i class="fas fa-info-circle info adminCorreo5"></i><p class="alerta5">Antes de modificar este campo verifica si se encuentra sujeto al cambio de categoria</p></label><br>
             <textarea class="datos__form text_area" rows="8" cols="50" id="descripcion" name="descripcion" required ><?php echo $_SESSION['empresa']['Descripcion'] ?></textarea>
           </div>
           <div class="selectores">
@@ -113,5 +113,6 @@ espacio no permite cambios">
   </main>
   <?php include 'footer.php'; ?>
   <script type="text/javascript" src="./js/datos.js"></script>
+  <script src="./js/alert.js"></script>
   </body>
 </html>
