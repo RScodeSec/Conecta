@@ -69,7 +69,7 @@
 			</div>
 			<div class="division fourth">
 				<figure class="img-container">
-					<img id="img-login" src="../public/imagenes/header/home.gif" alt="">
+					<img id="img-login" src="../public/imagenes/header/home.webp" alt="">
 				</figure>
 
 				<button class="Login">
