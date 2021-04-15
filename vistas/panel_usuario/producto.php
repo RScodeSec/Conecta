@@ -71,15 +71,22 @@ include 'header.php';
             <col style="width: 20%;">
             <col style="width: 20%;">
             <col style="width: 20%;">
-            <col style="width: 20%;">
+            <col style="width: 20%;"><thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
           </colgroup> -->
           <thead>
             <tr id="tabla__head">
-              <th class="tabla__celda">Nombre</th>
-              <th class="tabla__celda">Cantidad disponible</th>
-              <th class="tabla__celda">Precio</th>
-              <th class="tabla__celda">Editar</th>
-              <th class="tabla__celda">Eliminar</th>
+              <th class="tabla__celda" style="color: white;">Nombre</th>
+              <th class="tabla__celda" style="color: white;">Cantidad disponible</th>
+              <th class="tabla__celda" style="color: white;">Precio</th>
+              <th class="tabla__celda" style="color: white;">Editar</th>
+              <th class="tabla__celda" style="color: white;">Eliminar</th>
             </tr>
           </thead>
         </table>
