@@ -78,6 +78,7 @@ function getFormResponse(url, parametros) {
 		type: "POST",
 		async: false,
 		success: function (response) {
+			//console.log(response);
 			let json = JSON.parse(response);
 			if (json.bool == false) {
 				let msg;

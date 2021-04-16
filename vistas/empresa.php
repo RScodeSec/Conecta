@@ -156,90 +156,7 @@ include_once 'layouts/head.php'; ?>
 				</h3>
 
 				<div id="products-container">
-					<!-- <article class="product">
-						<figure class="img-product">
-							<img src="../public/imagenes/categorias-comercio/Ropa_textiles/Butrich/costureria.jpg" alt="">
-						</figure>
-						<h4 class="subtitulo-product">
-							Costurería
-						</h4>
-						<p class="product-desc">
-							S/ 14.99
-						</p>
-						<div class="button-container">
-							<button class="btn-product">
-								Ver producto
-							</button>
-						</div>
-					</article>
-
-					<article class="product">
-						<figure class="img-product">
-							<img src="../public/imagenes/categorias-comercio/Ropa_textiles/Butrich/confección.jpg" alt="">
-						</figure>
-						<h4 class="subtitulo-product">
-							Confección
-						</h4>
-						<p class="product-desc">
-							S/ 29.99
-						</p>
-						<div class="button-container">
-							<button class="btn-product">
-								Ver producto
-							</button>
-						</div>
-					</article>
-
-					<article class="product">
-						<figure class="img-product">
-							<img src="../public/imagenes/categorias-comercio/Ropa_textiles/Butrich/telas.jpg" alt="">
-						</figure>
-						<h4 class="subtitulo-product">
-							Venta de Telas
-						</h4>
-						<p class="product-desc">
-							S/ 59.99
-						</p>
-						<div class="button-container">
-							<button class="btn-product">
-								Ver producto
-							</button>
-						</div>
-					</article>
-
-					<article class="product">
-						<figure class="img-product">
-							<img src="../public/imagenes/categorias-comercio/Ropa_textiles/Butrich/tintorería.jpg" alt="">
-						</figure>
-						<h4 class="subtitulo-product">
-							Tintorería
-						</h4>
-						<p class="product-desc">
-							S/ 99.99
-						</p>
-						<div class="button-container">
-							<button class="btn-product">
-								Ver producto
-							</button>
-						</div>
-					</article>
-
-					<article class="product">
-						<figure class="img-product">
-							<img src="../public/imagenes/categorias-comercio/Ropa_textiles/Butrich/venta.jpg" alt="">
-						</figure>
-						<h4 class="subtitulo-product">
-							Venta de Ropa
-						</h4>
-						<p class="product-desc">
-							S/ 29.99
-						</p>
-						<div class="button-container">
-							<button class="btn-product">
-								Ver producto
-							</button>
-						</div>
-					</article> -->
+					
 				</div>
 
 				<div class="button-container">
@@ -255,7 +172,8 @@ include_once 'layouts/head.php'; ?>
 	</div>
 
 	<!--</?php include_once 'layouts/scripts.php'; ?>-->
-	<script src="../public/plugins/jquery-3.5.1.min.js"></script>
+	<!--<script src="../public/plugins/jquery-3.5.1.min.js"></script>-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 	<script src="../public/js/empresa.js"></script>
 	<script type="text/javascript" src="../public/js/form-product.js"></script>
 	<script src="../public/plugins/sweetalert2.all.min.js"></script>
@@ -264,7 +182,7 @@ include_once 'layouts/head.php'; ?>
 	<script type="text/javascript" src="../public/js/form_registro.js"></script>
 	<script type="text/javascript" src="../public/js/login.js"></script>
 	<!--<script type="text/javascript" src="../public/js/search.js"></script>-->
-	<script src="https://kit.fontawesome.com/c702fce202.js" crossorigin="anonymous"></script>
+	<!--<script src="https://kit.fontawesome.com/c702fce202.js" crossorigin="anonymous"></script>-->
 </body>
 
 </html>
