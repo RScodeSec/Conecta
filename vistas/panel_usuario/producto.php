@@ -10,12 +10,12 @@ include 'header.php';
     <!-- <a href="#" class="producto__boton" id="nuevoProducto"> <i class="fas fa-list-alt"></i>&#160;Nuevo Producto</a> -->
     <section class="producto">
       <h1 class="producto__titulo">Productos</h1>
-      <div class="form__producto" id="bloque" style="overflow-y: scroll;">
-        <div class="contenido" >
+      <div class="form__producto" id="bloque" style="overflow-y: scroll;z-index: 1000;">
+        <div class="contenido"  >
           <h1 class="formProducto">Nuevo producto</h1>
           
           <!-- New Product-->
-          <form class="formProducto__form" id="formProducto" enctype="multipart/form-data">
+          <form class="formProducto__form" id="formProducto"  enctype="multipart/form-data">
             <input type="text" id="idProd" hidden>
             <label for="nombre">Nombre del producto:</label>
             <input style="border:1px solid gray" class="form__item t" type="text" id="nombre" name="nombre_producto" required>

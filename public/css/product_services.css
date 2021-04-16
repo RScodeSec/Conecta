@@ -238,7 +238,7 @@ main .right-section .button-container button{
     font-weight: 700;
 }
 
-@media screen and (max-width:425px){
+@media screen and (max-width:600px){
 
     main .img-container{
         width: 150px;
@@ -254,7 +254,6 @@ main .right-section .button-container button{
 
     main .left-section .info-emp {
         position: static;
-        margin-top: 120px;
         width: 100%;
         padding-bottom: 20px;
         height: auto;
