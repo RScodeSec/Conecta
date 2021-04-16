@@ -82,12 +82,11 @@ main .left-section .info-emp{
 }
 
 main .left-section .info-emp .container-sticky{
-    height: 60%;
-    max-height: 700px;
+    height: 70%;
+    max-height: 100%;
     width: 100%;
-    margin-top: 190px;
-    position: sticky;
-    top: 40px;
+    position: relative;
+    top: 20%;
     font-family: 'Helvetica';
 }
 
@@ -253,10 +252,17 @@ main .right-section .button-container button{
     }
 
     main .left-section .info-emp {
-        position: static;
         width: 100%;
         padding-bottom: 20px;
-        height: auto;
+        height:100%;
+    }
+    main .left-section .info-emp .container-sticky{
+        height: 100%;
+        max-height: 100%;
+        width: 100%;
+        position: relative;
+        top: 10%;
+        font-family: 'Helvetica';
     }
 
     main .right-section{

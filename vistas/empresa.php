@@ -4,6 +4,7 @@ $title = $_SESSION['empresa']['NomEmpresa'];
 include_once 'layouts/head.php'; ?>
 <link rel="stylesheet" type="text/css" href="../public/css/product_services.css">
 <link rel="stylesheet" href="../public/css/form-product.css">
+<link rel="stylesheet" href="../public/css/menu-desplegable.css">
 </head>
 
 <body>
@@ -144,7 +145,30 @@ include_once 'layouts/head.php'; ?>
 								<input type="text" value="<?php echo $_SESSION['categoria']['idCat']; ?>" hidden>
 							</div>
 						</div>
+
+										
+						<div class="btn-group show-on-hover">
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+								Ordenar por defecto<span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="#">Ordenar por defecto</a></li>
+								<li><a href="#">Ordenar por pularidad</a></li>
+								<li><a href="#">Ordenar por precio: bajo - alto</a></li>
+								<li><a href="#">Ordenar por precio: alto - bajo</a></li>
+								<li class="divider"></li>
+							</ul>
+						</div>
+
+						<div class="range">
+							<h6>Filtro por precio</h6>
+							<input type="range" name="" id="">
+							<p>Precio S/.10 - S/.100</p>
+							<button>Filtrar</button>
+						</div>
 					</div>
+
+					
 
 				</article>
 
