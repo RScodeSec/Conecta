@@ -2,7 +2,8 @@
 $title = "Categorías";
 include_once 'layouts/head.php';
 ?>
-<link rel="stylesheet" type="text/css" href="../public/css/categorias.css">
+<!--<link rel="stylesheet" type="text/css" href="../public/css/categorias.css">-->
+<link rel="preload" href="../public/css/categorias.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 </head>
 
 <body>

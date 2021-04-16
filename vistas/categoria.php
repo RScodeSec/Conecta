@@ -3,7 +3,8 @@ session_start();
 $title = $_SESSION['categoria']['nomCat'];
 include_once 'layouts/head.php';
 ?>
-<link rel="stylesheet" type="text/css" href="../public/css/ropa.css">
+<!--<link rel="stylesheet" type="text/css" href="../public/css/ropa.css">-->
+<link rel="preload" href="../public/css/ropa.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 </head>
 
 <body>

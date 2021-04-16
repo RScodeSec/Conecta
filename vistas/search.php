@@ -2,9 +2,12 @@
 $title = "Buscar productos";
 include_once 'layouts/head.php';
 ?>
-    <link rel="stylesheet" type="text/css" href="../public/css/index.css">
-	<link rel="stylesheet" href="../public/css/form-product.css">
-    <link rel="stylesheet" href="../public/css/search.css">
+    <!--<link rel="stylesheet" type="text/css" href="../public/css/index.css">-->
+    <link rel="preload" href="../public/css/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<!--<link rel="stylesheet" href="../public/css/form-product.css">-->
+    <link rel="preload" href="../public/css/form-product.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!--<link rel="stylesheet" href="../public/css/search.css">-->
+    <link rel="preload" href="../public/css/search.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 </head>
 
 <body>

@@ -6,9 +6,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../public/css/test-header.css">
-	<link rel="stylesheet" type="text/css" href="../public/css/index.css">
-	<link rel="stylesheet" type="text/css" href="../public/css/footer.css">
+	<!--<link rel="stylesheet" type="text/css" href="../public/css/index.css">-->
+	<link rel="preload" href="../public/css/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<!--<link rel="stylesheet" type="text/css" href="../public/css/footer.css">-->
+	<link rel="preload" href="../public/css/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
+
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
@@ -22,9 +25,12 @@
 		href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap"
 	/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="../public/css/formulario.css">
-	<link rel="stylesheet" href="../public/css/login.css">
-	<link rel="stylesheet" href="../public/css/sweetalert2.min.css">
+	<!--<link rel="stylesheet" href="../public/css/formulario.css">-->
+	<link rel="preload" href="../public/css/formulario.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<!--<link rel="stylesheet" href="../public/css/login.css">-->
+	<link rel="preload" href="../public/css/login.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+	<!--<link rel="stylesheet" href="../public/css/sweetalert2.min.css">-->
 </head>
 
 <body>
@@ -178,12 +184,12 @@
 	<!--<script src="../public/plugins/jquery-3.5.1.min.js"></script>-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 	<script src="../public/js/index.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-	<script type="text/javascript" src="../public/js/menu.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" defer></script>
+	<script type="text/javascript" src="../public/js/menu.js" defer></script>
 	<!--<script src="../public/plugins/sweetalert2.all.min.js"></script>-->
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.all.min.js"></script>
-	<script type="text/javascript" src="../public/js/form_registro.js"></script>
-	<script type="text/javascript" src="../public/js/login.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.all.min.js" defer></script>
+	<script type="text/javascript" src="../public/js/form_registro.js" defer></script>
+	<script type="text/javascript" src="../public/js/login.js" defer></script>
 
 	<!--<script src="https://kit.fontawesome.com/c702fce202.js" crossorigin="anonymous"></script>-->
 	
