@@ -1,0 +1,132 @@
+
+.show-on-hover:hover > ul.dropdown-menu {
+    display: block;    
+}
+.show-on-hover{
+    width: 90%;
+    margin: auto;
+    border: 1px solid rgb(49, 96, 196);
+}
+.show-on-hover ul{
+    width: 100%;
+    border: 1px solid rgb(49, 96, 196);
+}
+.show-on-hover ul li{
+    width: 90%;
+    margin: auto;
+    font-size: 13px;
+}
+.show-on-hover ul li a{
+    text-decoration: none;
+    color: rgb(117, 117, 117);
+}
+.show-on-hover ul li a:hover{
+    color: #000;
+}
+/* RANGE */
+.range{
+    width: 90%;
+    margin: 10px 0;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #00C7CE;
+}
+.range input[type='range'] {
+    display: block;
+    width: 90%;
+    margin: 10px 5%;
+  }
+  
+  input[type='range']:focus {
+    outline: none;
+  }
+  
+  input[type='range'],
+  input[type='range']::-webkit-slider-runnable-track,
+  input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    background-color:#00C7CE;
+    width: 21px;
+    height: 21px;
+    border: 3px solid #ddd;
+    border-radius: 50%;
+    margin-top: -9px;
+  }
+  
+  input[type=range]::-moz-range-thumb {
+    background-color: #00C7CE;
+    width: 16px;
+    height: 16px;
+    border: 3px solid #ddd;
+    border-radius: 50%;
+  }
+  
+  input[type=range]::-ms-thumb {
+    background-color:#00C7CE;
+    width: 21px;
+    height: 21px;
+    border: 3px solid #ddd;
+    border-radius: 50%;
+  }
+  
+  input[type=range]::-webkit-slider-runnable-track {
+    background-color: #FF9E00;
+    height: 5px;
+    -webkit-appearance: none;
+    background-image:linear-gradient(to right, #02C38A calc(var(--value)*1%), black 0);
+  }
+  
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    outline: none;
+  }
+  
+  input[type=range]::-moz-range-track {
+    -webkit-appearance: none;
+    background-image:linear-gradient(to right, #02C38A calc(var(--value)*1%), black 0);
+    height: 5px;
+  }
+  
+  input[type=range]::-ms-track {
+    background-color: #777;
+    height: 3px;
+  }
+  
+.range h6{
+    text-align: center;
+    color: #fff;
+}
+.range p{
+    color: #fff;
+}
+.range button{
+    outline: none;
+    width: 50%;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #FF9E00;
+}
+.range button:active{
+    transform: scale(1.1);
+}
+@media (max-width:600px){
+    .show-on-hover{
+        width: 60%;
+        margin:0 20%;
+        
+    }
+    .show-on-hover ul li{
+        font-size: 15px;
+    }
+    .range{
+        width: 60%;
+        margin: 5% 20% 10% 20%;
+        border-radius: 20px;
+        padding: 10px;
+        background-color: #00C7CE;
+    }
+}
