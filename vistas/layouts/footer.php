@@ -25,10 +25,10 @@
             </div>
             
             <div class="wrapper-fot">
-                <a class="contact-fot" href="https://web.facebook.com/conectaperunegocios/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a class="contact-fot" href="https://wa.me/51936910425" target="_blank"><i class="fas fa-phone-alt"></i></i></a>
-                <a class="contact-fot" href="https://www.instagram.com/conectaperunegocios/feed/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a class="contact-fot" href="https://www.linkedin.com/company/conecta-per%C3%BA" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a class="contact-fot" href="https://web.facebook.com/conectaperunegocios/" target="_blank"><i class="fa fa-facebook-f"></i></a>
+                <a class="contact-fot" href="https://wa.me/51936910425" target="_blank"><i class="fa fa-phone"></i></i></a>
+                <a class="contact-fot" href="https://www.instagram.com/conectaperunegocios/feed/" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a class="contact-fot" href="https://www.linkedin.com/company/conecta-per%C3%BA" target="_blank"><i class="fa fa-linkedin"></i></a>
             </div>
         </div>
     </div>

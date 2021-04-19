@@ -163,10 +163,9 @@ include_once 'layouts/head.php'; ?>
 
 						<div class="range">
 							<h6>Filtro por precio</h6>
-							
 							<div class='container mt-4'>
-<input type="text" class="js-range-slider" name="my_range" value=""/>    
-</div>
+							<input type="text" class="js-range-slider" name="my_range" value=""/>    
+							</div>
 							<p>Precio S/.10 - S/.100</p>
 							<button>Filtrar</button>
 						</div>
