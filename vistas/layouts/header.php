@@ -173,6 +173,9 @@
 					<li class="first-nav">
 						<a href="./contactanos.php">Contáctanos</a>
 					</li>
+					<li class="first-nav">
+						<a href="./preguntas.php">Preguntas Frecuentes</a>
+					</li>
 				</ul>
 			</nav>
 		</section>

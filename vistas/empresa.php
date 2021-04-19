@@ -5,6 +5,7 @@ include_once 'layouts/head.php'; ?>
 <link rel="stylesheet" type="text/css" href="../public/css/product_services.css">
 <link rel="stylesheet" href="../public/css/form-product.css">
 <link rel="stylesheet" href="../public/css/menu-desplegable.css">
+
 </head>
 
 <body>
@@ -162,7 +163,10 @@ include_once 'layouts/head.php'; ?>
 
 						<div class="range">
 							<h6>Filtro por precio</h6>
-							<input type="range" name="" id="">
+							
+							<div class='container mt-4'>
+<input type="text" class="js-range-slider" name="my_range" value=""/>    
+</div>
 							<p>Precio S/.10 - S/.100</p>
 							<button>Filtrar</button>
 						</div>
@@ -289,6 +293,20 @@ include_once 'layouts/head.php'; ?>
 	<script type="text/javascript" src="../public/js/login.js"></script>
 	<!--<script type="text/javascript" src="../public/js/search.js"></script>-->
 	<script src="https://kit.fontawesome.com/c702fce202.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
+	<script>
+		$(".js-range-slider").ionRangeSlider({
+    skin: "round",
+    step: 30,
+    type: "double",
+    // grid: true,
+    min: 0,
+    max: 500,
+    from: 30,
+    to: 300,
+    prefix: "S/."
+});
+	</script>
 </body>
 
 </html>

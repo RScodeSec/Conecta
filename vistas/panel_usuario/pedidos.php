@@ -9,9 +9,9 @@ include 'header.php';
 <body class="body">
 <?php include 'menu.html'; ?>
   <!-- Formulario ver pedido -->
-  <div class="form-container">
-    <form action="" class="frm-product" onsubmit="return false">
-      <div class="close-container">
+  <div class="form-container" style="z-index: 100;">
+    <form action="" class="frm-product" onsubmit="return false" >
+      <div class="close-container" >
         <span class="close-title">Ver pedido</span>
         <span class="close-button">x</span>
       </div>

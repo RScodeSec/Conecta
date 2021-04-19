@@ -36,7 +36,7 @@
     <div class="otros">
         <div class="c-otros">
             <a href="terms_condiciones.php" id="otros">TÉRMINOS Y CONDICIONES</a>
-            <a href="" id="otros">PREGUNTAS FRECUENTES</a>
+            <a href="./preguntas.php" id="otros">PREGUNTAS FRECUENTES</a>
 
         </div>
     </div>
