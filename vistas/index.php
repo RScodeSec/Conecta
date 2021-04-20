@@ -24,13 +24,11 @@
 		as="style"
 		href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap"
 	/>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 	<!--<link rel="stylesheet" href="../public/css/formulario.css">-->
 	<link rel="preload" href="../public/css/formulario.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<!--<link rel="stylesheet" href="../public/css/login.css">-->
 	<link rel="preload" href="../public/css/login.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-
-	<!--<link rel="stylesheet" href="../public/css/sweetalert2.min.css">-->
 </head>
 
 <body>
@@ -128,25 +126,25 @@
 						<section class="cajas first-caja">
 
 							<h3 id="txtcaja">
-								<span><img src="../public/imagenes/index/idea.webp"></span>
+								<span><img src="../public/imagenes/index/idea.webp" width="16" height="16"></span>
 								Diseño
 							</h3>
 						</section>
 						<section class="cajas">
 							<h3 id="txtcaja">
-								<span><img src="../public/imagenes/index/ubi.webp"></span>
+								<span><img src="../public/imagenes/index/ubi.webp" width="16" height="16"></span>
 								Ubicación
 							</h3>
 						</section>
 						<section class="cajas">
 							<h3 id="txtcaja">
-								<span><img src="../public/imagenes/index/group.webp"></span>
+								<span><img src="../public/imagenes/index/group.webp" width="16" height="16"></span>
 								Opinión
 							</h3>
 						</section>
 						<section class="cajas">
 							<h3 id="txtcaja">
-								<span><img src="../public/imagenes/index/conf.webp"></span>
+								<span><img src="../public/imagenes/index/conf.webp" width="16" height="16"></span>
 								Promoción y publicidad
 							</h3>
 						</section>
@@ -191,9 +189,7 @@
 	<script type="text/javascript" src="../public/js/form_registro.js" defer></script>
 	<script type="text/javascript" src="../public/js/login.js" defer></script>
 
-	<!--<script src="https://kit.fontawesome.com/c702fce202.js" crossorigin="anonymous"></script>-->
 	
-
 </body>
 
 </html>

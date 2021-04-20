@@ -6,10 +6,6 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- CSS -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha512-tDXPcamuZsWWd6OsKFyH6nAqh/MjZ/5Yk88T5o+aMfygqNFPan1pLyPFAndRzmOWHKT+jSDzWpJv8krj6x1LMA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css"/>
-
-
 	<link rel="stylesheet" type="text/css" href="../public/css/test-header.css">
 	<!--<link rel="stylesheet" type="text/css" href="../public/css/footer.css">-->
 	<link rel="preload" href="../public/css/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -27,7 +23,7 @@
 		as="style"
 		href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap"
 	/>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="../public/css/formulario.css">
-	<link rel="stylesheet" href="../public/css/login.css">
-	<link rel="stylesheet" href="../public/css/sweetalert2.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+	<link rel="preload" href="../public/css/formulario.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="../public/css/login.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	

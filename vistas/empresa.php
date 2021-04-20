@@ -2,9 +2,11 @@
 session_start();
 $title = $_SESSION['empresa']['NomEmpresa'];
 include_once 'layouts/head.php'; ?>
-<link rel="stylesheet" type="text/css" href="../public/css/product_services.css">
-<link rel="stylesheet" href="../public/css/form-product.css">
-<link rel="stylesheet" href="../public/css/menu-desplegable.css">
+<!--<link rel="stylesheet" type="text/css" href="../public/css/product_services.css">-->
+<link rel="preload" href="../public/css/product_services.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="../public/css/form-product.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="../public/css/menu-desplegable.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css"/>
 
 </head>
 
@@ -153,13 +155,17 @@ include_once 'layouts/head.php'; ?>
 								Ordenar por defecto<span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu" role="menu">
-								<li><a href="#">Ordenar por defecto</a></li>
-								<li><a href="#">Ordenar por pularidad</a></li>
+								<li><a id="oo" href="#">Ordenar por pularidad</a></li>
 								<li><a href="#">Ordenar por precio: bajo - alto</a></li>
 								<li><a href="#">Ordenar por precio: alto - bajo</a></li>
 								<li class="divider"></li>
 							</ul>
 						</div>
+						<!--<select   id="filterOpt" name="filterOpt">
+							<option value="1">Value 1</option>
+							<option value="2" selected>Value 2</option>
+							<option value="3">Value 3</option>
+						</select>-->
 
 						<div class="range">
 							<h6>Filtro por precio</h6>
@@ -281,17 +287,13 @@ include_once 'layouts/head.php'; ?>
 
 	</div>
 
-	<!--</?php include_once 'layouts/scripts.php'; ?>-->
-	<script src="../public/plugins/jquery-3.5.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 	<script src="../public/js/empresa.js"></script>
-	<script type="text/javascript" src="../public/js/form-product.js"></script>
-	<script src="../public/plugins/sweetalert2.all.min.js"></script>
-	<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>-->
-	<script type="text/javascript" src="../public/js/menu.js"></script>
-	<script type="text/javascript" src="../public/js/form_registro.js"></script>
-	<script type="text/javascript" src="../public/js/login.js"></script>
-	<!--<script type="text/javascript" src="../public/js/search.js"></script>-->
-	<script src="https://kit.fontawesome.com/c702fce202.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="../public/js/form-product.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.all.min.js" defer></script>
+	<script type="text/javascript" src="../public/js/menu.js" defer></script>
+	<script type="text/javascript" src="../public/js/form_registro.js" defer></script>
+	<script type="text/javascript" src="../public/js/login.js" defer></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
 	<script>
 		$(".js-range-slider").ionRangeSlider({

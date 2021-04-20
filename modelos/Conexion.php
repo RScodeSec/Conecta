@@ -3,7 +3,7 @@
 class Conexion
 {
     private static $host = 'localhost';
-    private static $dbname = 'ghxumdmy_conectaperu';
+    private static $dbname = 'ghxumdmy_conectaperu2';
     private static $user = 'root';
     private static $pwd = '';
     private static $cnx = null;
