@@ -1,12 +1,18 @@
 .preguntas{
+    font-style: bold;
+    font-weight: bold;
     font-size: 24px;
     color: #00b2bb;
     text-align: center;
     overflow: hidden;
     box-shadow: 1px 1px 15px -5px rgba(0, 0, 0, 0.75);
-    margin: auto;
+    margin:2% auto;
     padding: 20px;
 }
+.ul-preguntas{
+    border: 1px solid rgba(192, 192, 192, 0.753);
+}
 .ul-preguntas>div{
-    margin: 2% auto;
+    padding:0px 20px;
+    margin:2% auto;
 }

@@ -25,13 +25,9 @@ include_once 'layouts/head.php';
            
         <div><li>¿Los emprendimientos son confiables?</li>
             Sí, cada negocio ha pasado por un filtrado que nos permite determinar la veracidad de sus negocios.</div>    
-            
-            
     </ul>
-
-
-
 </div>
+<br>
 
     
 </body>
