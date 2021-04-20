@@ -106,78 +106,20 @@ include_once 'layouts/head.php';
             <div id="products-container-search">
 
             </div>
-            <!--<article class="product-card">
-                <figure class="img-card-container">
-                    <img src="../public/imagenes/silla.jpg" alt="">
-                </figure>
-                <h4>Categoria</h4>
-                <h2>Sillas gamer</h2>
-                <p>Sillas gamer cómodas y alcochadas</p>
-                <div class="btn-container">
-                    <button class="btn-see-shop">Ver tienda</button>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <figure class="img-card-container">
-                    <img src="../public/imagenes/silla.jpg" alt="">
-                </figure>
-                <h4>Categoria</h4>
-                <h2>Sillas gamer</h2>
-                <p>Sillas gamer cómodas y alcochadas</p>
-                <div class="btn-container">
-                    <button class="btn-see-shop">Ver tienda</button>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <figure class="img-card-container">
-                    <img src="../public/imagenes/silla.jpg" alt="">
-                </figure>
-                <h4>Categoria</h4>
-                <h2>Sillas gamer</h2>
-                <p>Sillas gamer cómodas y alcochadas</p>
-                <div class="btn-container">
-                    <button class="btn-see-shop">Ver tienda</button>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <figure class="img-card-container">
-                    <img src="../public/imagenes/silla.jpg" alt="">
-                </figure>
-                <h4>Categoria</h4>
-                <h2>Sillas gamer</h2>
-                <p>Sillas gamer cómodas y alcochadas</p>
-                <div class="btn-container">
-                    <button class="btn-see-shop">Ver tienda</button>
-                </div>
-            </article>
-
-            <article class="product-card">
-                <figure class="img-card-container">
-                    <img src="../public/imagenes/silla.jpg" alt="">
-                </figure>
-                <h4>Categoria</h4>
-                <h2>Sillas gamer</h2>
-                <p>Sillas gamer cómodas y alcochadas</p>
-                <div class="btn-container">
-                    <button class="btn-see-shop">Ver tienda</button>
-                </div>
-            </article>-->
-
+            
 
         </section>
     </main>
     <?php include_once 'layouts/footer.php'; ?>
 
-    <?php include_once 'layouts/scripts.php'; ?>  
-
-
-<!-- Iconos -->
-<script src="https://kit.fontawesome.com/c702fce202.js" crossorigin="anonymous"></script>
+     
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
 <script type="text/javascript" src="../public/js/search_form-product.js"></script>
-<script type="text/javascript" src="../public/js/search.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.all.min.js" defer></script>
+<script type="text/javascript" src="../public/js/search.js" defer></script>
+<script type="text/javascript" src="../public/js/menu.js" defer></script>
+<script type="text/javascript" src="../public/js/form_registro.js" defer></script>
+<script type="text/javascript" src="../public/js/login.js" defer></script>
 
 </body>
 </html>
