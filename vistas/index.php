@@ -128,25 +128,25 @@
 						<section class="cajas first-caja">
 
 							<h3 id="txtcaja">
-								<span><img src="../public/imagenes/index/idea.webp"></span>
+								<span><img src="../public/imagenes/index/idea.webp" width="16" height="16"></span>
 								Diseño
 							</h3>
 						</section>
 						<section class="cajas">
 							<h3 id="txtcaja">
-								<span><img src="../public/imagenes/index/ubi.webp"></span>
+								<span><img src="../public/imagenes/index/ubi.webp" width="16" height="16"></span>
 								Ubicación
 							</h3>
 						</section>
 						<section class="cajas">
 							<h3 id="txtcaja">
-								<span><img src="../public/imagenes/index/group.webp"></span>
+								<span><img src="../public/imagenes/index/group.webp" width="16" height="16"></span>
 								Opinión
 							</h3>
 						</section>
 						<section class="cajas">
 							<h3 id="txtcaja">
-								<span><img src="../public/imagenes/index/conf.webp"></span>
+								<span><img src="../public/imagenes/index/conf.webp" width="16" height="16"></span>
 								Promoción y publicidad
 							</h3>
 						</section>
