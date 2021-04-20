@@ -124,4 +124,28 @@ class Producto {
         return $stmt->fetchAll(PDO::FETCH_OBJ);
         
     }
+    /*____________________________________________FILTER SELECT____________________________*/
+    function productosByRucFilterDESC(int $ruc){
+        $sql = "SELECT * FROM productos WHERE RucEmpresa = {$ruc} AND Estado = 1 ORDER BY Precio DESC";
+        $stmt = $this->cnx->prepare($sql);
+        $stmt->execute(array($ruc));
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    function productosByRucFilterASC(int $ruc){
+        $sql = "SELECT * FROM productos WHERE RucEmpresa = {$ruc} AND Estado = 1 ORDER BY Precio ASC";
+        $stmt = $this->cnx->prepare($sql);
+        $stmt->execute(array($ruc));
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    function productosByRucFilterPopular(int $ruc){
+        $sql = "SELECT pedidos.IdProducto,p.ImagenUrl,p.Imagen,p.NomProducto,p.Descripcion,p.Precio, SUM(pedidos.Vendido) AS MAS_Vendidos FROM pedidos 
+        INNER JOIN productos as p 
+        ON pedidos.IdProducto=p.IdProducto 
+        WHERE p.RucEmpresa = {$ruc} AND p.Estado = 1 AND pedidos.Vendido =1 
+        GROUP BY pedidos.IdProducto";
+        $stmt = $this->cnx->prepare($sql);
+        $stmt->execute(array($ruc));
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

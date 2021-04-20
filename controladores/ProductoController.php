@@ -330,4 +330,57 @@ class ProductoController {
         $resultBestSeller = $this->modelo->orderBestSeller($_GET['ruc']);
         echo json_encode($resultBestSeller);
     }
+    /*____________________________________________FILTER SELECT____________________________*/
+    function productosByRucFilters(){
+        //$prods = $this->modelo->productosByRucFilterDESC($_GET['ruc']);
+        switch($_GET['opt']){
+            case 1:
+                $prods = $this->modelo->productosByRuc($_GET['ruc']);
+            break;
+            case 2:
+                $prods = $this->modelo->productosByRucFilterPopular($_GET['ruc']);
+            break;
+            case 3:
+                $prods = $this->modelo->productosByRucFilterASC($_GET['ruc']);                   
+            break;
+            case 4:
+                $prods = $this->modelo->productosByRucFilterDESC($_GET['ruc']);  
+            break;
+            default:
+                $prods = $this->modelo->productosByRuc($_GET['ruc']);
+
+        }
+        if (isset($_POST['type'])) {
+
+            
+            $articles = '';
+            //AQUI HE AGREGADO BR PARA AGREGAR ESPACIO
+            foreach ($prods as $p) {
+                $iganes = $p['ImagenUrl'];
+                $articles .= "<article class='product'>
+                                <figure class='img-product'>
+                                    <img src='.$iganes' alt='Imagen del Producto'>
+                                </figure>
+                               
+                                <h4 class='subtitulo-product'>
+                                    ".$p['NomProducto']."
+                                </h4>
+                                <p class='product-desc'>
+                                    ".$p['Precio']."
+                                </p>
+                                <div class='button-container'>
+                                    <input type='text' id='idproducto' value='".$p['IdProducto']."' hidden>
+                                    <button class='btn-product' data-id='".$p['IdProducto']."'>
+                                        Ver producto
+                                    </button>
+                                </div>
+                            </article>";
+            }
+            return $articles;
+        } else {
+            return $prods;
+        }
+        
+    }
+
 }

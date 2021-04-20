@@ -150,7 +150,7 @@ include_once 'layouts/head.php'; ?>
 						</div>
 
 										
-						<div class="btn-group show-on-hover">
+						<!--<div class="btn-group show-on-hover">
 							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 								Ordenar por defecto<span class="caret"></span>
 							</button>
@@ -160,12 +160,13 @@ include_once 'layouts/head.php'; ?>
 								<li><a href="#">Ordenar por precio: alto - bajo</a></li>
 								<li class="divider"></li>
 							</ul>
-						</div>
-						<!--<select   id="filterOpt" name="filterOpt">
-							<option value="1">Value 1</option>
-							<option value="2" selected>Value 2</option>
-							<option value="3">Value 3</option>
-						</select>-->
+						</div>-->
+						<select   id="filterOpt" name="filterOpt" >
+							<option value="1" selected>Ordenar por defecto</option>
+							<option value="2">Ordenar por pularidad</option>
+							<option value="3">Ordenar por precio: bajo - alto</option>
+							<option value="4">Ordenar por precio: alto - bajo</option>
+						</select>
 
 						<div class="range">
 							<h6>Filtro por precio</h6>
@@ -294,6 +295,7 @@ include_once 'layouts/head.php'; ?>
 	<script type="text/javascript" src="../public/js/menu.js" defer></script>
 	<script type="text/javascript" src="../public/js/form_registro.js" defer></script>
 	<script type="text/javascript" src="../public/js/login.js" defer></script>
+	<script type="text/javascript" src="../public/js/filter.js" defer></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
 	<script>
 		$(".js-range-slider").ionRangeSlider({
