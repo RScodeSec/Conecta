@@ -6,8 +6,8 @@ include_once 'layouts/head.php'; ?>
 <link rel="preload" href="../public/css/product_services.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <link rel="preload" href="../public/css/form-product.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <link rel="preload" href="../public/css/menu-desplegable.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css"/>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
 </head>
 
 <body>
@@ -309,8 +309,11 @@ include_once 'layouts/head.php'; ?>
     max: 500,
     from: 30,
     to: 300,
-    prefix: "S/."
+    prefix: "S/.",
+
 });
+
+
 	</script>
 </body>
 

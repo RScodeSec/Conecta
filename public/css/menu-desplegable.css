@@ -16,28 +16,31 @@
 /* RANGE */
 .range{
     width: 90%;
-    margin: 10px auto;
+    margin: 10px auto 50px auto; 
     border-radius: 20px;
     padding: 10px;
     background-color: #00C7CE;
 }
-.range input[type='range'] {
-    display: block;
-    width: 90%;
-    margin: 10px 5%;
-  }
-  
-  input[type='range']:focus {
+.irs-bar {
+  background: linear-gradient(#FF9E00, #FF9E00) 100% no-repeat;
+}
+.irs-handle{
+  background: linear-gradient(#FF9E00, #FF9E00) 100% no-repeat;
+  border: 2px solid #FF9E00;
+  color: #cbcfd5;
+}
+
+  /* .js-range-slider:focus {
     outline: none;
   }
   
-  input[type='range'],
-  input[type='range']::-webkit-slider-runnable-track,
-  input[type='range']::-webkit-slider-thumb {
+  .js-range-slider,
+  .js-range-slider::-webkit-slider-runnable-track,
+  .js-range-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
   }
   
-  input[type=range]::-webkit-slider-thumb {
+  .js-range-slider::-webkit-slider-thumb {
     background-color:#00C7CE;
     width: 21px;
     height: 21px;
@@ -46,7 +49,7 @@
     margin-top: -9px;
   }
   
-  input[type=range]::-moz-range-thumb {
+  .js-range-slider::-moz-range-thumb {
     background-color: #00C7CE;
     width: 16px;
     height: 16px;
@@ -54,7 +57,7 @@
     border-radius: 50%;
   }
   
-  input[type=range]::-ms-thumb {
+  .js-range-slider::-ms-thumb {
     background-color:#00C7CE;
     width: 21px;
     height: 21px;
@@ -62,28 +65,28 @@
     border-radius: 50%;
   }
   
-  input[type=range]::-webkit-slider-runnable-track {
+  .js-range-slider::-webkit-slider-runnable-track {
     background-color: #FF9E00;
     height: 5px;
     -webkit-appearance: none;
     background-image:linear-gradient(to right, #02C38A calc(var(--value)*1%), black 0);
   }
   
-  input[type=range]:focus::-webkit-slider-runnable-track {
+  .js-range-slider:focus::-webkit-slider-runnable-track {
     outline: none;
   }
   
-  input[type=range]::-moz-range-track {
+  .js-range-slider::-moz-range-track {
     -webkit-appearance: none;
     background-image:linear-gradient(to right, #02C38A calc(var(--value)*1%), black 0);
     height: 5px;
   }
   
-  input[type=range]::-ms-track {
+  .js-range-slider::-ms-track {
     background-color: #777;
     height: 3px;
   }
-  
+*/
 .range h6{
     text-align: center;
     color: #fff;
