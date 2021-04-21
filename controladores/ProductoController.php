@@ -382,5 +382,41 @@ class ProductoController {
         }
         
     }
+    /*______________filter range ______________*/
+    function filterInRange()
+    {
+        $prods = $this->modelo->productosByRucFilterRange($_GET['ruc'],$_GET['valone'],$_GET['valtwo']);
+        if (isset($_POST['type'])) {
+
+            
+            $articles = '';
+            //AQUI HE AGREGADO BR PARA AGREGAR ESPACIO
+            foreach ($prods as $p) {
+                $iganes = $p['ImagenUrl'];
+                $articles .= "<article class='product'>
+                                <figure class='img-product'>
+                                    <img src='.$iganes' alt='Imagen del Producto'>
+                                </figure>
+                               
+                                <h4 class='subtitulo-product'>
+                                    ".$p['NomProducto']."
+                                </h4>
+                                <p class='product-desc'>
+                                    ".$p['Precio']."
+                                </p>
+                                <div class='button-container'>
+                                    <input type='text' id='idproducto' value='".$p['IdProducto']."' hidden>
+                                    <button class='btn-product' data-id='".$p['IdProducto']."'>
+                                        Ver producto
+                                    </button>
+                                </div>
+                            </article>";
+            }
+            return $articles;
+        } else {
+            return $prods;
+        }
+        
+    }
 
 }

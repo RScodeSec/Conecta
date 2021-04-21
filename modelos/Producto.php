@@ -148,4 +148,10 @@ class Producto {
         $stmt->execute(array($ruc));
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+    function productosByRucFilterRange(int $ruc, int $valone, int $valtwo){
+        $sql = "SELECT * FROM productos WHERE RucEmpresa = {$ruc} AND Estado = 1 AND Precio BETWEEN {$valone} AND {$valtwo}";
+        $stmt = $this->cnx->prepare($sql);
+        $stmt->execute(array($ruc));
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
