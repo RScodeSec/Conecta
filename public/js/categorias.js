@@ -5,6 +5,8 @@ let data = {
 $(".contentCats").load(urlCats, data, () => {
 	$(".contentCats").on("click", ".cuadros", function () {
 		empresasByCategoria($(this)[0]);
+		//console.log($(this)[0]);
+		//console.log("haaaa")
 	});
 });
 

@@ -21,11 +21,19 @@ class Categoria {
 
             return $this->cnx->query($sql,PDO::FETCH_ASSOC)->fetchAll();
 
-        }                
+        }           
         
 
+    }
+    function empresasByCategoria1($idCat) {
+        $sql = "SELECT RucEmpresa,NomEmpresa,Logo FROM empresas WHERE IdCategoria = {$idCat} ORDER BY rand() LIMIT 3"; 
+        if($this->cnx->query($sql,PDO::FETCH_ASSOC)){
+
+            return $this->cnx->query($sql,PDO::FETCH_ASSOC)->fetchAll();
+
+        }           
         
-        
+
     }
 }
 ?>

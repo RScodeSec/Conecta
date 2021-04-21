@@ -1,4 +1,4 @@
-let urlEmpImgs = "../index.php?controller=categoria&action=empresasByCategoria",
+let urlEmpImgs = "../index.php?controller=categoria&action=empresasByCategoria1",
 	ruc = $("#t-principal h3").text(),
 	data = {
 		type: "imgs",

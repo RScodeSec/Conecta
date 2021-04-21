@@ -49,8 +49,73 @@ class CategoriaController {
         $cuadros = '';
         //add this code for fixed fechall
         if($empresas){
-
+            /*___add count*/
+            $mycount = 0;
             foreach ($empresas as $emp) {
+                $mycount++;
+                $numFigures = 4;
+                if ($type == 'cuadros') {
+                    $rucEmpresa = $emp['RucEmpresa'];
+                    $nomEmp = $emp['NomEmpresa'];
+                    $logo = $emp['Logo'];
+                    $cuadros .= "<div class='cuadros'>
+                                    <input type='text' class='urlEmp' value='{$rucEmpresa}' hidden>
+                                    <img id='img' src='../vistas/panel_usuario/logoemp/{$logo}' >
+                                    <div class='hover-galeria'>
+                                        <p class='text-center' >{$nomEmp}</p>
+                                    </div>
+                                </div>";
+                } else {
+                    if ($numFigures > 0 ) {
+                        if ($_POST['ruc'] != $emp['RucEmpresa']) {
+                            $ruc = $emp['RucEmpresa'];
+                            $logo = $emp['Logo'];
+                            $cuadros .= "<figure class='dck-img-container'>
+                                            <input id='miotraruc' type='text' value='{$ruc}' hidden>
+                                            <img id='logoMiotraruc'src='../vistas/panel_usuario/logoemp/{$logo}' alt='Otro logo'>
+                                        </figure>";
+                            $numFigures;
+                        }
+                    } 
+                }
+            }
+
+
+
+        }
+        
+            
+
+        
+                
+        if ($type == 'imgs') {
+            return $cuadros;
+        } else {
+            session_start();
+            $_SESSION['cuadrosEmps'] = $cuadros;
+            $_SESSION['categoria'] = $_POST;
+        }
+    }
+
+
+    /*modified for empresa.php for view business */
+    function empresasByCategoria1($type = 'cuadros'){
+        if(isset($_POST['idCat'])){
+
+            $empresas = $this->modelo->empresasByCategoria1($_POST['idCat']);
+
+        }
+        
+        if (isset($_POST['type'])) {
+            $type = $_POST['type'];
+        }
+        $cuadros = '';
+        //add this code for fixed fechall
+        if($empresas){
+            /*___add count*/
+            $mycount = 0;
+            foreach ($empresas as $emp) {
+                $mycount++;
                 $numFigures = 4;
                 if ($type == 'cuadros') {
                     $rucEmpresa = $emp['RucEmpresa'];
