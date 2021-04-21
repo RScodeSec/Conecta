@@ -161,12 +161,14 @@ include_once 'layouts/head.php'; ?>
 								<li class="divider"></li>
 							</ul>
 						</div>-->
-						<select   id="filterOpt" name="filterOpt" >
-							<option value="1" selected>Ordenar por defecto</option>
-							<option value="2">Ordenar por pularidad</option>
-							<option value="3">Ordenar por precio: bajo - alto</option>
-							<option value="4">Ordenar por precio: alto - bajo</option>
-						</select>
+						<div class="select-filtro">
+							<select   id="filterOpt" name="filterOpt" >
+								<option value="1" selected>Ordenar por defecto</option>
+								<option value="2">Ordenar por pularidad</option>
+								<option value="3">Ordenar por precio: bajo - alto</option>
+								<option value="4">Ordenar por precio: alto - bajo</option>
+							</select>
+						</div>
 
 						<div class="range">
 							<h6>Filtro por precio</h6>
