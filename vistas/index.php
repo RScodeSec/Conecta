@@ -5,15 +5,19 @@
 	<title>Bienvenidos a Conecta Perú</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="../public/css/test-header.css">
+	<link rel="preload" href="../public/css/test-header.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<!--<link rel="stylesheet" type="text/css" href="../public/css/test-header.css">-->
 	<!--<link rel="stylesheet" type="text/css" href="../public/css/index.css">-->
 	<link rel="preload" href="../public/css/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<!--<link rel="stylesheet" type="text/css" href="../public/css/footer.css">-->
+	<link rel="preload" href="../public/plugins/bootstrap/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<link rel="preload" href="../public/css/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />
+	<!--<link rel="preload" href="../public/css/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">-->
+	
+	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous" />-->
+	
 
-
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<!--<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
 		rel="preload"
 		as="style"
@@ -23,12 +27,17 @@
 		rel="preload"
 		as="style"
 		href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap"
-	/>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+	/>-->
+	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />-->
 	<!--<link rel="stylesheet" href="../public/css/formulario.css">-->
-	<link rel="preload" href="../public/css/formulario.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<!--<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>-->
+	
+	
 	<!--<link rel="stylesheet" href="../public/css/login.css">-->
 	<link rel="preload" href="../public/css/login.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="../public/css/formulario.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<!--<link rel="preload" href="../public/plugins/fontawesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">-->
+
 </head>
 
 <body>
@@ -53,28 +62,28 @@
 				<img src="../public/imagenes/sliders/img-01.webp" class="d-block w-100" alt="...">
 				</div>
 				<div class="carousel-item">
-				<img src="../public/imagenes/sliders/img-02.webp" class="d-block w-100" alt="...">
+				<img data-src="../public/imagenes/sliders/img-02.webp" class="d-block w-100 lazyload" alt="...">
 				</div>
 				<div class="carousel-item">
-				<img src="../public/imagenes/sliders/img-03.webp" class="d-block w-100" alt="...">
+				<img data-src="../public/imagenes/sliders/img-03.webp" class="d-block w-100 lazyload" alt="...">
 				</div>
 				<div class="carousel-item">
-				<img src="../public/imagenes/sliders/img-04.webp" class="d-block w-100" alt="...">
+				<img data-src="../public/imagenes/sliders/img-04.webp" class="d-block w-100 lazyload" alt="...">
 				</div>
 				<div class="carousel-item">
-				<img src="../public/imagenes/sliders/img-05.webp" class="d-block w-100" alt="...">
+				<img data-src="../public/imagenes/sliders/img-05.webp" class="d-block w-100 lazyload" alt="...">
 				</div>
 				<div class="carousel-item">
-				<img src="../public/imagenes/sliders/img-06.webp" class="d-block w-100" alt="...">
+				<img data-src="../public/imagenes/sliders/img-06.webp" class="d-block w-100 lazyload" alt="...">
 				</div>
 				<div class="carousel-item">
-				<img src="../public/imagenes/sliders/img-07.webp" class="d-block w-100" alt="...">
+				<img data-src="../public/imagenes/sliders/img-07.webp" class="d-block w-100 lazyload" alt="...">
 				</div>
 				<div class="carousel-item">
-				<img src="../public/imagenes/sliders/img-08.webp" class="d-block w-100" alt="...">
+				<img data-src="../public/imagenes/sliders/img-08.webp" class="d-block w-100 lazyload" alt="...">
 				</div>
 				<div class="carousel-item">
-				<img src="../public/imagenes/sliders/img-09.webp" class="d-block w-100" alt="...">
+				<img data-src="../public/imagenes/sliders/img-09.webp" class="d-block w-100 lazyload" alt="...">
 				</div>
 			</div>
 			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -179,15 +188,14 @@
 		<?php include_once 'layouts/footer.php'; ?>
 	</div>
 
-	<!--<script src="../public/plugins/jquery-3.5.1.min.js"></script>-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+	<script src="../public/plugins/jquery-3.5.1.min.js"></script>
 	<script src="../public/js/index.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" defer></script>
+	<script type="text/javascript" src="../public/plugins/bootstrap/js/bootstrap.min.js" defer></script>
 	<script type="text/javascript" src="../public/js/menu.js" defer></script>
-	<!--<script src="../public/plugins/sweetalert2.all.min.js"></script>-->
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.3/dist/sweetalert2.all.min.js" defer></script>
+	<script src="../public/plugins/sweetalert2.all.min.js" defer></script>
 	<script type="text/javascript" src="../public/js/form_registro.js" defer></script>
 	<script type="text/javascript" src="../public/js/login.js" defer></script>
+	<script src="../public/js/lazysizes.min.js" async></script>
 
 	
 </body>
