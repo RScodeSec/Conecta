@@ -805,7 +805,7 @@ button#b{
         width: 70%;
     }
     .img-check img{
-        width: 260px;
+        width: 100%;
         transition:1s ease;
         height:170px;
        
@@ -992,11 +992,11 @@ button#b{
         max-width: 375px;
     }
 
-    #slider{
+    /* #slider{
         overflow: hidden;
         height: inherit;
         width: 350px;
-    }
+    } */
 
     /* ------ Animacion Slider ------ */
     /* @-webkit-keyframes slide_animation{
